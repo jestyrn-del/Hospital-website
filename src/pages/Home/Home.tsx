@@ -15,8 +15,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
   return (
     <div id="top">
       <section className="hero">
-        <div className="hero__decor hero__decor--one" />
-        <div className="container hero__inner">
+        <div className="container hero-inner">
           <div className="hero__content">
             <p className="eyebrow">ФГКУ «1602 ВКГ» Минобороны России</p>
             <h1>1602 ВКГ</h1>
@@ -27,6 +26,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <a className="button button--outline" href="#contacts">Режим работы</a>
             </div>
           </div>
+
           <div className="hero__cards" aria-label="Разделы сайта">
             <a href="#patient"><span>01</span><strong>Пациентам</strong><i>↗</i></a>
             <a href="#about"><span>02</span><strong>Структура</strong><i>↗</i></a>
