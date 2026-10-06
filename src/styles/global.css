@@ -119,17 +119,16 @@ select:focus-visible {
    ========================= */
 .mobile-button {
     display: none;
-    background-color: transparent;
 }
 
-.mobile-button span {
-    display: none;
-    background-color: transparent;
-}
-
-
-@media (max-width: 767px) {
+@media (max-width: 400px) {
     .container {
         width: calc(100% - 36px);
+    }
+
+    .mobile-button {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
     }
 }
