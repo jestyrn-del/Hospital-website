@@ -57,19 +57,27 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
 
       <section className="about section" id="about">
         <div className="container">
-          <div className="section-heading"><span>01 / О ГОСПИТАЛЕ</span><h2>О 1602 ВКГ</h2></div>
+          <div className="section-heading">
+            <h2>О 1602 ВКГ</h2>
+          </div>
           <div className="about__grid">
             <div className="about__text">
-              <p>1602 военный клинический госпиталь — многопрофильное лечебно-профилактическое учреждение Министерства обороны Российской Федерации.</p>
-              <p>История госпиталя неразрывно связана с развитием военной медицины. Сегодня здесь работают специалисты различных направлений, обеспечивающие диагностику, лечение и реабилитацию пациентов.</p>
-              <p>Медицинская организация располагает современным оборудованием и объединяет более 50 подразделений, позволяя оказывать квалифицированную медицинскую помощь на высоком уровне.</p>
-              <a className="text-link" href="#contacts">Подробнее о госпитале <span>→</span></a>
+              <p>
+                Федеральное государственное казённое учреждение «1602 военный клинический госпиталь» Министерства обороны Российской Федерации (ФГКУ «1602 ВКГ» МО РФ) сформирован 23 июня 1941 года. Является многопрофильным специализированным медицинским учреждением и головным для 18 госпиталей, 9 поликлиник, 1 лазарета и других медицинских учреждений, которые охватывают территорию всего Южного военного округа, в состав которого входят Республики: Адыгея, Дагестан, Ингушетия, Северная Осетия-Алания, Чеченская, Кабардино-Балкарская, Калмыкская, Карачаево‑Черкесская; Краснодарский и Ставропольский край; Ростовская, Волгоградская и Астраханская области.              </p>
             </div>
-            <div className="about__stats">
-              <div className="stat"><strong>50+</strong><span>подразделений</span></div>
-              <div className="stat"><strong>209</strong><span>врачей и провизоров</span></div>
-              <div className="stat"><strong>371</strong><span>медицинская сестра</span></div>
-              <div className="stat"><strong>276</strong><span>младшего медперсонала</span></div>
+            <div className='about-stats'>
+              <div className='about-stats-info'>
+                <div className='about-stats-info-image'>
+                  <img src='adadad'/>
+                </div>
+                <div className='about-stats-info-text'></div>
+              </div>
+
+              <div className='about-stats-button'>
+                <button>подробнее о госпитале</button>
+              </div>
+
+              <div className='about-stats-decoration'/>
             </div>
           </div>
         </div>

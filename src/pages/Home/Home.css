@@ -223,13 +223,15 @@
 
 
 
+
+
 .button--green {
     background: var(--green);
     color: #fff
 }
 
 .section {
-    padding: 110px 0
+    padding: 5% 0
 }
 
 .section-heading>span {
