@@ -233,7 +233,7 @@
 }
 
 .section-heading h2 {
-    font-size: clamp(46px, 5vw, 76px);
+    font-size: clamp(42px, 4vw, 118px);
     line-height: .95;
     letter-spacing: -.045em;
     margin: 18px 0 55px;
@@ -315,7 +315,8 @@
 }
 
 .section-heading--light h2 {
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    font-size: clamp(42px, 4vw, 118px);
 }
 
 .patient__intro {

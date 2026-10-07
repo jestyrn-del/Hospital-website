@@ -83,7 +83,15 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
 
       <section className="patient section section--green" id="patient">
         <div className="container patient__grid">
-          <div><div className="section-heading section-heading--light"><span>02 / ПАЦИЕНТАМ</span><h2>Помощь<br />рядом</h2></div><p className="patient__intro">Госпиталь работает для вас каждый день, круглосуточно.</p></div>
+          <div>
+            <div className="section-heading section-heading--light">
+              <span>02 / ПАЦИЕНТАМ</span>
+              <h2>Помощь<br />рядом</h2>
+            </div>
+            <p className="patient__intro">
+              Госпиталь работает для вас каждый день, круглосуточно.
+            </p>
+          </div>
           <div className="patient__info">
             <div className="info-card"><span>Режим работы</span><strong>Каждый день,<br />круглосуточно</strong></div>
             <div className="info-card"><span>Горячая линия</span><strong>+7 863 272-83-66</strong><small>Факс: 272-83-11</small></div>
