@@ -1,6 +1,8 @@
 import { useState, type FormEvent } from 'react';
 import type { HomeProps, ReviewFormData } from '../../types';
 import heroImage from '../../assets/home-hero-hospital.svg';
+import aboutBanner from '../../assets/home-about-banner.svg';
+import aboutStatsImg from '../../assets/home-about-stats-img.svg';
 import './Home.css';
 
 export function Home({ onAppointment, onNotification }: HomeProps) {
@@ -60,22 +62,24 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
           <div className="section-heading">
             <h2>О 1602 ВКГ</h2>
           </div>
-          <div className="about__grid">
-            <div className="about__text">
-              <p>
-                Федеральное государственное казённое учреждение «1602 военный клинический госпиталь» Министерства обороны Российской Федерации (ФГКУ «1602 ВКГ» МО РФ) сформирован 23 июня 1941 года. Является многопрофильным специализированным медицинским учреждением и головным для 18 госпиталей, 9 поликлиник, 1 лазарета и других медицинских учреждений, которые охватывают территорию всего Южного военного округа, в состав которого входят Республики: Адыгея, Дагестан, Ингушетия, Северная Осетия-Алания, Чеченская, Кабардино-Балкарская, Калмыкская, Карачаево‑Черкесская; Краснодарский и Ставропольский край; Ростовская, Волгоградская и Астраханская области.              </p>
+          <div className='about-banner'>
+            <img src={aboutBanner}/>
+          </div>
+          <div className="about-text">
+            <p>Федеральное государственное казённое учреждение «1602 военный клинический госпиталь» Министерства обороны Российской Федерации (ФГКУ «1602 ВКГ» МО РФ) сформирован 23 июня 1941 года. Является многопрофильным специализированным медицинским учреждением и головным для 18 госпиталей, 9 поликлиник, 1 лазарета и других медицинских учреждений, которые охватывают территорию всего Южного военного округа, в состав которого входят Республики: Адыгея, Дагестан, Ингушетия, Северная Осетия-Алания, Чеченская, Кабардино-Балкарская, Калмыкская, Карачаево‑Черкесская; Краснодарский и Ставропольский край; Ростовская, Волгоградская и Астраханская области.              </p>
+          </div>
+          <div className='about-stats'>
+            <div className='about-stats-info'>
+              <div className='about-stats-info-image'>
+                <img src={aboutStatsImg}/>
+              </div>
+              <div className='about-stats-info-text'>
+                <p>В ФГКУ «1602 ВКГ» МО РФ развёрнуто и лицензировано более 50  лечебно-диагностических отделений, кабинетов, клинико-диагностических лабораторий и других подразделений. В госпитале успешно работает 209 врачей и провизоров, 371 медицинских сестёр, 276 лиц младшего медицинского персонала</p>
+              </div>
             </div>
-            <div className='about-stats'>
-              <div className='about-stats-info'>
-                <div className='about-stats-info-image'>
-                  <img src='adadad'/>
-                </div>
-                <div className='about-stats-info-text'></div>
-              </div>
-              <div className='about-stats-button'>
-                <button>подробнее о госпитале</button>
-              </div>
-              <div className='about-stats-decoration'/>
+            <div className='about-stats-decoration'/>
+            <div className='about-stats-button'>
+              <button>подробнее о госпитале</button>
             </div>
           </div>
         </div>
