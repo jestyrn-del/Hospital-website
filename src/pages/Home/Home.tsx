@@ -40,10 +40,10 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
             </div>
 
             <div className='hero-links'>
-              <a href="#patient"><span>01</span><strong>Пациентам</strong><i>↗</i></a>
-              <a href="#about"><span>02</span><strong>Структура</strong><i>↗</i></a>
-              <a href="#about"><span>03</span><strong>О госпитале</strong><i>↗</i></a>
-              <a href="#contacts"><span>04</span><strong>Контакты</strong><i>↗</i></a>
+              <a href="#patient">Пациентам <span>↗</span></a>
+              <a href="#about">Структура <span>↗</span></a>
+              <a href="#about">О госпитале <span>↗</span></a>
+              <a href="#contacts">Контакты <span>↗</span></a>
             </div>
           </div>
         </div>
