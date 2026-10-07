@@ -26,7 +26,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
         <div className="container hero-inner">
           <div className="hero-content">
             <h1>1602 ВКГ</h1>
-            <p className="hero-lead">Квалифицированная помощь<br/>на высоком уровне</p>
+            <p className="hero-lead">Квалифицированная помощь на высоком уровне</p>
             <p className="hero-description">Федеральное государственное казенное учреждение «1602 военный клинический госпиталь» министерства обороны Российской Федерации</p>
             <div className="hero-buttons">
               <button className="button" type="button" onClick={onAppointment}>Записаться на прием к руководителю</button>
@@ -40,11 +40,17 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
             </div>
 
             <div className='hero-links'>
-              <a href="#patient"><span>01</span><strong>Пациентам</strong><i>↗</i></a>
-              <a href="#about"><span>02</span><strong>Структура</strong><i>↗</i></a>
-              <a href="#about"><span>03</span><strong>О госпитале</strong><i>↗</i></a>
-              <a href="#contacts"><span>04</span><strong>Контакты</strong><i>↗</i></a>
+              <a href="#patient">Пациентам <span>↗</span></a>
+              <a href="#about">Структура <span>↗</span></a>
+              <a href="#about">О госпитале <span>↗</span></a>
+              <a href="#contacts">Контакты <span>↗</span></a>
             </div>
+          </div>
+
+          <div className='hero-decoration'>
+            <div className='hero-decoration-part hero-decoration-up'/>
+            <div className='hero-decoration-part hero-decoration-down'/>
+            <div className='hero-decoration-part hero-decoration-right'/>
           </div>
         </div>
       </section>
