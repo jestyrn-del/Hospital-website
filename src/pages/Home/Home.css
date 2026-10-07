@@ -1,3 +1,6 @@
+/* ================= */
+/* === HERO PART === */
+/* ================= */
 .hero {
     position: relative;
     background: linear-gradient(to top right, #FFFFFF 0%, #E8E8E8 100%);
@@ -222,22 +225,11 @@
 }
 
 
-
-
-
-.button--green {
-    background: var(--green);
-    color: #fff
-}
-
+/* ================== */
+/* === ABOUT PART === */
+/* ================== */
 .section {
     padding: 5% 0
-}
-
-.section-heading>span {
-    font-size: 11px;
-    letter-spacing: .14em;
-    color: #738078
 }
 
 .section-heading h2 {
@@ -303,6 +295,10 @@
     color: #67726c
 }
 
+
+/* ==================== */
+/* === PATIENT PART === */
+/* ==================== */
 .section--green {
     background: var(--green);
     color: #fff
@@ -370,6 +366,11 @@
     border-top: 1px solid rgba(255, 255, 255, .25)
 }
 
+.button--green {
+    background: var(--green);
+    color: #fff
+}
+
 .patient__links a,
 .patient__links button {
     min-height: 105px;
@@ -389,6 +390,10 @@
     float: right
 }
 
+
+/* ===================== */
+/* === CONTACTS PART === */
+/* ===================== */
 .contacts__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -449,6 +454,10 @@
     letter-spacing: .15em
 }
 
+
+/* =================== */
+/* === REVIEW PART === */
+/* =================== */
 .review {
     background: #f1f4f1
 }
@@ -490,6 +499,10 @@
     margin-top: 10px
 }
 
+
+/* =================== */
+/* === FOOTER PART === */
+/* =================== */
 .footer {
     background: var(--green);
     color: #fff;

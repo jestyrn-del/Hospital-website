@@ -72,11 +72,9 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
                 </div>
                 <div className='about-stats-info-text'></div>
               </div>
-
               <div className='about-stats-button'>
                 <button>подробнее о госпитале</button>
               </div>
-
               <div className='about-stats-decoration'/>
             </div>
           </div>
