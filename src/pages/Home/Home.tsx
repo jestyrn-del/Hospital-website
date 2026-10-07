@@ -26,7 +26,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
         <div className="container hero-inner">
           <div className="hero-content">
             <h1>1602 ВКГ</h1>
-            <p className="hero-lead">Квалифицированная помощь<br/>на высоком уровне</p>
+            <p className="hero-lead">Квалифицированная помощь на высоком уровне</p>
             <p className="hero-description">Федеральное государственное казенное учреждение «1602 военный клинический госпиталь» министерства обороны Российской Федерации</p>
             <div className="hero-buttons">
               <button className="button" type="button" onClick={onAppointment}>Записаться на прием к руководителю</button>
@@ -45,12 +45,12 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <a href="#about">О госпитале <span>↗</span></a>
               <a href="#contacts">Контакты <span>↗</span></a>
             </div>
+          </div>
 
-            <div className='hero-decoration'>
-              <div className='hero-decoration-up'/>
-              <div className='hero-decoration-down'/>
-              <div className='hero-decoration-right'/>
-            </div>
+          <div className='hero-decoration'>
+            <div className='hero-decoration-part hero-decoration-up'/>
+            <div className='hero-decoration-part hero-decoration-down'/>
+            <div className='hero-decoration-part hero-decoration-right'/>
           </div>
         </div>
       </section>
