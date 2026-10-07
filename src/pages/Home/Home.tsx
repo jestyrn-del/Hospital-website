@@ -45,6 +45,12 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <a href="#about">О госпитале <span>↗</span></a>
               <a href="#contacts">Контакты <span>↗</span></a>
             </div>
+
+            <div className='hero-decoration'>
+              <div className='hero-decoration-up'/>
+              <div className='hero-decoration-down'/>
+              <div className='hero-decoration-right'/>
+            </div>
           </div>
         </div>
       </section>
