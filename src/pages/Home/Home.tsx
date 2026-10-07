@@ -38,7 +38,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
 
           <div className="hero-cards" aria-label="Разделы сайта">
             <div className='hero-image'>
-              <img src={heroImage}/>
+              <img src={heroImage} alt='Госпиталь'/>
             </div>
 
             <div className='hero-links'>
@@ -74,7 +74,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
                 <img src={aboutStatsImg}/>
               </div>
               <div className='about-stats-info-text'>
-                <p>В ФГКУ «1602 ВКГ» МО РФ развёрнуто и лицензировано более 50  лечебно-диагностических отделений, кабинетов, клинико-диагностических лабораторий и других подразделений. В госпитале успешно работает 209 врачей и провизоров, 371 медицинских сестёр, 276 лиц младшего медицинского персонала</p>
+                <p>В ФГКУ «1602 ВКГ» МО РФ развёрнуто и лицензировано более 50 лечебно-диагностических отделений, кабинетов, клинико-диагностических лабораторий и других подразделений. В госпитале успешно работает 209 врачей и провизоров, 371 медицинских сестёр, 276 лиц младшего медицинского персонала</p>
               </div>
             </div>
             <div className='about-stats-decoration'/>
@@ -85,24 +85,29 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
         </div>
       </section>
 
-      <section className="patient section" id="patient">
-        <div className="container patient__grid">
-          <div>
-            <div className="section-heading section-heading--light">
-              <h2>Помощь<br />рядом</h2>
-            </div>
-            <p className="patient__intro">
-              Госпиталь работает для вас каждый день, круглосуточно.
-            </p>
+      <section className="patient section section--green" id="patient">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Пациентам</h2>
           </div>
-          <div className="patient__info">
-            <div className="info-card"><span>Режим работы</span><strong>Каждый день,<br />круглосуточно</strong></div>
-            <div className="info-card"><span>Горячая линия</span><strong>+7 863 272-83-66</strong><small>Факс: 272-83-11</small></div>
-            <div className="info-card"><span>Психологическая поддержка ВС РФ</span><strong>8 800 550-67-98</strong></div>
+          <div className="patient-info">
+            <div className="info-card">
+              <span className="info-card-title">Режим работы</span>
+              <span className="info-card-value">Каждый день, круглосуточно</span>
+            </div>
+            <div className="info-card">
+              <span className="info-card-title">Горячая линия</span>
+              <span className="info-card-value">+7 863 272-83-66<br/>факс 272 83 11</span>
+            </div>
+            <div className="info-card">
+              <span className="info-card-title">Психологическая поддержка ВС РФ</span>
+              <span className="info-card-value">8 800 550-67-98</span>
+            </div>
           </div>
         </div>
         <div className="container patient__links">
-          <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>          <a href="#contacts">Подробная информация <span>↗</span></a>
+          <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
+          <a href="#contacts">Подробная информация <span>↗</span></a>
           <a href="#about">Платные услуги <span>↗</span></a>
           <a href="#about">Структура <span>↗</span></a>
           <a href="#review">Оставить обращение <span>↗</span></a>

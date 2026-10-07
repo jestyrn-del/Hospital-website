@@ -377,56 +377,37 @@
 /* ==================== */
 /* === PATIENT PART === */
 /* ==================== */
-.patient__grid {
+.patient-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 90px
-}
-
-.section-heading--light h2 {
-    margin-bottom: 20px;
-    font-size: clamp(42px, 4vw, 118px);
-}
-
-.patient__intro {
-    font-size: 20px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, .72);
-    max-width: 430px
-}
-
-.patient__info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: rgba(255, 255, 255, .22)
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    gap: 20px;
+    width: 80%;
 }
 
 .info-card {
-    padding: 28px;
-    background: var(--green);
-    min-height: 145px;
+    background: transparent;
+    border: 1px solid #000000;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    height: 15vh;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    position: relative;
 }
 
-.info-card span {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: rgba(255, 255, 255, .55)
+.info-card-title {
+    font-weight: bold;
+    font-size: 1.7vw;
 }
 
-.info-card strong {
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: auto;
-    line-height: 1.25
-}
-
-.info-card small {
-    color: rgba(255, 255, 255, .55);
-    margin-top: 7px
+.info-card-value {
+    bottom: 0;
+    padding: 20px 0;
+    position: absolute;
 }
 
 .patient__links {
