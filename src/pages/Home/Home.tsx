@@ -85,11 +85,10 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
         </div>
       </section>
 
-      <section className="patient section section--green" id="patient">
+      <section className="patient section" id="patient">
         <div className="container patient__grid">
           <div>
             <div className="section-heading section-heading--light">
-              <span>02 / ПАЦИЕНТАМ</span>
               <h2>Помощь<br />рядом</h2>
             </div>
             <p className="patient__intro">
@@ -103,8 +102,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
           </div>
         </div>
         <div className="container patient__links">
-          <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
-          <a href="#contacts">Подробная информация <span>↗</span></a>
+          <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>          <a href="#contacts">Подробная информация <span>↗</span></a>
           <a href="#about">Платные услуги <span>↗</span></a>
           <a href="#about">Структура <span>↗</span></a>
           <a href="#review">Оставить обращение <span>↗</span></a>

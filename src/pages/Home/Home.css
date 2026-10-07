@@ -377,19 +377,10 @@
 /* ==================== */
 /* === PATIENT PART === */
 /* ==================== */
-.section--green {
-    background: var(--green);
-    color: #fff
-}
-
 .patient__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 90px
-}
-
-.section-heading--light>span {
-    color: rgba(255, 255, 255, .55)
 }
 
 .section-heading--light h2 {
