@@ -83,7 +83,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
             </div>
             <div className='about-stats-decoration'/>
             <div className='about-stats-button'>
-              <button>подробнее о госпитале</button>
+              <button className='button'>подробнее о госпитале</button>
             </div>
           </div>
         </div>
