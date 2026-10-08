@@ -381,6 +381,11 @@
     position: relative;
 }
 
+.patient {
+    position: relative;
+    overflow-x: clip;
+}
+
 .patient-info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
