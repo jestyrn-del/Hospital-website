@@ -467,15 +467,80 @@
     height: 160%;
 
     top: -20%;
-    right: -10%;
+    right: -20%;
 
     pointer-events: none;
     z-index: -1;
 }
 
-.patient-dec-first {}
-.patient-dec-second {}
-.patient-dec-third {}
+.patient-dec-first {
+    position: absolute;
+    
+    top: 0;
+    right: 5%;
+
+    width: 25vw;
+    height: 100%;
+
+    background: linear-gradient(
+        180deg,
+        #C7E997 0%,
+        #1DA159 100%
+    );
+
+    clip-path: polygon(
+        70% 0,
+        100% 0,
+        calc(100% - 70%) 100%,
+        0 100%
+    );
+}
+
+.patient-dec-second {
+    position: absolute;
+    
+    top: 0;
+    right: 30%;
+
+    width: 25vw;
+    height: 100%;
+
+    background: linear-gradient(
+        180deg,
+        #C7E997 0%,
+        #1DA159 100%
+    );
+
+    clip-path: polygon(
+        70% 0,
+        100% 0,
+        calc(100% - 70%) 100%,
+        0 100%
+    );
+}
+
+.patient-dec-third {
+    position: absolute;
+    
+    top: 0;
+    right: 55%;
+
+    width: 25vw;
+    height: 100%;
+
+    background: linear-gradient(
+        180deg,
+        #C7E997 0%,
+        #1DA159 100%
+    );
+
+    clip-path: polygon(
+        70% 0,
+        100% 0,
+        calc(100% - 70%) 100%,
+        0 100%
+    );
+}
 
 .patient-military img {
     display: block;
