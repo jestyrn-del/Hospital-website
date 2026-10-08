@@ -3,7 +3,7 @@
 
     min-height: 20vh;
 
-    background: #5A9366;
+    background: #4BAA71;
     color: #FFFFFF;
 
     overflow: hidden;
@@ -110,4 +110,105 @@
 
 .footer-address {
     font-size: 0.9vw;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        min-height: 40vh;
+    }
+
+    .footer-inner {
+        position: relative;
+        z-index: 2;
+
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(4, 10vh);
+
+        box-sizing: border-box;
+        gap: 8vh;
+        padding: 1vh 0;
+    }
+
+    .footer-logo {
+        grid-column: 1;
+        grid-row: 1;
+
+        width: 16vw;
+        height: 16vh;
+    }
+
+    .footer-organization {
+        grid-column: 2;
+        grid-row: 1;
+
+        width: 75vw;
+
+        gap: 3vw;
+        font-size: 3.1vw;
+    }
+
+    .footer-column:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .footer-column:nth-of-type(4) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .footer-column:nth-of-type(5) {
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    .footer-copyright {
+        font-weight: 700;
+    }
+
+    .footer-column {
+        display: flex;
+        gap: 2vh;
+        flex-direction: column;
+    }
+
+    .footer-column a {
+        font-size: 2.9vw;
+        color: #FFFFFF;
+
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-column a:hover {
+        opacity: .65;
+    }
+
+    .footer-decor {
+        position: absolute;
+
+        width: 30vw;
+        height: 40vh;
+
+        right: 5%;
+        top: 0;
+
+        background:
+            radial-gradient(
+                50% 50% at 50% 50%,
+                #007CBC 0%,
+                #26B5FF 100%
+            );
+
+        filter: blur(50px);
+        transform: rotate(-60deg);
+        opacity: .9;
+
+        pointer-events: none;
+    }
+
+    .footer-address {
+        margin-top: 4vh;
+        font-size: 2.9vw;
+    }
 }
