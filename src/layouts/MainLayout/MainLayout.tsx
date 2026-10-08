@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import { Header } from '../../components/Header/Header';
+import { Footer } from '../../components/Footer/Footer';
 import { MobileMenu } from '../../components/MobileMenu/MobileMenu';
 import { SearchOverlay } from '../../components/SearchOverlay/SearchOverlay';
 import { Notification } from '../../components/Notification/Notification';
@@ -27,6 +28,7 @@ export function MainLayout({ children, menuOpen, searchOpen, notification, onMen
       <MobileMenu open={menuOpen} onClose={onMenuClose} onAppointment={onAppointment} onCreateRequest={onCreateRequest} />
       <SearchOverlay open={searchOpen} onClose={onSearchClose} />
       <Notification {...notification} onClose={() => {}} />
+      <Footer/>
     </>
   );
 }
