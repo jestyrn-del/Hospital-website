@@ -393,21 +393,24 @@
 
     padding: 0.8vw 1vh;
 
-    height: 15vh;
     display: flex;
     flex-direction: column;
     position: relative;
+
+    gap: 1.2vh;
 }
 
 .info-card-title {
     font-weight: bold;
     font-size: 1.4vw;
     padding: 1.2vw;
+    margin-bottom: 1.3vh;
 }
 
 .info-card-value {
     bottom: 0;
     padding: 1.2vw;
+    margin-top: 1.3vh;
     font-size: 1.2vw;
     position: absolute;
 }
