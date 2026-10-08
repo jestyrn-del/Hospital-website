@@ -1,1 +1,19 @@
-.notification{position:fixed;z-index:200;left:50%;bottom:24px;transform:translateX(-50%);background:#173b2e;color:#fff;padding:14px 20px;box-shadow:0 8px 30px rgba(0,0,0,.2);font-size:14px;max-width:min(560px,calc(100% - 36px));text-align:center}
+.notification {
+    position: fixed;
+    z-index: 200;
+
+    left: 50%;
+    bottom: 2%;
+    width: 80vw;
+    border-radius: 4vw;
+    
+    background: #4BAA71;
+    color: #FFFFFF;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, .2);
+    text-align: center;
+    
+    padding: 2vh 10vw;
+    font-size: 3.8vw;
+
+    transform: translateX(-50%);
+}
