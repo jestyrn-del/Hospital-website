@@ -147,13 +147,15 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
       </section>
 
       <section className="review section" id="review">
-        <div className="container review__grid">
-          <div className="section-heading"><span>04 / ОБРАТНАЯ СВЯЗЬ</span><h2>Оставьте<br />ваш отзыв</h2></div>
-          <form className="review__form" onSubmit={submitReview}>
-            <label>Имя<input required value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Ваше имя" /></label>
-            <label>Email<input required type="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="example@mail.ru" /></label>
-            <label>Сообщение<textarea required value={form.message} onChange={(e) => update('message', e.target.value)} placeholder="Ваш отзыв" rows={5} /></label>
-            <button className="button button--green" type="submit">Оставить отзыв <span>→</span></button>
+        <div className="container review-grid">
+          <form className="review-form" onSubmit={submitReview}>
+            <h2>Оставьте свой отзыв</h2>
+            <div className='review-form-inputs'>
+              <input required value={form.name} onChange={(e) => update('name', e.target.value)} placeholder="Имя" />
+              <input required type="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="Email" />
+            </div>
+            <textarea required value={form.message} onChange={(e) => update('message', e.target.value)} placeholder="Напишите отзыв по нашей работе. Ваш email будет скрыт для просмотра" rows={5} />
+            <button className="button button--green" type="submit">оставить отзыв</button>
           </form>
         </div>
       </section>
