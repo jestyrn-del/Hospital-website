@@ -125,7 +125,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
             <div className='patient-dec-third'/>
           </div>
           <div className='patient-military'>
-            <img src='patientMilitary'/>
+            <img src={patientMilitary}/>
           </div>
         </div>
       </section>

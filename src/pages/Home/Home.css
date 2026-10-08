@@ -377,18 +377,21 @@
 /* ==================== */
 /* === PATIENT PART === */
 /* ==================== */
+.container {
+    position: relative;
+}
+
 .patient-info {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
     gap: 20px;
-    width: 80%;
+    width: 65%;
 }
 
 .info-card {
-    background: transparent;
+    background: #ffffff;
     border: 1px solid #000000;
-
     border-radius: 10px;
 
     padding: 20px;
@@ -401,17 +404,19 @@
 
 .info-card-title {
     font-weight: bold;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
+    padding: 1.2vw;
 }
 
 .info-card-value {
     bottom: 0;
-    padding: 20px 0;
+    padding: 1.2vw;
+    font-size: 1.2vw;
     position: absolute;
 }
 
 .patient-links {
-    width: 80%;
+    width: 65%;
     margin-top: 20px;
 }
 
@@ -433,8 +438,10 @@
     border: 1px solid #000000;
     border-radius: 10px;
     background-color: transparent;
-    font-weight: 700;
 
+    background-color: #ffffff;
+
+    font-weight: 700;
     font-size: 1.2vw;
     text-align: left;
 
@@ -452,12 +459,33 @@
     float: right
 }
 
-.patient-decorations {}
+.patient-decorations, .patient-military{
+    position: absolute;
+    display: flex;
+
+    width: 50%;
+    height: 160%;
+
+    top: -20%;
+    right: -10%;
+
+    pointer-events: none;
+    z-index: -1;
+}
+
 .patient-dec-first {}
 .patient-dec-second {}
 .patient-dec-third {}
-.patient-military {}
-.patient-military img {}
+
+.patient-military img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    z-index: -1;
+}
 
 
 
