@@ -662,118 +662,69 @@
 /* === MOBILE VERSION <= 767px ==== */
 /* ================================= */
 @media (max-width: 767px) {
-
-    /* ================= */
-    /* === COMMON ====== */
-    /* ================= */
-
-    .container {
-        width: calc(100% - 36px);
-        max-width: none;
-        margin-inline: auto;
-    }
-
-    .section {
-        padding: 40px 0;
-    }
-
-
-    /* ================= */
-    /* === HERO ======== */
-    /* ================= */
-
     .hero {
-        min-height: 932px;
+        height: 80%;
         background: #EAEAEA;
         overflow: hidden;
     }
 
     .hero-inner {
-        min-height: 932px;
-
-        width: calc(100% - 36px);
         margin-inline: auto;
 
-        padding-top: 373px;
-        padding-bottom: 40px;
+        padding-top: 20vh;
+        padding-bottom: 20vh;
 
         display: flex;
         flex-direction: column;
     }
 
-    /* Заголовок и описание */
     .hero-content {
         width: 100%;
         order: 2;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 3vh;
         line-height: 43px;
         margin: 0;
     }
 
     .hero-lead {
-        width: 100%;
-
-        font-size: 32px;
-        line-height: 43px;
-
-        margin: 0 0 12px;
+        font-size: 3vh;
+        margin: 0 0 1.3vh;
 
         text-transform: uppercase !important;
     }
 
     .hero-description {
-        width: 100%;
-        max-width: 356px;
-
-        font-size: 15px;
-        line-height: 25px;
-
+        max-width: 70vw;
+        font-size: 3.2vw;
         margin: 0;
     }
 
-
-    /* ================= */
-    /* === HERO BUTTONS */
-    /* ================= */
-
     .hero-buttons {
-        width: 100%;
-
         display: flex;
         flex-direction: column;
 
-        gap: 20px;
-
-        margin-top: 20px;
+        gap: 2.5vh;
+        margin-top: 3.5vh;
     }
 
     .hero-buttons .button {
-        width: 100%;
-        min-height: 50px;
+        padding: 2vh 4vw;
 
-        padding: 15px 30px;
+        border-radius: 10vw;
 
-        border-radius: 40px;
-
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 3.2vw;
     }
-
-
-    /* ================= */
-    /* === HERO IMAGE == */
-    /* ================= */
 
     .hero-cards {
         order: 1;
 
-        width: 100%;
-        height: auto;
+        width: 60%;
+        height: 60%;
 
-        margin: 0 0 24px;
+        margin: 0 0 2.8vw;
 
         display: flex;
         flex-direction: column;
@@ -782,13 +733,13 @@
 
     .hero-image {
         width: 100%;
-        height: 212px;
+        height: 100%;
 
         flex: none;
 
         margin: 0;
 
-        border-radius: 10px;
+        border-radius: 2vw;
         overflow: hidden;
     }
 
@@ -799,18 +750,9 @@
         object-fit: cover;
     }
 
-    /*
-     * В мобильном макете ссылки Hero
-     * отсутствуют — вместо них идут две кнопки.
-     */
     .hero-links {
         display: none;
     }
-
-
-    /* ================= */
-    /* === HERO DECOR == */
-    /* ================= */
 
     .hero-decoration {
         left: 0;
@@ -819,62 +761,45 @@
         width: 100%;
         height: 100%;
 
-        overflow: hidden;
+        z-index: -1;
     }
 
     .hero-decoration-up {
-        right: auto;
-        left: 112px;
-        top: -11px;
-
-        width: 421px;
-        height: 416px;
+        display: none;
     }
 
     .hero-decoration-down {
-        right: auto;
-        left: 25px;
-        bottom: auto;
-        top: -6px;
+        right: 20%;
+        top: 0;
 
-        width: 233px;
-        height: 411px;
+        width: 58vw;
+        height: 40%;
     }
 
     .hero-decoration-right {
-        right: -20px;
+        right: -10%;
         top: 0;
 
-        width: 135px;
-        height: 181px;
+        width: 52.5vw;
+        height: 40%;
     }
 
 
-    /* ================= */
-    /* === ABOUT ======= */
-    /* ================= */
 
     .about {
         overflow: hidden;
     }
 
     .section-heading h2 {
-        font-size: 40px;
-        line-height: 53px;
-
-        margin: 0 0 25px;
-
-        font-weight: 400;
-        text-transform: uppercase;
+        font-size: 8.5vw;
+        text-transform: uppercase !important;
+        margin: 0 0 2vh;
     }
 
     .about-banner {
-        width: 100%;
-        height: 212px;
+        height: 20vh;
 
-        margin: 0 0 25px;
-
-        border-radius: 10px;
+        margin: 0 0 2vh;
         overflow: hidden;
     }
 
@@ -889,25 +814,20 @@
         width: 100%;
         max-width: none;
 
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 3.2vw;
+        line-height: 2.8vh;
     }
 
     .about-text p {
         margin: 0;
     }
 
-
-    /* ================= */
-    /* === ABOUT STATS = */
-    /* ================= */
-
     .about-stats {
         position: relative;
 
         width: 100%;
 
-        margin-top: 40px;
+        margin-top: 4vh;
 
         display: flex;
         flex-direction: column;
@@ -917,25 +837,19 @@
     .about-stats-info {
         box-sizing: border-box;
 
-        width: 100%;
-        min-height: 385px;
-        height: auto;
-
-        padding: 20px;
+        padding: 5vw;
 
         display: flex;
         flex-direction: column;
 
-        gap: 15px;
-
-        border-radius: 10px;
+        border-radius: 5vw;
     }
 
     .about-stats-info-image {
         flex: none;
 
-        width: 66px;
-        height: 80px;
+        width: 12vw;
+        height: 8vh;
     }
 
     .about-stats-info-image img {
@@ -948,50 +862,38 @@
     .about-stats-info-text {
         width: 100%;
 
-        font-size: 18px;
-        line-height: 25px;
+        font-size: 4vw;
+        line-height: 2.6vh;
     }
 
     .about-stats-button {
         width: 100%;
-
         margin-top: 0;
-
         justify-content: center;
     }
 
     .about-stats-button button {
-        min-height: 50px;
+        padding: 3.4vw 3.4vh;
+        margin-top: 2vh;
 
-        padding: 15px 30px;
+        border-radius: 4vh;
 
-        border-radius: 40px;
-
-        font-size: 15px;
+        font-size: 3.2vw;
     }
 
     .about-stats-decoration {
-        left: auto;
-        right: -20px;
-        bottom: 0;
-
-        width: 110px;
-        height: 145px;
-
-        z-index: 0;
+        display: none;
     }
 
-
-    /* ================= */
-    /* === PATIENT ===== */
-    /* ================= */
 
     .patient {
         overflow-x: clip;
+        margin: 0;
     }
 
     .patient .section-heading h2 {
-        margin-bottom: 25px;
+        margin-bottom: 2.4vh;
+        text-transform: uppercase !important;
     }
 
     .patient-info {
@@ -1000,28 +902,24 @@
         display: flex;
         flex-direction: column;
 
-        gap: 20px;
+        gap: 2vh;
     }
 
     .info-card {
         box-sizing: border-box;
 
         width: 100%;
-        min-height: 130px;
+        padding: 2vh;
 
-        padding: 20px;
-
-        border-radius: 10px;
-
-        gap: 15px;
+        border-radius: 2vw;
+        gap: 2vh;
     }
 
     .info-card-title {
         padding: 0;
         margin: 0;
 
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 4.5vw;
     }
 
     .info-card-value {
@@ -1030,74 +928,65 @@
         padding: 0;
         margin: 0;
 
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 4.5vw;
     }
-
-
-    /* ================= */
-    /* === PATIENT LINKS */
-    /* ================= */
 
     .patient-links {
         width: 100%;
-
-        margin-top: 20px;
+        margin-top: 2vh;
     }
 
-    .patient-links-top,
-    .patient-links-bottom {
+    .patient-links-top, .patient-links-bottom {
         display: flex;
         flex-direction: column;
 
-        gap: 20px;
+        gap: 2vh;
     }
 
     .patient-links-bottom {
-        margin-top: 20px;
+        margin-top: 2vh;
     }
 
-    .patient-links a,
-    .patient-links button {
+    .patient-links a, .patient-links button {
         box-sizing: border-box;
 
         width: 100%;
-        min-height: 65px;
+        padding: 2vh;
 
-        padding: 20px;
+        border-radius: 1.2vw;
 
-        border-radius: 10px;
-
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 2vh;
     }
 
-    .patient-links span {
-        float: none;
-        margin-left: auto;
-    }
+    .patient-decorations {
+        position: relative;
+        
+        margin-top: 5vh;
 
+        width: 100%;
+        height: 50vh;
 
-    /* ================= */
-    /* === PATIENT DECOR */
-    /* ================= */
-
-    .patient-decorations,
-    .patient-military {
-        width: 426px;
-        height: 528px;
-
-        top: 890px;
-        right: -45px;
+        top: 8%;
+        right: -15%;
 
         z-index: 0;
     }
 
-    .patient-dec-first,
-    .patient-dec-second,
-    .patient-dec-third {
-        width: 223px;
-        height: 409px;
+    .patient-military {
+        position: absolute;
+        
+        width: 100%;
+        height: 50vh;
+
+        top: 60.8%;
+        height: 50vh;
+
+        z-index: 0;
+    }
+
+    .patient-dec-first, .patient-dec-second, .patient-dec-third {
+        width: 50vw;
+        height: 50vh;
     }
 
     .patient-dec-first {
@@ -1105,24 +994,20 @@
     }
 
     .patient-dec-second {
-        right: 102px;
+        right: 25%;
     }
 
     .patient-dec-third {
-        right: 204px;
+        right: 50%;
     }
 
     .patient-military img {
-        width: 352px;
-        height: 528px;
+        width: 100vw;
+        height: 60vh;
 
         object-fit: contain;
     }
 
-
-    /* ================= */
-    /* === CONTACTS ==== */
-    /* ================= */
 
     .contacts {
         overflow: hidden;
@@ -1132,7 +1017,7 @@
         display: flex;
         flex-direction: column;
 
-        gap: 30px;
+        gap: 3.2vh;
     }
 
     .contacts-list {
@@ -1140,37 +1025,30 @@
 
         margin-top: 0;
 
-        gap: 20px;
+        gap: 2vh;
     }
 
     .contacts-list a {
         display: flex;
         align-items: center;
 
-        min-height: 45px;
+        height: 3.2vh;
 
-        font-size: 15px;
-        line-height: 20px;
+        font-size: 3.4vw;
     }
 
     .contacts-list span {
         margin-left: auto;
-
-        font-size: 15px;
+        font-size: 3.4vw;
     }
 
     .map-placeholder {
-        min-height: 250px;
+        min-height: 25vh;
+        border-radius: 2vh;
 
-        border-radius: 10px;
-
-        font-size: 15px;
+        font-size: 3.4vw;
     }
 
-
-    /* ================= */
-    /* === REVIEW ====== */
-    /* ================= */
 
     .review {
         overflow: hidden;
@@ -1187,55 +1065,45 @@
         display: flex;
         flex-direction: column;
 
-        gap: 15px;
+        gap: 2vw;
     }
 
     .review-form h2 {
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 4vw;
     }
 
     .review-form-inputs {
         display: flex;
         flex-direction: column;
 
-        gap: 15px;
+        gap: 2vw;
     }
 
-    .review-form input,
-    .review-form textarea {
+    .review-form input, .review-form textarea {
         box-sizing: border-box;
 
         width: 100%;
+        font-size: 3.4vw;
 
-        font-size: 15px;
-        line-height: 25px;
-
-        padding: 10px;
-
-        border-radius: 10px;
+        padding: 1.8vw;
+        border-radius: 2vw;
     }
 
     .review-form textarea {
-        min-height: 232px;
+        min-height: 23vh;
     }
 
     .review-form .button {
         width: 100%;
 
-        min-height: 50px;
-
+        min-height: 5vh;
         margin-top: 0;
 
-        border-radius: 10px;
+        border-radius: 2vh;
     }
 
 
-    /* ================= */
-    /* === MOBILE FONT */
-    /* ================= */
-
     .button {
-        font-size: 15px;
+        font-size: 3.4vw;
     }
 }
