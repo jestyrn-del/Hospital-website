@@ -132,15 +132,16 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
 
       <section className="contacts section" id="contacts">
         <div className="container">
-          <div className="section-heading"><span>03 / КОНТАКТЫ</span><h2>Контакты</h2></div>
-          <div className="contacts__grid">
-            <div className="contacts__list">
-              <a href="#contacts"><strong>1602 ВКГ</strong><span>Основная информация</span></a>
-              <a href="#contacts"><strong>Страховые медицинские организации</strong><span>Информация для пациентов</span></a>
-              <a href="#contacts"><strong>Военная академия</strong><span>Перейти к информации</span></a>
-              <a href="#contacts"><strong>Психологическая поддержка ВС РФ</strong><span>Телефон горячей линии</span></a>
+          <div className="section-heading"><h2>Контакты</h2></div>
+          <div className="contacts-grid">
+            <div className="contacts-list">
+              <a href="#contacts">1602 ВКГ <span>↗</span></a>
+              <a href="#contacts">Страховые медицинские организации <span>↗</span></a>
+              <a href="#contacts">Военная академия <span>↗</span></a>
+              <a href="#contacts">Психологическая поддержка ВС РФ <span>↗</span></a>
+              <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
-            <div className="contacts__address"><span>Адрес</span><strong>344064, Ростовская обл.,<br />г. Ростов-на-Дону,<br />ул. Дачная, д. 10</strong><div className="map-placeholder"><span>КАРТА</span></div></div>
+            <div className="map-placeholder"><span>КАРТА</span></div>
           </div>
         </div>
       </section>

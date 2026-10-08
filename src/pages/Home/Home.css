@@ -558,71 +558,51 @@
 /* ===================== */
 /* === CONTACTS PART === */
 /* ===================== */
-.contacts__grid {
+.contacts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 100px
 }
 
+.contacts-list {
+    margin-top: 5%;
 
-.button--green {
-    background: var(--green);
-    color: #fff
-}
-
-
-
-.contacts__list {
-    border-top: 1px solid #cfd5d1
-}
-
-.contacts__list a {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 25px 0;
-    border-bottom: 1px solid #cfd5d1;
-    color: var(--text)
+    flex-direction: column;
+
+    gap: 24px;
+    text-align: left;
 }
 
-.contacts__list strong {
-    font-size: 18px;
-    font-weight: 500
+.contacts-list a {
+    border-bottom: 1px solid #000000;
+    align-items: center;
+    transition: 0.3s ease;
 }
 
-.contacts__list span {
-    color: #78827c;
-    font-size: 12px
+.contacts-list span {
+    float: right;
+    transition: 0.3s ease;
 }
 
-.contacts__address {
-    position: relative;
-    padding-left: 15px
-}
 
-.contacts__address>span {
-    display: block;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .1em;
-    color: #77827b;
-    margin-bottom: 18px
-}
-
-.contacts__address>strong {
-    font-size: 24px;
-    line-height: 1.35;
-    font-weight: 400
+.contacts-list a:hover, .contacts-list span:hover
+.contacts-list span:last-child {
+    border-color: #1DA159;
+    color: #1DA159;
 }
 
 .map-placeholder {
-    margin-top: 45px;
-    height: 220px;
+    height: 100%;
     background: linear-gradient(135deg, #e8ece9, #dce3de);
+
+    border-radius: 10px;
+
     display: grid;
     place-items: center;
+
     color: #89938d;
-    font-size: 11px;
+    font-size: 1.2vw;
     letter-spacing: .15em
 }
 
@@ -632,6 +612,11 @@
 /* =================== */
 .review {
     background: #f1f4f1
+}
+
+.button--green {
+    background: var(--green);
+    color: #fff
 }
 
 .review__grid {
