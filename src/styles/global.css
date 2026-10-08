@@ -121,7 +121,7 @@ select:focus-visible {
     display: none;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 900px) {
     .container {
         width: calc(100% - 36px);
     }

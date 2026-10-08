@@ -1,6 +1,7 @@
 import type { HeaderProps } from '../../types';
 import headerLogo from '../../assets/header-logo.svg';
 import searchLense from '../../assets/search.svg';
+import mobileIcon from '../../assets/header-mobile-menu.svg';
 import './Header.css';
 
 export function Header({ onSearchOpen, onMenuOpen, onCreateRequest, onAccessibility }: HeaderProps) {
@@ -12,10 +13,10 @@ export function Header({ onSearchOpen, onMenuOpen, onCreateRequest, onAccessibil
         </div>
 
         <div className="header-actions">
-          <button className="header-button" type="button" onClick={onSearchOpen} aria-label="поиск"><img src={searchLense} alt="Поиск"/></button>
+          <button className="header-button search-button" type="button" onClick={onSearchOpen} aria-label="поиск"><img src={searchLense} alt="Поиск"/></button>
           <button className="header-button header-not-mobile" type="button" onClick={onCreateRequest}>создать обращение</button>
           <button className="header-button header-not-mobile" type="button" onClick={onAccessibility}>для слабовидящих</button>
-          <button className="header-button mobile-button" type="button" onClick={onMenuOpen} aria-label="открыть меню"><span/><span/></button>
+          <button className="header-button mobile-button" type="button" onClick={onMenuOpen} aria-label="открыть меню"><img src={mobileIcon}/></button>
         </div>
       </div>
     </header>
