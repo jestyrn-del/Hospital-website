@@ -17,3 +17,10 @@
 
     transform: translateX(-50%);
 }
+
+@media (max-width: 767px) {
+    .notification {
+        width: 80vw;
+        font-size: 3.2vw;
+    }
+}
