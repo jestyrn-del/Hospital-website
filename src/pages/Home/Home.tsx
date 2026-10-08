@@ -1,8 +1,12 @@
 import { useState, type FormEvent } from 'react';
 import type { HomeProps, ReviewFormData } from '../../types';
 import heroImage from '../../assets/home-hero-hospital.svg';
+
 import aboutBanner from '../../assets/home-about-banner.svg';
 import aboutStatsImg from '../../assets/home-about-stats-img.svg';
+
+import patientMilitary from '../../assets/home-patient-military.svg';
+
 import './Home.css';
 
 export function Home({ onAppointment, onNotification }: HomeProps) {
@@ -114,6 +118,14 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <a href="#about">Структура <span>↗</span></a>
               <a href="#review">Создать обращение <span>↗</span></a>
             </div>
+          </div>
+          <div className='patient-decorations'>
+            <div className='patient-dec-first'/>
+            <div className='patient-dec-second'/>
+            <div className='patient-dec-third'/>
+          </div>
+          <div className='patient-military'>
+            <img src='patientMilitary'/>
           </div>
         </div>
       </section>
