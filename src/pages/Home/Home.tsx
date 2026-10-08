@@ -85,7 +85,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
         </div>
       </section>
 
-      <section className="patient section section--green" id="patient">
+      <section className="patient section" id="patient">
         <div className="container">
           <div className="section-heading">
             <h2>Пациентам</h2>
@@ -104,13 +104,17 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <span className="info-card-value">8 800 550-67-98</span>
             </div>
           </div>
-        </div>
-        <div className="container patient__links">
-          <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
-          <a href="#contacts">Подробная информация <span>↗</span></a>
-          <a href="#about">Платные услуги <span>↗</span></a>
-          <a href="#about">Структура <span>↗</span></a>
-          <a href="#review">Оставить обращение <span>↗</span></a>
+          <div className="patient-links">
+            <div className='patient-links-top'>
+              <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
+              <a href="#contacts">Подробная информация <span>↗</span></a>
+            </div>
+            <div className='patient-links-bottom'>
+              <a href="#about">Платные услуги <span>↗</span></a>
+              <a href="#about">Структура <span>↗</span></a>
+              <a href="#review">Создать обращение <span>↗</span></a>
+            </div>
+          </div>
         </div>
       </section>
 

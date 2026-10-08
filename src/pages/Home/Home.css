@@ -410,34 +410,45 @@
     position: absolute;
 }
 
-.patient__links {
-    margin-top: 70px;
+.patient-links {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.patient-links-top, .patient-links-bottom {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border-top: 1px solid rgba(255, 255, 255, .25)
+    gap: 20px;
 }
 
-.button--green {
-    background: var(--green);
-    color: #fff
+.patient-links-top {
+    grid-template-columns: 1fr 1fr;
 }
 
-.patient__links a,
-.patient__links button {
-    min-height: 105px;
-    padding: 20px 14px;
+.patient-links-bottom {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 20px;
+}
+
+.patient-links a, .patient-links button {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background-color: transparent;
+    font-weight: 700;
+
+    font-size: 1.2vw;
     text-align: left;
-    background: transparent;
-    color: #fff;
-    border: 0;
-    border-bottom: 1px solid rgba(255, 255, 255, .25);
-    border-right: 1px solid rgba(255, 255, 255, .25);
-    font: inherit;
-    font-size: 13px;
-    cursor: pointer
+
+    padding: 20px;
+
+    transition: 0.3s ease;
 }
 
-.patient__links span {
+.patient-links a:hover, .patient-links button:hover{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.patient-links span {
     float: right
 }
 
@@ -450,6 +461,14 @@
     grid-template-columns: 1fr 1fr;
     gap: 100px
 }
+
+
+.button--green {
+    background: var(--green);
+    color: #fff
+}
+
+
 
 .contacts__list {
     border-top: 1px solid #cfd5d1
