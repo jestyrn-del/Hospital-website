@@ -4,16 +4,16 @@
 
     left: 50%;
     bottom: 2%;
-    width: 80vw;
     border-radius: 4vw;
+    width: auto;
     
     background: #4BAA71;
     color: #FFFFFF;
     box-shadow: 0 8px 30px rgba(0, 0, 0, .2);
     text-align: center;
     
-    padding: 2vh 10vw;
-    font-size: 3.8vw;
+    padding: 1.3vh 8vw;
+    font-size: 1.3vw;
 
     transform: translateX(-50%);
 }
