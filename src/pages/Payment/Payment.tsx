@@ -48,15 +48,17 @@ export function PaidServices({ onNotification }: PaymentProps) {
                 </button>
             </div>
 
-            <div className="paid-info-card">
-                <h2>Режим работы</h2>
-                <p>Пн–Чт<br/>08:00–16:30</p>
-                <p>Пт<br/>08:00–15:30</p>
-            </div>
+            <div className='paid-intro-right-part'>
+                <div className="paid-info-card">
+                    <h2>Режим работы</h2>
+                    <p>Пн–Чт<br/>08:00–16:30</p>
+                    <p>Пт<br/>08:00–15:30</p>
+                </div>
 
-            <div className="paid-info-card paid-info-card--phones">
-                <h2>Телефоны</h2>
-                <p>272–85–66<br/>272–83–66<br/>272–84–66</p>
+                <div className="paid-info-card paid-info-card--phones">
+                    <h2>Телефоны</h2>
+                    <p>272–85–66<br/>272–83–66<br/>272–84–66</p>
+                </div>
             </div>
         </div>
       </section>
