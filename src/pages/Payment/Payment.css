@@ -234,204 +234,76 @@
     }
 
     .paid-intro-grid {
-        display: grid;
+        display: flex;
         flex-direction: column;
-        grid-template-rows: 1fr 1fr;
         gap: 6vw;
     }
 
     .paid-intro-left-part {
-        width: 46vw;
+        width: 100%;
     }
 
     .paid-title {
-        display: flex;
-        align-items: baseline;
-
-        gap: 0 1.2vw;
-        margin: 0;
-
-        font-size: 3vw;
-
-        text-transform: uppercase;
-    }
-
-    .paid-title-green {
-        color: #4D795F;
-        font-weight: 400;
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 8vw;
     }
 
     .paid-description {
-        width: 100%;
-
-        margin: 2.8vh 0;
-
-        font-size: 1.4vw;
+        font-size: 3.4vw;
     }
 
     .paid-info-card {
-        width: 21vw;
-
-        padding: 2vh 1.4vw;
-
-        border: 1px solid #000000;
-        border-radius: 1.2vw;
-
-        background: transparent;
+        width: 50%;
+        padding: 1.4vh 3.4vw;
     }
 
     .paid-info-card--phones {
-        width: 13vw;
+        width: 50%;
     }
 
-    .paid-info-card h2 {
-        margin: 0 0 1.2vw;
-
-        font-size: 1.3vw;
-        font-weight: 700;
-    }
-
-    .paid-info-card p {
-        margin: 0 0 0.8vw;
-
-        font-size: 1.3vw;
-        font-weight: 400;
+    .paid-info-card h2, .paid-info-card p {
+        font-size: 3.4vw;
     }
 
     .paid-decoration {
-        position: absolute;
-        z-index: 0;
-
-        top: 26vh;
-        right: 0;
-
-        width: 180px;
-        height: 180px;
-
-        background: linear-gradient(
-            180deg,
-            #007CBC 0%,
-            #26B5FF 100%
-        );
-
-        clip-path: polygon(
-            40% 0%,
-            100% 0%,
-            60% 100%,
-            0% 100%
-        );
-
-        pointer-events: none;
+        top: 52vh;
+        right: -8vw;
     }
+
 
     /* ================== */
     /* === DEPARTMENTS == */
     /* ================== */
-    .paid-services-section {
-        position: relative;
-        z-index: 1;
-    }
-
     .paid-section-title {
-        margin: 0 0 2vw;
-
-        font-size: 3vw;
-        font-weight: 400;
-
-        text-transform: uppercase;
+        font-size: 8vw;
     }
 
     .paid-services-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.7vw;
-
-        width: 100%;
+        grid-template-columns: 1fr;
     }
 
     .paid-service {
-        min-height: 1.3vh;
-        padding: 1.6vw;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-
-        border-radius: 0.7vw;
-
-        background: #FFFFFFCC;
-
-        font-size: 1.3vw;
-        font-weight: 700;
-
-        transition: 0.3s ease;
-    }
-
-    .paid-service:hover {
-        background: #FFFFFF;
-        transform: translateY(-0.3vh);
-    }
-
-    .paid-service strong {
-        display: block;
-        margin: 0.5vh 0;
-        font-weight: 700;
+        padding: 3vw;
+        border-radius: 2vw;
+        font-size: 3.4vw;
     }
 
     .paid-service span {
-        display: block;
-        margin-top: 0.8vh;
-
-        font-size: 1.3vw;
-        font-weight: 400;
+        font-size: 3.4vw;
     }
 
-    .paid-service--large {
-        min-height: 8vh;
-    }
-
-    .paid-service--xlarge {
-        min-height: 3.2vh;
-        justify-content: flex-start;
-        padding-top: 2vh;
-    }
 
     /* ================== */
     /* === DOCUMENTS ==== */
     /* ================== */
     .paid-documents {
-        position: relative;
-        z-index: 1;
-
-        width: 100%;
-        padding-bottom: 10vh;
-
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10vh;
-    }
-
-    .paid-documents-column {
-        min-width: 0;
-
-        display: flex;
-        flex-direction: column;
+        padding-bottom: 4vh;
+        grid-template-columns: 1fr;
         gap: 3vh;
     }
 
     .paid-documents a {
-        display: block;
-
-        font-size: 1.3vw;
-
-        overflow-wrap: anywhere;
-        text-decoration: underline;
-
-        transition: 0.3s ease;
-    }
-
-    .paid-documents a:hover {
-        opacity: 0.55;
+        font-size: 3.4vw;
     }
 }
