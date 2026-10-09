@@ -26,6 +26,8 @@ export function MobileMenu({ open, onClose, onAppointment, onCreateRequest, }: M
           <img src={closeImage}/>
         </button>
 
+        <h2>1602 ВКГ</h2>
+
         <nav className="mobile-menu-nav">
           <a href="#patient" onClick={onClose}>Пациентам<span>↗</span></a>
           <a href="#patient" onClick={onClose}>Структура<span>↗</span></a>

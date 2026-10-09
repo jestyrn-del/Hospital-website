@@ -43,6 +43,10 @@
     animation: menuIn 0.3s ease;
 }
 
+.mobile-menu-panel {
+    font-size: 4.4vw;
+}
+
 .mobile-menu--closing .mobile-menu-panel {
     animation: menuOut 0.3s ease forwards;
 }
@@ -72,7 +76,7 @@
     flex-direction: column;
 
     gap: 5vh;
-    margin-top: 8vh;
+    margin-top: 3.2vh;
 }
 
 .mobile-menu-nav a {
