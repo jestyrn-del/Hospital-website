@@ -1,8 +1,6 @@
-import type { PaymentProps } from '../../types';
+import './AboutHospital.css';
 
-import './Payment.css';
-
-export function PaidServices({ onNotification }: PaymentProps) {
+export function AbotHospital() {
   return (
     <div className='paid-page' id="top">
       <section className="paid-intro-main section">
