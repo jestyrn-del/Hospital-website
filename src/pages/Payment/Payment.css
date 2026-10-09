@@ -18,31 +18,28 @@
     background-color: transparent;
 
     width: 100%;
-    max-width: 100%;
 
-    padding: 120px 40px 0;
-    box-sizing: border-box;
-
+    padding: 120px 0 0;
     overflow: hidden;
+}
 
-    color: var(--color-black);
-    font-family: "Evolventa", Arial, sans-serif;
+.paid-intro-grid {
+    display: flex;
+    gap: 6vw;
+}
 
+.paid-intro-left-part {
+    width: 46vw;
 }
 
 .paid-title {
     display: flex;
     align-items: baseline;
-    flex-wrap: wrap;
 
-    gap: 0 11px;
-
+    gap: 0 1.2vw;
     margin: 0;
 
-    font-family: "Evolventa", Arial, sans-serif;
-    font-size: clamp(28px, 3.33vw, 42.655px);
-    line-height: 1.34;
-    font-weight: 700;
+    font-size: 3vw;
 
     text-transform: uppercase;
 }
@@ -54,118 +51,55 @@
 
 .paid-description {
     width: 100%;
-    max-width: 560px;
 
-    margin: 12px 0 0;
+    margin: 2.8vh 0;
 
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 400;
-}
-
-.paid-price-button {
-    min-height: 50px;
-
-    margin-top: 24px;
-    padding: 15px 30px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid var(--color-black);
-    border-radius: var(--radius-button);
-
-    background: transparent;
-    color: var(--color-black);
-
-    font-family: inherit;
-    font-size: 14px;
-    line-height: 1;
-
-    text-decoration: none;
-
-    transition:
-        background-color var(--transition-fast),
-        color var(--transition-fast),
-        transform var(--transition-fast);
-}
-
-.paid-price-button:hover {
-    background: var(--color-black);
-    color: var(--color-white);
-}
-
-.paid-price-button:active {
-    transform: translateY(1px);
-}
-
-/* ================== */
-/* === INFO CARDS === */
-/* ================== */
-
-.paid-info {
-    position: absolute;
-    z-index: 2;
-
-    top: 120px;
-    right: 40px;
-
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    font-size: 1.4vw;
 }
 
 .paid-info-card {
-    width: 284px;
-    min-height: 176px;
+    width: 21vw;
 
-    padding: 18px 15px;
+    padding: 2vh 1.4vw;
 
-    border: 1px solid var(--color-black);
-    border-radius: var(--radius-small);
+    border: 1px solid #000000;
+    border-radius: 1.2vw;
 
     background: transparent;
 }
 
 .paid-info-card--phones {
-    width: 183px;
+    width: 13vw;
 }
 
 .paid-info-card h2 {
-    margin: 0 0 12px;
+    margin: 0 0 1.2vw;
 
-    font-size: 17px;
-    line-height: 1.2;
+    font-size: 1.3vw;
     font-weight: 700;
 }
 
 .paid-info-card p {
-    margin: 0 0 8px;
+    margin: 0 0 0.8vw;
 
-    font-size: 16px;
-    line-height: 1.35;
+    font-size: 1.3vw;
     font-weight: 400;
 }
-
-/* ================== */
-/* === DECORATION === */
-/* ================== */
 
 .paid-decoration {
     position: absolute;
     z-index: 0;
 
-    top: 100px;
-    right: 20px;
+    top: 26vh;
+    right: 0;
 
     width: 180px;
     height: 180px;
 
     background: linear-gradient(
         180deg,
-        var(--color-blue) 0%,
-        var(--color-blue-light) 100%
+        #007CBC 0%,
+        #26B5FF 100%
     );
 
     clip-path: polygon(
@@ -181,13 +115,9 @@
 /* ================== */
 /* === DEPARTMENTS == */
 /* ================== */
-
 .paid-services-section {
     position: relative;
     z-index: 1;
-
-    width: 100%;
-    margin-top: 48px;
 }
 
 .paid-section-title {

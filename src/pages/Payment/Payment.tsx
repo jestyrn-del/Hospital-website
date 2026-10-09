@@ -30,21 +30,23 @@ export function PaidServices({ onNotification }: PaymentProps) {
   return (
     <div className='paid-page' id="top">
       <section className="paid-intro-main section">
-        <div className="container">
-            <h1 className="paid-title">
-            <span>1602 ВКГ</span>
-            <span className="paid-title-green">ПЛАТНЫЕ УСЛУГИ</span>
-            </h1>
+        <div className="container paid-intro-grid">
+            <div className='paid-intro-left-part'>
+                <h1 className="paid-title">
+                    <span>1602 ВКГ</span>
+                    <span className="paid-title-green">ПЛАТНЫЕ УСЛУГИ</span>
+                </h1>
 
-            <p className="paid-description">
-            По вопросам платных медицинских услуг обращаться в отделение
-            медицинского страхования. Находится на цокольном этаже
-            хирургического корпуса.
-            </p>
+                <p className="paid-description">
+                    По вопросам платных медицинских услуг обращаться в отделение
+                    медицинского страхования. Находится на цокольном этаже
+                    хирургического корпуса.
+                </p>
 
-            <a href="#" className="paid-price-button">
-            прейскурант
-            </a>
+                <button className='button' type='button'>
+                    прейскурант
+                </button>
+            </div>
 
             <div className="paid-info-card">
                 <h2>Режим работы</h2>
