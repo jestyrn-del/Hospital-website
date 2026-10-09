@@ -6,7 +6,12 @@ import { Routes, Route } from 'react-router-dom';
 
 import { Home } from './pages/Home/Home';
 import { PaidServices } from './pages/Payment/Payment';
-import { BadRequest } from './pages/404/404';
+import { AboutHospital } from './pages/AboutHospital/AboutHospital';
+import { History } from './pages/History/History';
+import { License } from './pages/License/License';
+import { Patients } from './pages/Patients/Patients';
+import { Structure } from './pages/Structure/Structure';
+import { Vacation } from './pages/Vacation/Vacation';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,8 +53,13 @@ function App() {
           }
         />
 
-        <Route path="/paid-services" element={<PaidServices onNotification={notification}/>}
-        />
+        <Route path="/paid-services" element={<PaidServices onNotification={notification}/>}/>
+        <Route path="/about" element={<AboutHospital/>}/>
+        <Route path="/history" element={<History/>}/>
+        <Route path="/license" element={<License/>}/>
+        <Route path="/patients" element={<Patients/>}/>
+        <Route path="/structure" element={<Structure/>}/>
+        <Route path="/vacations" element={<Vacation/>}/>
       </Routes>
     </MainLayout>
   );
