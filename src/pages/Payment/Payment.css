@@ -205,21 +205,18 @@
 
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 3vh;
 }
 
 .paid-documents a {
     display: block;
 
-    color: var(--color-black);
-
-    font-size: 13px;
-    line-height: 1.5;
+    font-size: 1.3vw;
 
     overflow-wrap: anywhere;
     text-decoration: underline;
 
-    transition: opacity var(--transition-fast);
+    transition: 0.3s ease;
 }
 
 .paid-documents a:hover {
