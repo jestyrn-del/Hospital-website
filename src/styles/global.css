@@ -1,3 +1,6 @@
+/* ================ */
+/* ===== FONT ===== */
+/* ================ */
 @font-face {
     font-family: "Evolventa";
     src: url("../../public/Evolventa-Regular.ttf") format("truetype");
@@ -15,9 +18,9 @@
 }
 
 
-/* =========================
-   Base
-   ========================= */
+/* ================ */
+/* ===== BASE ===== */
+/* ================ */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -41,9 +44,9 @@ body {
 }
 
 
-/* =========================
-   Typography
-   ========================= */
+/* =========================== */
+/* == TYPHOGRAPHY + BUTTONS == */
+/* =========================== */
 button, input, textarea, select {
     font-family: inherit;
     font-size: inherit;
@@ -54,10 +57,6 @@ h1, h2, h3, h4, h5, h6, p, span, a, li, label {
     font-family: inherit;
 }
 
-
-/* =========================
-   Buttons / Links
-   ========================= */
 button {
     border: 0;
     padding: 0;
@@ -75,53 +74,45 @@ a {
 }
 
 
-/* =========================
-   Images
-   ========================= */
+/* ================== */
+/* ===== IMAGES ===== */
+/* ================== */
 img {
     display: block;
     max-width: 100%;
 }
 
 
-/* =========================
-   Layout
-   ========================= */
+/* ================== */
+/* ===== LAYOUT ===== */
+/* ================== */
 .container {
     width: 90%;
     margin: 0 auto;
 }
 
 
-/* =========================
-   Focus
-   ========================= */
+/* ================= */
+/* ===== FOCUS ===== */
+/* ================= */
 button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
     outline: 2px solid #9bb9aa;
     outline-offset: 3px;
 }
 
 
-/* =========================
-   Selection
-   ========================= */
+/* ================= */
+/* === SELECTION === */
+/* ================= */
 ::selection {
     background: #b9d0c4;
     color: #173f30;
 }
 
 
-/* =========================
-   Mobile
-   ========================= */
-.mobile-button {
-    display: none;
-}
-
-
-/* =========================
-   Common
-   ========================= */
+/* ================== */
+/* ===== COMMON ===== */
+/* ================== */
 .button {
     display: inline-flex;
     border: 1px solid #000000;
@@ -148,10 +139,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     color: #ffffff;
 }
 
+.mobile-button {
+    display: none;
+}
 
-/* =========================
-   Adaptation
-   ========================= */
+
+/* ================== */
+/* === ADAPTATION === */
+/* ================== */
 @media (max-width: 767px) {
     .container {
         width: calc(100% - 36px);
