@@ -16,6 +16,7 @@
 
 .header-logo {
     height: 90%;
+    margin-left: -1.4vw;
     display: flex;
     align-items: center;
 }
@@ -72,8 +73,12 @@
         top: 3.2vh;
     }
 
+    .header-logo {
+        margin-left: -2.8vw;
+    }
+
     .header-logo img {
-        height: 7vh;
+        height: 8vh;
         width: 16vw;
     }
 
