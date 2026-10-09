@@ -681,13 +681,12 @@
     }
 
     .hero h1 {
-        font-size: 3vh;
-        line-height: 43px;
-        margin: 0;
+        font-size: 7vw;
+        margin: 2vh 0;
     }
 
     .hero-lead {
-        font-size: 3vh;
+        font-size: 7vw;
         margin: 0 0 1.3vh;
 
         text-transform: uppercase !important;
@@ -812,7 +811,6 @@
         max-width: none;
 
         font-size: 3.2vw;
-        line-height: 2.8vh;
     }
 
     .about-text p {
@@ -860,7 +858,6 @@
         width: 100%;
 
         font-size: 4vw;
-        line-height: 2.6vh;
     }
 
     .about-stats-button {
