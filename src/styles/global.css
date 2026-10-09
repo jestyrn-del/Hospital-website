@@ -148,6 +148,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     color: #ffffff;
 }
 
+
+/* =========================
+   Adaptation
+   ========================= */
 @media (max-width: 767px) {
     .container {
         width: calc(100% - 36px);
