@@ -122,3 +122,41 @@
 .search-results button:hover {
     background: #D1D1D1D1;
 }
+
+@media (max-width: 767px) {
+
+    .search-overlay-content {
+        width: 90%;
+    }
+
+    .search-overlay-close {
+        top: -4.8vh;
+        
+        width: 8vw;
+        height: 8vh;
+    }
+
+    .search-field {
+        border-radius: 8vw;
+        padding: 2.3vw;
+    }
+
+    .search-layout-search-button {
+        width: 8%;
+        height: 6%;
+
+        margin-right: 1.2vw;
+    }
+
+    .search-results {
+        margin: 0;
+        margin-top: 4vw;
+        padding: 1vw;
+        border-radius: 3.4vw;
+    }
+
+    .search-results button {
+        padding: 2.2vw 4.4vw;
+        border-radius: 2.8vw;
+    }
+}
