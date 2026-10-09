@@ -1,1 +1,124 @@
-.search-overlay{position:fixed;inset:0;z-index:110}.search-overlay__backdrop{position:absolute;inset:0;border:0;background:rgba(10,35,27,.78)}.search-overlay__content{position:relative;width:min(760px,calc(100% - 36px));margin:12vh auto 0;background:#fff;padding:32px;box-shadow:0 20px 60px rgba(0,0,0,.25)}.search-overlay__close{position:absolute;right:18px;top:10px;border:0;background:none;font-size:34px;cursor:pointer}.search-field{display:flex;align-items:center;gap:14px;border-bottom:1px solid #bbb;padding:12px 0}.search-field span{font-size:28px}.search-field input{width:100%;border:0;outline:0;font:inherit;font-size:20px}.search-results{display:grid;margin-top:15px}.search-results button{padding:15px;text-align:left;border:0;border-bottom:1px solid #eee;background:#fff;cursor:pointer}.search-results button:hover{background:#f4f6f3}
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+}
+
+.search-overlay-backdrop {
+    position: absolute;
+    inset: 0;
+    border: 0;
+
+    background: rgba(0, 0, 0, .28);
+    backdrop-filter: blur(15px);
+
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.search-overlay-content {
+    position: relative;
+    width: 70%;
+    
+    background: transparent;
+    
+    padding: 3vh 0;
+    margin: 22vh auto 0;
+}
+
+.search-overlay-close {
+    position: absolute;
+    right: 0;
+    top: -0.8vh;
+    
+    width: 3vw;
+    height: 3vh;
+
+    border: 0;
+    background: none;
+    
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-overlay-close:hover {
+    opacity: 0.8;
+}
+
+.search-overlay-close img {
+    width: 100%;
+    height: 100%;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    background-color: #FFFFFF;
+    border-radius: 4vw;
+
+    padding: 0.3vw;
+}
+
+.search-field input {
+    width: 100%;
+    height: 3.2vh;
+    border: 0;
+    border-radius: 4vw;
+    margin-right: 2vw;
+    font-size: 2vh;
+    text-align: left;
+    padding-left: 1vw;
+}
+
+.search-field input:focus {
+    outline-color: #1DA159;
+}
+
+.search-layout-search-button {
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    border-radius: 50%;
+
+    width: 3%;
+    height: 3%;
+
+    margin-right: 0.5vw;
+
+    transition: 0.3s ease;
+}
+
+.search-layout-search-button:hover {
+    opacity: 0.8;
+    scale: 1.2;
+}
+
+.search-field img {
+    width: 100%;
+    height: 100%;
+}
+
+.search-results {
+    display: grid;
+    margin: 1vh;
+    padding: 1vw;
+    border-radius: 1.4vw;
+    background-color: #FFFFFF;
+    gap: 1.3vh;
+}
+
+.search-results button {
+    padding: 1.4vw;
+    text-align: left;
+    border: 0;
+    border-radius: 0.8vw;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.search-results button:hover {
+    background: #D1D1D1D1;
+}

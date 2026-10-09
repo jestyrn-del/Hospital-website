@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import type { MobileMenuProps } from '../../types';
-import closeImage from '../../assets/mobile-menu-cross.svg';
+import closeImage from '../../assets/close-cross.svg';
 
 import './MobileMenu.css';
 
