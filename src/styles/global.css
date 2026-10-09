@@ -157,4 +157,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         flex-direction: column;
         gap: 4px;
     }
+
+    .button {
+        font-size: 2.8vw;
+        padding: 0.8vh 1.4vw;
+
+        width: 52vw;
+        height: 4vh;
+
+        border-radius: 2vh;
+    }
 }
