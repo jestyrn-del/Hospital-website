@@ -50,7 +50,7 @@ function App() {
 
         <Route
           path="/paid-services"
-          element={<PaidServices />}
+          element={<PaidServices onNotification={notification}/>}
         />
       </Routes>
     </MainLayout>
