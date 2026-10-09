@@ -66,8 +66,7 @@ body {
   margin: 0;
 }
 
-h1,
-h2 {
+h1, h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
@@ -95,8 +94,7 @@ p {
   margin: 0;
 }
 
-code,
-.counter {
+code, .counter {
   font-family: var(--mono);
   display: inline-flex;
   border-radius: 4px;

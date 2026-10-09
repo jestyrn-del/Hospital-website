@@ -96,11 +96,7 @@ img {
 /* =========================
    Focus
    ========================= */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
     outline: 2px solid #9bb9aa;
     outline-offset: 3px;
 }
@@ -114,11 +110,42 @@ select:focus-visible {
     color: #173f30;
 }
 
+
 /* =========================
    Mobile
    ========================= */
 .mobile-button {
     display: none;
+}
+
+
+/* =========================
+   Common
+   ========================= */
+.button {
+    display: inline-flex;
+    border: 1px solid #000000;
+    border-radius: 3vw;
+    background-color: transparent;
+    color: #000000;
+
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+
+    font-size: 0.8vw;
+
+    padding: 0.8vh 1.4vw;
+    text-transform: lowercase;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000000;
+    color: #ffffff;
 }
 
 @media (max-width: 767px) {
