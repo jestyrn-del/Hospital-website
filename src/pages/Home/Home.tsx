@@ -7,6 +7,8 @@ import aboutStatsImg from '../../assets/home-about-stats-img.svg';
 
 import patientMilitary from '../../assets/home-patient-military.svg';
 
+import { Link } from 'react-router-dom';
+
 import './Home.css';
 
 export function Home({ onAppointment, onNotification }: HomeProps) {
@@ -114,7 +116,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <a href="#contacts">Подробная информация <span>↗</span></a>
             </div>
             <div className='patient-links-bottom'>
-              <a href="#about">Платные услуги <span>↗</span></a>
+              <Link to="/paid-services">Платные услуги <span>↗</span></Link>
               <a href="#about">Структура <span>↗</span></a>
               <a href="#review">Создать обращение <span>↗</span></a>
             </div>

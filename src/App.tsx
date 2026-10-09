@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { MainLayout } from './layouts/MainLayout/MainLayout';
-import { Home } from './pages/Home/Home';
 import type { NotificationState } from './types';
-import './styles/variables.css';
-import './styles/global.css';
+
+import { Routes, Route } from 'react-router-dom';
+
+import { Home } from './pages/Home/Home';
+import { PaidServices } from './pages/Payment/Payment';
+import { BadRequest } from './pages/404/404';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -36,10 +39,20 @@ function App() {
       onAccessibility={() => showNotification('Версия для слабовидящих будет подключена отдельно.')}
       onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
     >
-      <Home
-        onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
-        onNotification={showNotification}
-      />
+      <Routes>
+        <Route path="/" element={
+            <Home
+              onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
+              onNotification={showNotification}
+            />
+          }
+        />
+
+        <Route
+          path="/paid-services"
+          element={<PaidServices />}
+        />
+      </Routes>
     </MainLayout>
   );
 }
