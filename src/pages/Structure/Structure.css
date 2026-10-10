@@ -1,0 +1,175 @@
+.structure-page {
+    position: relative;
+    isolation: isolate;
+
+    padding: 8% 0;
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.structure-page *, .structure-page *::before, .structure-page *::after {
+    box-sizing: border-box;
+}
+
+.structure-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+.structure-decoration {
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    right: -5vw;
+
+    width: 40vw;
+    height: 160%;
+
+    background: linear-gradient(
+    180deg,
+    #C7E997 0%,
+    #1DA159 100%
+    );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% 100%,
+        70% 100%
+    );
+
+    pointer-events: none;
+}
+
+.structure-title {
+    display: flex;
+    align-items: baseline;
+
+    gap: 0 1.2vw;
+    margin: 0;
+
+    font-size: 3vw;
+
+    text-transform: uppercase;
+}
+
+.structure-title-green {
+    color: #4D795F;
+    font-weight: 400;
+}
+
+.patients-links {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    width: 100%;
+}
+
+.patients-item {
+    width: 100%;
+    border-bottom: 1px solid #000000;
+    transition: border-color 0.35s ease;
+}
+
+.patients-item:not(.patients-item--open) .patients-link:hover {
+    color: #4D795F;
+}
+
+.patients-item--open {
+    border-color: #000000;
+    transition: 0.3s ease;
+}
+
+.patients-item--open .patients-link {
+    color: #4D795F;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.patients-item--open .patients-link-arrow {
+    transform: rotate(90deg);
+}
+
+.patients-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 1vw 1vw 0.4vw 0;
+
+    border: 0;
+    background: transparent;
+    color: #000000;
+
+    font-size: 0.8vw;
+    font-weight: 400;
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        color 0.35s ease,
+        font-weight 0.35s ease;
+}
+
+.patients-link-arrow {
+    flex-shrink: 0;
+    display: inline-block;
+    font-size: 1.2vw;
+    transform: rotate(0deg);
+    transition: 0.3s ease;
+}
+
+.patients-description {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    color: #4D795F;
+    font-size: 0.8vw;
+    line-height: 1.6;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        grid-template-rows 0.35s ease,
+        opacity 0.25s ease,
+        visibility 0.35s ease;
+}
+
+.patients-item--open .patients-description {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+}
+
+.patients-description p {
+    min-height: 0;
+    overflow: hidden;
+
+    margin: 0;
+    padding-bottom: 0;
+
+    transition: padding-bottom 0.35s ease;
+}
+
+.patients-item--open .patients-description p {
+    padding-bottom: 2vh;
+}
+
+.patients-link:hover .patients-link-arrow {
+    transform: translate(0.4vw, -0.4vw);
+}
+
+.patients-item--open .patients-link:hover .patients-link-arrow {
+    transform: rotate(90deg) translate(0.4vw, -0.4vw);
+}

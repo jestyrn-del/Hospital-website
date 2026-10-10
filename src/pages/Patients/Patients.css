@@ -47,7 +47,7 @@
     pointer-events: none;
 }
 
-.paid-title {
+.patients-title-green {
     display: flex;
     align-items: baseline;
 
@@ -59,7 +59,7 @@
     text-transform: uppercase;
 }
 
-.paid-title-green {
+.patients-title-green {
     color: #4D795F;
     font-weight: 400;
 }
