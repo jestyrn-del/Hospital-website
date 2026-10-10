@@ -93,7 +93,7 @@ export function Structure() {
       <section className="container structure-content">
         <h1 className="structure-title">
           <span>1602 ВКГ</span>
-          <span className="structure-title-green">пациентам</span>
+          <span className="structure-title-green">структура учреждения</span>
         </h1>
         
         <div className='structure-banner'>
