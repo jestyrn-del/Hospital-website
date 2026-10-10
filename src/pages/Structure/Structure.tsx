@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './Structure.css';
-// import aboutStatsImg from '../../assets/structure-banner.svg';
+import aboutStatsImg from '../../assets/structure-banner.svg';
 
 interface Department {
   index: number;
@@ -74,8 +74,7 @@ const departments: DepartmentInfo[] = [
 
 export function Structure() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [openDepartmentIndex, setOpenDepartmentIndex] =
-    useState<number | null>(null);
+  const [openDepartmentIndex, setOpenDepartmentIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
     setOpenIndex((currentIndex) =>
@@ -97,9 +96,9 @@ export function Structure() {
           <span className="structure-title-green">пациентам</span>
         </h1>
         
-        {/* <div className='structure-banner'>
+        <div className='structure-banner'>
           <img src={aboutStatsImg} alt="Структура госпиталя" />
-        </div> */}
+        </div>
 
         <div className='structure-branches'>
           <h2 className='structure-title-thin'>ФИЛИАЛЫ</h2>
@@ -109,17 +108,8 @@ export function Structure() {
               const contentId = `structure-branches-element-${index}`;
               
               return (
-                <div 
-                  className={`structure-branches-item ${isOpen ? 'structure-branches-item--open' : ''}`} 
-                  key={item.fullName || index}
-                >
-                  <button 
-                    className="structure-branches-link" 
-                    type="button" 
-                    aria-expanded={isOpen} 
-                    aria-controls={contentId} 
-                    onClick={() => toggleItem(index)}
-                  >
+                <div className={`structure-branches-item ${isOpen ? 'structure-branches-item--open' : ''}`} key={item.fullName || index}>
+                  <button className="structure-branches-link" type="button" aria-expanded={isOpen} aria-controls={contentId} onClick={() => toggleItem(index)}>
                     <span className="structure-branches-link-text">{item.fullName}</span>
                     <span className="structure-branches-link-arrow" aria-hidden="true">
                       {/* Базовая стрелка ↗. В CSS мы повернем её на 90deg (↘) и 180deg (↙) */}
@@ -183,7 +173,7 @@ export function Structure() {
             })}
           </div>
         </div>
-        
+
         <div className="structure-departments">
           <h2 className="structure-title-thin">ОТДЕЛЕНИЯ</h2>
 
@@ -193,79 +183,38 @@ export function Structure() {
               const contentId = `department-content-${index}`;
 
               return (
-                <article
-                  className={`department-card ${
+                <article className={`department-card ${
                     isOpen ? 'department-card--open' : ''
-                  }`}
-                  key={dept.name}
+                  }`} key={dept.name}
                 >
-                  <button
-                    className="department-card-header"
-                    type="button"
-                    aria-expanded={isOpen}
-                    aria-controls={contentId}
-                    onClick={() => toggleDepartment(index)}
-                  >
+                  <button className="department-card-header" type="button" aria-expanded={isOpen} aria-controls={contentId} onClick={() => toggleDepartment(index)}>
                     <span className="department-card-title">
                       {dept.name}
                     </span>
 
-                    <span
-                      className="department-card-arrow"
-                      aria-hidden="true"
-                    >
-                      <svg
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M7 17L17 7M17 7H7M17 7V17"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
+                    <span className="department-card-arrow" aria-hidden="true">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     </span>
                   </button>
 
-                  <div
-                    className="department-card-content"
-                    id={contentId}
-                    aria-hidden={!isOpen}
-                    inert={!isOpen}
-                  >
+                  <div className="department-card-content" id={contentId} aria-hidden={!isOpen} inert={!isOpen}>
                     <div className="department-card-inner">
                       <div className="department-info-row">
-                        <span className="department-info-label">
-                          Заведующий:
-                        </span>
+                        <span className="department-info-label">Заведующий:</span>
+                        <span className="department-info-value">{dept.head}</span>
+                      </div>
+
+                      <div className="department-info-row">
+                        <span className="department-info-label">Телефон:</span>
                         <span className="department-info-value">
-                          {dept.head}
+                          <a href={`tel:${dept.phone.replace(/\s/g, '')}`}>{dept.phone}</a>
                         </span>
                       </div>
 
                       <div className="department-info-row">
-                        <span className="department-info-label">
-                          Телефон:
-                        </span>
-                        <span className="department-info-value">
-                          <a href={`tel:${dept.phone.replace(/\s/g, '')}`}>
-                            {dept.phone}
-                          </a>
-                        </span>
-                      </div>
-
-                      <div className="department-info-row">
-                        <span className="department-info-label">
-                          Расположение:
-                        </span>
-                        <span className="department-info-value">
-                          {dept.location}
-                        </span>
+                        <span className="department-info-label">Расположение:</span>
+                        <span className="department-info-value">{dept.location}</span>
                       </div>
                     </div>
                   </div>
