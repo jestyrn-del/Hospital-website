@@ -55,10 +55,11 @@ function App() {
 
         <Route path="/paid-services" element={<PaidServices onNotification={notification}/>}/>
         <Route path="/about" element={<AboutHospital/>}/>
-        <Route path="/history" element={<History/>}/>
-        <Route path="/license" element={<License/>}/>
         <Route path="/patients" element={<Patients/>}/>
         <Route path="/structure" element={<Structure/>}/>
+
+        <Route path="/history" element={<History/>}/>
+        <Route path="/license" element={<License/>}/>
         <Route path="/vacations" element={<Vacation/>}/>
       </Routes>
     </MainLayout>

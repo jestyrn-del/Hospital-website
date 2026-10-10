@@ -48,7 +48,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
             </div>
 
             <div className='hero-links'>
-              <a href="#patient">Пациентам <span>↗</span></a>
+              <Link to="/patients">Пациентам <span>↗</span></Link>
               <a href="#about">Структура <span>↗</span></a>
               <a href="#about">О госпитале <span>↗</span></a>
               <a href="#contacts">Контакты <span>↗</span></a>
@@ -85,7 +85,9 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
             </div>
             <div className='about-stats-decoration'/>
             <div className='about-stats-button'>
-              <button className='button'>подробнее о госпитале</button>
+              <button className='button'>
+                <Link to="/about">подробнее о госпитале</Link>
+              </button>
             </div>
           </div>
         </div>
@@ -113,12 +115,12 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
           <div className="patient-links">
             <div className='patient-links-top'>
               <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
-              <a href="#contacts">Подробная информация <span>↗</span></a>
+              <Link to="/about">Подробная информация <span>↗</span></Link>
             </div>
             <div className='patient-links-bottom'>
               <Link to="/paid-services">Платные услуги <span>↗</span></Link>
-              <a href="#about">Структура <span>↗</span></a>
-              <a href="#review">Создать обращение <span>↗</span></a>
+              <Link to="/structure">Структура <span>↗</span></Link>
+              <a onClick={onAppointment}>Создать обращение <span>↗</span></a>
             </div>
           </div>
           <div className='patient-decorations'>
