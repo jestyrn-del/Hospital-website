@@ -625,9 +625,27 @@
 }
 
 .button--green {
-    background: #5A9366;
-    width: 100%;
-    color: #fff
+    display: inline-flex;
+    border-radius: 3vw;
+    background-color: #5A9366;
+    color: #FFFFFF;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.8vw;
+
+    padding: 0.8vh 1.4vw;
+    text-transform: lowercase;
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.button--green:hover {
+    background-color: #5A9366AA;
+    color: #FFFFFFAA;
 }
 
 
@@ -1070,6 +1088,13 @@
         margin-top: 0;
 
         border-radius: 2vh;
+    }
+
+    .button--green {
+        border-radius: 4vw;
+
+        font-size: 3.4vw;
+        padding: 3.8vh 1.4vw;
     }
 
 

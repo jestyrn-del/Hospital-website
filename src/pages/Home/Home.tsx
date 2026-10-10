@@ -159,7 +159,7 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <input required type="email" value={form.email} onChange={(e) => update('email', e.target.value)} placeholder="Email" />
             </div>
             <textarea required value={form.message} onChange={(e) => update('message', e.target.value)} placeholder="Напишите отзыв по нашей работе. Ваш email будет скрыт для просмотра" rows={5} />
-            <button className="button button--green" type="submit">оставить отзыв</button>
+            <button className="button--green" type="submit">оставить отзыв</button>
           </form>
         </div>
       </section>
