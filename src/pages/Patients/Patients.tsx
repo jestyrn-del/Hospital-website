@@ -1,73 +1,110 @@
-import { Link } from 'react-router-dom';
+
+import { useState } from 'react';
 import './Patients.css';
 
 const patientLinks = [
   {
     title: 'Правила записи на первичный прием',
-    href: '#appointment',
+    description:
+      'Здесь размещается подробная информация о порядке записи на первичный прием, необходимых документах и способах записи.',
   },
   {
     title: 'Правила госпитализации',
-    href: '#hospitalization',
+    description:
+      'Здесь размещается информация о порядке госпитализации, необходимых документах и подготовке к поступлению в стационар.',
   },
   {
     title: 'Права и обязанности граждан в сфере охраны здоровья',
-    href: '#rights',
+    description:
+      'Здесь размещается информация о правах и обязанностях граждан в сфере охраны здоровья.',
   },
   {
     title: 'Информация об оказываемой помощи',
-    href: '#medical-care',
+    description:
+      'Здесь размещается подробная информация о видах медицинской помощи, оказываемой госпиталем.',
   },
   {
     title: 'Программы бесплатной медицинской помощи',
-    href: '#free-medical-care',
+    description:
+      'Здесь размещается информация о программах бесплатного оказания медицинской помощи и условиях её получения.',
   },
   {
     title: 'Диспансеризация',
-    href: '#medical-examination',
+    description:
+      'Здесь размещается информация о порядке прохождения диспансеризации и профилактических обследований.',
   },
   {
     title: 'Перечень жизненно-важных лекарств',
-    href: '#essential-medicines',
+    description:
+      'Здесь размещается актуальный перечень жизненно необходимых и важнейших лекарственных препаратов.',
   },
   {
     title: 'Другие лекарственные препараты',
-    href: '#other-medicines',
+    description:
+      'Здесь размещается дополнительная информация о лекарственных препаратах.',
   },
 ];
 
 export function Patients() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleItem = (index: number) => {
+    setOpenIndex((currentIndex) =>
+      currentIndex === index ? null : index
+    );
+  };
+
   return (
-    <main className="patients-page">
+    <div className='patients-page'>
       <div className="patients-decoration" aria-hidden="true" />
 
-      <section className="patients-content">
+      <section className="container patients-content">
         <h1 className="patients-title">
           <span className="patients-title__number">1602 ВКГ</span>
           <span className="patients-title__accent">ПАЦИЕНТАМ</span>
         </h1>
 
-        <nav className="patients-links" aria-label="Информация для пациентов">
-          {patientLinks.map((item) => (
-            <Link
-              className="patients-link"
-              to={item.href}
-              key={item.title}
-            >
-              <span className="patients-link__text">
-                {item.title}
-              </span>
+        <div className="patients-links">
+          {patientLinks.map((item, index) => {
+            const isOpen = openIndex === index;
+            const contentId = `patients-content-${index}`;
 
-              <span
-                className="patients-link__arrow"
-                aria-hidden="true"
+            return (
+              <div
+                className={`patients-item${isOpen ? ' patients-item--open' : ''}`}
+                key={item.title}
               >
-                ↗
-              </span>
-            </Link>
-          ))}
-        </nav>
+                <button
+                  className="patients-link"
+                  type="button"
+                  aria-expanded={isOpen}
+                  aria-controls={contentId}
+                  onClick={() => toggleItem(index)}
+                >
+                  <span className="patients-link__text">
+                    {item.title}
+                  </span>
+
+                  <span
+                    className="patients-link__arrow"
+                    aria-hidden="true"
+                  >
+                    ↗
+                  </span>
+                </button>
+
+                <div
+                  className="patients-description"
+                  id={contentId}
+                  hidden={!isOpen}
+                >
+                  <p>{item.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </section>
-    </main>
+    </div>
   );
 }
