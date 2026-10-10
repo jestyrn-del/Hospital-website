@@ -1,6 +1,15 @@
-import { useState } from 'react';
+import { useLayoutEffect, useRef, useState  } from 'react';
 import './Structure.css';
 import aboutStatsImg from '../../assets/structure-banner.svg';
+
+interface Department {
+  index: number;
+  deportament: string;
+  vacation: string;
+  rating: string;
+  name: string;
+  number: string;
+}
 
 interface Department {
   index: number;
@@ -17,14 +26,6 @@ interface Branch {
   contacts: string[];
   table: Department[];
 }
-
-interface DepartmentInfo {
-  name: string;
-  head: string;
-  phone: string;
-  location: string;
-}
-
 const branches: Branch[] = [
   // 1. Длинное название и адрес, несколько подразделений
   {
@@ -420,21 +421,134 @@ const departments: DepartmentInfo[] = [
   },
 ];
 
+
+type FlipRect = {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+};
+
+function useFlipGrid<T extends HTMLElement>(dependency: number | null) {
+  const gridRef = useRef<T>(null);
+  const previousRects = useRef(new Map<HTMLElement, FlipRect>());
+  const animations = useRef(new WeakMap<HTMLElement, Animation>());
+
+  const capturePositions = () => {
+    const grid = gridRef.current;
+    if (!grid) return;
+
+    const rects = new Map<HTMLElement, FlipRect>();
+
+    Array.from(grid.children).forEach((child) => {
+      const card = child as HTMLElement;
+      const rect = card.getBoundingClientRect();
+
+      rects.set(card, {
+        left: rect.left,
+        top: rect.top,
+        width: rect.width,
+        height: rect.height,
+      });
+    });
+
+    previousRects.current = rects;
+  };
+
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    const previous = previousRects.current;
+
+    if (!grid || previous.size === 0) return;
+
+    const reduceMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches;
+
+    if (reduceMotion) {
+      previous.clear();
+      return;
+    }
+
+    Array.from(grid.children).forEach((child) => {
+      const card = child as HTMLElement;
+      const first = previous.get(card);
+
+      if (!first) return;
+
+      const last = card.getBoundingClientRect();
+
+      const deltaX = first.left - last.left;
+      const deltaY = first.top - last.top;
+
+      const scaleX = last.width > 0 ? first.width / last.width : 1;
+
+      if (
+        Math.abs(deltaX) < 0.5 &&
+        Math.abs(deltaY) < 0.5 &&
+        Math.abs(scaleX - 1) < 0.005
+      ) {
+        return;
+      }
+
+      animations.current.get(card)?.cancel();
+
+      const animation = card.animate(
+        [
+          {
+            transform: `translate(${deltaX}px, ${deltaY}px) scaleX(${scaleX})`,
+            transformOrigin: 'top left',
+          },
+          {
+            transform: 'translate(0, 0) scaleX(1)',
+            transformOrigin: 'top left',
+          },
+        ],
+        {
+          duration: 450,
+          easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+        },
+      );
+
+      animations.current.set(card, animation);
+    });
+
+    previous.clear();
+  }, [dependency]);
+
+  return {
+    gridRef,
+    capturePositions,
+  };
+}
+
+
 export function Structure() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [openDepartmentIndex, setOpenDepartmentIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
+    branchesFlip.capturePositions();
+
     setOpenIndex((currentIndex) =>
-      currentIndex === index ? null : index
+      currentIndex === index ? null : index,
     );
   };
 
   const toggleDepartment = (index: number) => {
+    departmentsFlip.capturePositions();
+
     setOpenDepartmentIndex((currentIndex) =>
-      currentIndex === index ? null : index
+      currentIndex === index ? null : index,
     );
   };
+
+  const branchesFlip = useFlipGrid<HTMLDivElement>(openIndex);
+  const departmentsFlip = useFlipGrid<HTMLDivElement>(openDepartmentIndex,);
+
+  function toggleIndex(setter: React.Dispatch<React.SetStateAction<number | null>>, index: number,) {
+    setter((current) => (current === index ? null : index));
+  }
 
   return (
     <div className='structure-page'>
@@ -450,7 +564,7 @@ export function Structure() {
 
         <div className='structure-branches'>
           <h2 className='structure-title-thin'>ФИЛИАЛЫ</h2>
-          <div className='structure-branches-grid'>
+          <div className='structure-branches-grid' ref={branchesFlip.gridRef}>
             {branches.map((item, index) => {
               const isOpen = openIndex === index;
               const contentId = `structure-branches-element-${index}`;
@@ -524,7 +638,7 @@ export function Structure() {
         <div className="structure-departments">
           <h2 className="structure-title-thin">ОТДЕЛЕНИЯ</h2>
 
-          <div className="departments-grid">
+          <div className="departments-grid" ref={departmentsFlip.gridRef}>
             {departments.map((dept, index) => {
               const isOpen = openDepartmentIndex === index;
               const contentId = `department-content-${index}`;
