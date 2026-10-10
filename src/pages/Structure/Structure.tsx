@@ -634,7 +634,6 @@ export function Structure() {
           </div>
         </div>
 
-
         <div className="structure-departments">
           <h2 className="structure-title-thin">ОТДЕЛЕНИЯ</h2>
 
