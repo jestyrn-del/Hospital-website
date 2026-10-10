@@ -56,52 +56,32 @@ export function Patients() {
 
   return (
     <div className='patients-page'>
-      <div className="patients-decoration" aria-hidden="true" />
-
       <section className="container patients-content">
-        <h1 className="patients-title">
-          <span className="patients-title__number">1602 ВКГ</span>
-          <span className="patients-title__accent">ПАЦИЕНТАМ</span>
+        <div className="patients-decoration" aria-hidden="true" />
+
+        <h1 className="paid-title">
+            <span>1602 ВКГ</span>
+            <span className="paid-title-green">пациентам</span>
         </h1>
 
         <div className="patients-links">
-          {patientLinks.map((item, index) => {
-            const isOpen = openIndex === index;
-            const contentId = `patients-content-${index}`;
+          {
+            patientLinks.map((item, index) => {
+              const isOpen = openIndex === index;
+              const contentId = `patients-content-${index}`;
 
-            return (
-              <div
-                className={`patients-item${isOpen ? ' patients-item--open' : ''}`}
-                key={item.title}
-              >
-                <button
-                  className="patients-link"
-                  type="button"
-                  aria-expanded={isOpen}
-                  aria-controls={contentId}
-                  onClick={() => toggleItem(index)}
-                >
-                  <span className="patients-link__text">
-                    {item.title}
-                  </span>
+              return (
+                <div className={`patients-item${isOpen ? ' patients-item--open' : ''}`} key={item.title}>
+                  <button className="patients-link" type="button" aria-expanded={isOpen} aria-controls={contentId} onClick={() => toggleItem(index)}>
+                    <span className="patients-link-text">{item.title}</span>
+                    <span className="patients-link-arrow" aria-hidden="true">↗</span>
+                  </button>
 
-                  <span
-                    className="patients-link__arrow"
-                    aria-hidden="true"
-                  >
-                    ↗
-                  </span>
-                </button>
-
-                <div
-                  className="patients-description"
-                  id={contentId}
-                  hidden={!isOpen}
-                >
-                  <p>{item.description}</p>
+                  <div className="patients-description" id={contentId} aria-hidden={!isOpen}>
+                    <p>{item.description}</p>
+                  </div>
                 </div>
-              </div>
-            );
+              );
           })}
         </div>
       </section>
