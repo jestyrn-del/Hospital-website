@@ -2,7 +2,7 @@
     position: relative;
     isolation: isolate;
 
-    padding: 10% 0;
+    padding: 8% 0;
     width: 100%;
 
     box-sizing: border-box;
@@ -172,4 +172,36 @@
 
 .patients-item--open .patients-link:hover .patients-link-arrow {
     transform: rotate(90deg) translate(0.4vw, -0.4vw);
+}
+
+@media (max-width: 767px) {
+    .patients-page {
+        padding: 30% 0;
+    }
+
+    .patients-decoration {
+        display: none;
+    }
+
+    .paid-title {
+        font-size: 8vw;
+    }
+
+    .patients-links {
+        margin-top: 1.2vh;
+        gap: 2vh;
+    }
+
+    .patients-link {
+        padding: 4vw 2vw 1.2vh 0;
+        font-size: 3.4vw;
+    }
+
+    .patients-link-arrow {
+        font-size: 3.2vw;
+    }
+
+    .patients-description {
+        font-size: 3.4vw;
+    }
 }
