@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import './Structure.css';
 
+import aboutStatsImg from '../../assets/structure-banner.svg';
+
 const patientLinks = [
   {
     title: 'Правила записи на первичный прием',
@@ -57,15 +59,21 @@ export function Structure() {
   return (
     <div className='structure-page'>
       <section className="container structure-content">
-        <div className="structure-decoration" aria-hidden="true" />
-
         <h1 className="structure-title">
             <span>1602 ВКГ</span>
             <span className="structure-title-green">пациентам</span>
         </h1>
 
-        <div className='structure-branches'>
+        <div className='structure-banner'>
+          <img src={aboutStatsImg}/>
+        </div>
 
+        <div className='structure-branches'>
+          <h1 className='structure-title-thin'>ФИЛИАЛЫ</h1>
+        </div>
+
+        <div className='structure-deportaments'>
+          <h1 className='structure-title-thin'>ОТДЕЛЕНИЯ</h1>
         </div>
 
         <div className="patients-links">

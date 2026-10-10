@@ -21,32 +21,6 @@
     margin: 0 auto;
 }
 
-.patients-decoration {
-    position: absolute;
-    z-index: -1;
-
-    top: 0;
-    right: -5vw;
-
-    width: 40vw;
-    height: 160%;
-
-    background: linear-gradient(
-    180deg,
-    #C7E997 0%,
-    #1DA159 100%
-    );
-
-    clip-path: polygon(
-    0 0,
-    100% 0,
-    100% 100%,
-    70% 100%
-    );
-
-    pointer-events: none;
-}
-
 .patients-title-green {
     display: flex;
     align-items: baseline;
@@ -177,10 +151,6 @@
 @media (max-width: 767px) {
     .patients-page {
         padding: 30% 0;
-    }
-
-    .patients-decoration {
-        display: none;
     }
 
     .paid-title {
