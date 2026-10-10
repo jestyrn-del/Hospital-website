@@ -73,6 +73,15 @@ a {
     text-decoration: none;
 }
 
+main {
+    flex: 1;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /* ================== */
 /* ===== IMAGES ===== */
