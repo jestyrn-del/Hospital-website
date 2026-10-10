@@ -122,12 +122,10 @@ export function Structure() {
                   <div className="structure-branches-content" id={contentId} aria-hidden={!isOpen}>
                     <div className="structure-branches-details">
                       <div className="detail-row">
-                        <span className="detail-label">Адрес:</span>
                         <span className="detail-value">{item.adress}</span>
                       </div>
                       
                       <div className="detail-row">
-                        <span className="detail-label">Контакты:</span>
                         <div className="detail-value contacts-list">
                           {item.contacts.map((contact, i) => (
                             <span key={i}>{contact}</span>
@@ -137,7 +135,6 @@ export function Structure() {
 
                       {item.table && item.table.length > 0 && (
                         <div className="detail-row table-row">
-                          <span className="detail-label">Отделения:</span>
                           <div className="detail-value">
                             <table className="departments-table">
                               <thead>
