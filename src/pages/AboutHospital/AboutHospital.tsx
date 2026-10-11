@@ -62,27 +62,33 @@ const news = [
 ];
 
 export function AboutHospital({ OpenNews } : AboutHospitalProps) {
-
-    const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
-    const newsRef = useRef<HTMLDivElement>(null);
-
-    const scrollNews = (direction: "left" | "right") => {
-      const container = newsRef.current;
-
-      if (!container) return;
-
-      const card = container.querySelector<HTMLElement>(".about-news-card");
-
-      if (!card) return;
-
-      const gap = parseFloat(getComputedStyle(container).columnGap) || 0;
-      const scrollAmount = card.offsetWidth + gap;
-
-      container.scrollBy(
-      {
-        left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth",
+  const scrollToSection = (id: string) => {
+      document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
       });
-    };
+  };
+
+  const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
+  const newsRef = useRef<HTMLDivElement>(null);
+
+  const scrollNews = (direction: "left" | "right") => {
+    const container = newsRef.current;
+
+    if (!container) return;
+
+    const card = container.querySelector<HTMLElement>(".about-news-card");
+
+    if (!card) return;
+
+    const gap = parseFloat(getComputedStyle(container).columnGap) || 0;
+    const scrollAmount = card.offsetWidth + gap;
+
+    container.scrollBy(
+    {
+      left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth",
+    });
+  };
 
   return (
     <section className="section">
@@ -170,10 +176,10 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
           <div className="about-title-thin"><span>Контакты</span></div>
           <div className="contacts-grid">
             <div className="contacts-list">
-              <a href="#contacts">1602 ВКГ <span>↗</span></a>
-              <a href="#contacts">Страховые медицинские организации <span>↗</span></a>
-              <a href="#contacts">Военная академия <span>↗</span></a>
-              <a href="#contacts">Психологическая поддержка ВС РФ <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Военная академия <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ <span>↗</span></a>
               <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
             <div className="map-placeholder"><span>КАРТА</span></div>
