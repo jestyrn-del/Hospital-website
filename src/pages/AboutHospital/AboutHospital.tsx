@@ -1,4 +1,6 @@
 import { useRef } from "react";
+import { Link } from 'react-router-dom';
+
 import './AboutHospital.css';
 
 import mainBanner from '../../assets/about-banner.svg';
@@ -127,7 +129,7 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
           <a>Положение об организации</a>
           <a>ИНН</a>
           <a>ОГРН</a>
-          <a>Структура</a>
+          <Link to="/structure">Структура</Link>
         </div>
       </div>
 
