@@ -156,20 +156,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     display: none;
 }
 
-.computer-element {
-    display: unset;
-}
-
 /* ================== */
 /* === ADAPTATION === */
 /* ================== */
 @media (max-width: 767px) {
     .container {
         width: calc(100% - 36px);
-    }
-
-    .mobile-element {
-        display: unset;
     }
 
     .computer-element {
