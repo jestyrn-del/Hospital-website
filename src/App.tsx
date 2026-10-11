@@ -54,7 +54,7 @@ function App() {
         />
 
         <Route path="/paid-services" element={<PaidServices onNotification={notification}/>}/>
-        <Route path="/about" element={<AboutHospital/>}/>
+        <Route path="/about" element={<AboutHospital OpenNews={() => showNotification('Страница показа новостей пока не готова.')}/>}/>
         <Route path="/patients" element={<Patients/>}/>
         <Route path="/structure" element={<Structure/>}/>
 
