@@ -1,5 +1,264 @@
-.license-title {}
-.license-title-green {}
-.license-description-little {}
-.license-description-more {}
-.license-list {}
+.about-page {
+    background: linear-gradient(180deg, #FFFFFF 0%, #E8E8E8 100%);
+}
+
+.license-title {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    gap: 1.2vw;
+
+    margin-top: 4vh;
+
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+.license-title-green {
+    color: #4D795F;
+    font-weight: 400;
+}
+
+.license-description-little {
+    display: flex;
+    align-items: center;
+
+    gap: 1vw;
+    margin-bottom: 4%;
+    
+    font-size: 1.5vh;
+
+    color: #000000;
+}
+
+.license-description-little span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.5vw;
+}
+
+.license-description-little span:last-child {
+    color: #0F87C4;
+}
+
+.license-circle {
+    border-radius: 100%;
+    background: linear-gradient(180deg, #26B5FF 0%, #007CBC 100%);
+    width: 0.5vw;
+    height: 0.5vw;
+}
+
+.license-description-more {
+    margin-bottom: 5%;
+}
+
+.license-description-more p {
+    max-width: 75%;
+
+    margin: 0;
+
+    font-size: 1.5vh;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #000000;
+}
+
+.license-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 2.5vh;
+}
+
+.license-list a {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5vw;
+
+    width: 100%;
+    min-height: 5.5vw;
+
+    padding: 1.5vw;
+
+    background-color: #FFFFFFAA;
+    border-radius: 1vw;
+
+    color: #4D795F;
+    font-size: 1.5vh;
+    font-weight: 700;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.license-list a img {
+    display: block;
+
+    width: 2vw;
+    height: 2.5vw;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+
+    transition: 0.3s ease;
+}
+
+.license-list a:hover {
+    border: 1px solid #4D795F;
+    transform: translateX(0.2vw);
+}
+
+.license-list p {
+    background: #FFFFFF;
+    border-radius: 1vw;
+
+    margin: 0;
+    padding: 2vw;
+
+    font-size: 1.2vw;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: #000000;
+}
+
+@media (max-width: 767px) {
+    .about-page {
+    background: linear-gradient(180deg, #FFFFFF 0%, #E8E8E8 100%);
+    }
+
+    .license-title {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+
+        gap: 1.2vw;
+
+        margin-top: 4vh;
+
+        font-size: 3vw;
+        text-transform: uppercase;
+    }
+
+    .license-title-green {
+        color: #4D795F;
+        font-weight: 400;
+    }
+
+    .license-description-little {
+        display: flex;
+        align-items: center;
+
+        gap: 1vw;
+        margin-bottom: 4%;
+        
+        font-size: 1.5vh;
+
+        color: #000000;
+    }
+
+    .license-description-little span {
+        display: inline-flex;
+        align-items: center;
+
+        gap: 0.5vw;
+    }
+
+    .license-description-little span:last-child {
+        color: #0F87C4;
+    }
+
+    .license-circle {
+        border-radius: 100%;
+        background: linear-gradient(180deg, #26B5FF 0%, #007CBC 100%);
+        width: 0.5vw;
+        height: 0.5vw;
+    }
+
+    .license-description-more {
+        margin-bottom: 5%;
+    }
+
+    .license-description-more p {
+        max-width: 75%;
+
+        margin: 0;
+
+        font-size: 1.5vh;
+        font-weight: 400;
+        line-height: 1.6;
+
+        color: #000000;
+    }
+
+    .license-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 2.5vh;
+    }
+
+    .license-list a {
+        display: flex;
+        align-items: center;
+
+        gap: 1.5vw;
+
+        width: 100%;
+        min-height: 5.5vw;
+
+        padding: 1.5vw;
+
+        background-color: #FFFFFFAA;
+        border-radius: 1vw;
+
+        color: #4D795F;
+        font-size: 1.5vh;
+        font-weight: 700;
+
+        text-decoration: none;
+        cursor: pointer;
+
+        transition: 0.3s ease;
+    }
+
+    .license-list a img {
+        display: block;
+
+        width: 2vw;
+        height: 2.5vw;
+
+        flex-shrink: 0;
+
+        object-fit: contain;
+
+        transition: 0.3s ease;
+    }
+
+    .license-list a:hover {
+        border: 1px solid #4D795F;
+        transform: translateX(0.2vw);
+    }
+
+    .license-list p {
+        background: #FFFFFF;
+        border-radius: 1vw;
+
+        margin: 0;
+        padding: 2vw;
+
+        font-size: 1.2vw;
+        font-weight: 400;
+        line-height: 1.7;
+
+        color: #000000;
+    }
+
+}
