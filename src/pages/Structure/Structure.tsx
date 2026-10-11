@@ -11,23 +11,14 @@ interface Department {
   number: string;
 }
 
-interface Department {
-  index: number;
-  deportament: string;
-  vacation: string;
-  rating: string;
-  name: string;
-  number: string;
-}
-
 interface Branch {
   fullName: string;
   adress: string;
   contacts: string[];
   table: Department[];
 }
+
 const branches: Branch[] = [
-  // 1. Длинное название и адрес, несколько подразделений
   {
     fullName: 'Филиал № 1 ФГКУ «1602 ВКГ» МО РФ',
     adress:
@@ -63,8 +54,6 @@ const branches: Branch[] = [
       },
     ],
   },
-
-  // 2. Много контактных телефонов
   {
     fullName: 'Филиал № 2 — многопрофильный медицинский центр',
     adress: '355012, г. Ставрополь, ул. Ленина, д. 250.',
@@ -97,16 +86,12 @@ const branches: Branch[] = [
       },
     ],
   },
-
-  // 3. Пустая таблица и пустой список контактов
   {
     fullName: 'Филиал № 3 — диагностический пункт',
     adress: '355018, г. Ставрополь, ул. Мира, д. 18.',
     contacts: [],
     table: [],
   },
-
-  // 4. Обычная таблица на несколько строк
   {
     fullName: 'Филиал № 4 — городской клинический центр',
     adress: '355020, г. Ставрополь, ул. Дзержинского, д. 155.',
@@ -157,8 +142,6 @@ const branches: Branch[] = [
       },
     ],
   },
-
-  // 5. Большая таблица для проверки прокрутки и адаптивности
   {
     fullName: 'Филиал № 5 — центральный многопрофильный госпиталь',
     adress:
@@ -632,7 +615,65 @@ export function Structure() {
                   </div>
 
                   <div className="mobile-element structure-branches-content" id={contentId} aria-hidden={!isOpen}>
+                    <div className="structure-branches-details">
+                      <div className="detail-row">
+                        <span className="detail-value">{item.adress}</span>
+                      </div>
 
+                      <div className="detail-row">
+                        <div className="detail-value contacts-list">
+                          {
+                            item.contacts.map((contact, i) => (
+                              <span key={i}>{contact}</span>
+                            ))
+                          }
+                        </div>
+                      </div>
+
+                      {
+                        item.table && item.table.length > 0 ? (
+                          <div className="detail-row detail-row--cards">
+                            {
+                              item.table.map((row, i) => (
+                                <div className='detail-row-card' key={i}>
+                                    <div className='detail-row-card-index detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>№ п/п</div>
+                                      <div className='deteil-row-card-item-value'>{row.index}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-rating detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Занимаемая должность</div>
+                                      <div className='deteil-row-card-item-value'>{row.rating}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-vacation detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Воинское звание</div>
+                                      <div className='deteil-row-card-item-value'>{row.vacation}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-name detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>ФИО</div>
+                                      <div className='deteil-row-card-item-value'>{row.name}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-number detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Телефон</div>
+                                      <div className='deteil-row-card-item-value'>{row.number}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-deportament detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Отделение</div>
+                                      <div className='deteil-row-card-item-value'>{row.deportament}</div>
+                                    </div>
+                                </div>
+                              ))
+                            }
+                          </div>
+                        ) : (
+                          <p className="department-empty">Информация о подразделениях пока отсутствует.</p>
+                      )
+                    }
+                    </div>
                   </div>
                 </div>
               );
@@ -716,8 +757,66 @@ export function Structure() {
                     </div>
                   </div>
 
-                  <div className="mobile-element structure-branches-content" id={contentId} aria-hidden={!isOpen}>
-                  
+                  <div className="mobile-element department-card-content" id={contentId} aria-hidden={!isOpen}>
+                    <div className="department-card-inner">
+                      <div className="detail-row">
+                        <span className="department-detail-value">{dept.adress}</span>
+                      </div>
+
+                      <div className="detail-row">
+                        <div className="department-detail-value contacts-list">
+                          {
+                            dept.contacts.map((contact, i) => (
+                              <span key={i}>{contact}</span>
+                            ))
+                          }
+                        </div>
+                      </div>
+
+                      {
+                        dept.table && dept.table.length > 0 ? (
+                          <div className="detail-row detail-row--cards">
+                            {
+                              dept.table.map((row, i) => (
+                                <div className='detail-row-card' key={i}>
+                                    <div className='detail-row-card-index detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>№ п/п</div>
+                                      <div className='deteil-row-card-item-value'>{row.index}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-rating detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Занимаемая должность</div>
+                                      <div className='deteil-row-card-item-value'>{row.rating}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-vacation detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Воинское звание</div>
+                                      <div className='deteil-row-card-item-value'>{row.vacation}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-name detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>ФИО</div>
+                                      <div className='deteil-row-card-item-value'>{row.name}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-number detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Телефон</div>
+                                      <div className='deteil-row-card-item-value'>{row.number}</div>
+                                    </div>
+                                    
+                                    <div className='detail-row-card-deportament detail-row-card-item'>
+                                      <div className='detail-row-card-item-label'>Отделение</div>
+                                      <div className='deteil-row-card-item-value'>{row.deportament}</div>
+                                    </div>
+                                </div>
+                              ))
+                            }
+                          </div>
+                        ) : (
+                          <p className="department-empty">Информация о подразделениях пока отсутствует.</p>
+                      )
+                    }
+                    </div>
                   </div>
                 </article>
               );
