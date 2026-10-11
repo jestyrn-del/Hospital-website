@@ -55,8 +55,6 @@
 }
 
 .vacancy-description-more p {
-    max-width: 75%;
-
     margin: 0;
 
     font-size: 1.5vh;
@@ -70,10 +68,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    gap: 2.5vh;
+    gap: 0.2vh;
 }
 
-.vacancy-list a {
+.vacancy-list p {
     display: flex;
     align-items: center;
 
@@ -92,12 +90,12 @@
     font-weight: 700;
 
     text-decoration: none;
-    cursor: pointer;
+    cursor: auto;
 
     transition: 0.3s ease;
 }
 
-.vacancy-list a img {
+.vacancy-list p img {
     display: block;
 
     width: 2vh;
@@ -108,25 +106,6 @@
     object-fit: contain;
 
     transition: 0.3s ease;
-}
-
-.vacancy-list a:hover {
-    border: 1px solid #4D795F;
-    transform: translateX(0.2vw);
-}
-
-.vacancy-list p {
-    background: #FFFFFF;
-    border-radius: 1vw;
-
-    margin: 0;
-    padding: 2vw;
-
-    font-size: 1.5vh;
-    font-weight: 400;
-    line-height: 1.7;
-
-    color: #000000;
 }
 
 @media (max-width: 767px) {
@@ -157,20 +136,15 @@
         display: grid;
         grid-template-columns: 1fr;
 
-        gap: 2.5vh;
+        gap: 0.2vh;
     }
     
-    .vacancy-list a {
+    .vacancy-list p {
         gap: 2.5vw;
         min-height: 8vh;
 
         padding: 4vw;
 
         border-radius: 3vw;
-    }
-
-    .vacancy-list p {
-        border-radius: 3vw;
-        min-height: 18vh;
     }
 }
