@@ -11,7 +11,7 @@ import { History } from './pages/History/History';
 import { License } from './pages/License/License';
 import { Patients } from './pages/Patients/Patients';
 import { Structure } from './pages/Structure/Structure';
-import { Vacation } from './pages/Vacation/Vacation';
+import { Vacancy } from './pages/Vacancy/Vacancy';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -78,7 +78,7 @@ function App() {
 
         <Route path="/history" element={<History />} />
         <Route path="/license" element={<License />} />
-        <Route path="/vacations" element={<Vacation />} />
+        <Route path="/vacancy" element={<Vacancy />} />
       </Routes>
     </MainLayout>
   );
