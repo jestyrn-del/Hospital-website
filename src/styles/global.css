@@ -152,6 +152,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     display: none;
 }
 
+.mobile-element {
+    display: none;
+}
+
+.computer-element {
+    display: unset;
+}
 
 /* ================== */
 /* === ADAPTATION === */
@@ -159,6 +166,14 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 767px) {
     .container {
         width: calc(100% - 36px);
+    }
+
+    .mobile-element {
+        display: unset;
+    }
+
+    .computer-element {
+        display: none;
     }
 
     .mobile-button {
