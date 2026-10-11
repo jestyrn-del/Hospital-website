@@ -1,5 +1,3 @@
-import type { PaymentProps } from '../../types';
-
 import './Payment.css';
 
 const services = [
@@ -26,7 +24,7 @@ const services = [
   'Лечебной физкультуры',
 ];
 
-export function PaidServices({ onNotification }: PaymentProps) {
+export function PaidServices() {
   return (
     <div className='paid-page' id="top">
       <section className="paid-intro-main section">

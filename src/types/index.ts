@@ -12,6 +12,10 @@ export interface MobileMenuProps {
   onCreateRequest: () => void;
 }
 
+export interface PaymentProps {
+  onNotification: () => void;
+}
+
 export interface SearchOverlayProps {
   open: boolean;
   onClose: () => void;
@@ -30,6 +34,10 @@ export interface ReviewFormData {
   name: string;
   email: string;
   message: string;
+}
+
+export interface AboutHospitalProps {
+  OpenNews: () => void;
 }
 
 export interface HomeProps {

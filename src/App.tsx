@@ -59,7 +59,7 @@ function App() {
 
         <Route
           path="/paid-services"
-          element={<PaidServices onNotification={notification} />}
+          element={<PaidServices/>}
         />
 
         <Route

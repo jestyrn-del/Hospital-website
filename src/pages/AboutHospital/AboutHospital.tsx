@@ -6,7 +6,9 @@ import logoImage from '../../assets/header-logo.svg';
 import moreImage from '../../assets/about-more-info.svg';
 import newsImage from '../../assets/about-news-example.svg';
 
-const news: NewsItem[] = [
+import type { AboutHospitalProps } from '../../types';
+
+const news = [
   {
     id: 1,
     date: "02.02.2026",
@@ -57,7 +59,7 @@ const news: NewsItem[] = [
   },
 ];
 
-export function AboutHospital({ OpenNews }) {
+export function AboutHospital({ OpenNews } : AboutHospitalProps) {
 
     const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
     const newsRef = useRef<HTMLDivElement>(null);
