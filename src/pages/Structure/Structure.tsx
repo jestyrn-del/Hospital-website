@@ -580,7 +580,7 @@ export function Structure() {
                     </span>
                   </button>
                   
-                  <div className="structure-branches-content" id={contentId} aria-hidden={!isOpen}>
+                  <div className="computer-element structure-branches-content" id={contentId} aria-hidden={!isOpen}>
                     <div className="structure-branches-details">
                       <div className="detail-row">
                         <span className="detail-value">{item.adress}</span>
@@ -588,9 +588,11 @@ export function Structure() {
 
                       <div className="detail-row">
                         <div className="detail-value contacts-list">
-                          {item.contacts.map((contact, i) => (
-                            <span key={i}>{contact}</span>
-                          ))}
+                          {
+                            item.contacts.map((contact, i) => (
+                              <span key={i}>{contact}</span>
+                            ))
+                          }
                         </div>
                       </div>
 
@@ -628,6 +630,10 @@ export function Structure() {
                     )}
                     </div>
                   </div>
+
+                  <div className="mobile-element structure-branches-content" id={contentId} aria-hidden={!isOpen}>
+
+                  </div>
                 </div>
               );
             })}
@@ -653,7 +659,7 @@ export function Structure() {
                     </span>
                   </button>
 
-                  <div className="department-card-content" id={contentId} aria-hidden={!isOpen} inert={!isOpen}>
+                  <div className="computer-element department-card-content" id={contentId} aria-hidden={!isOpen} inert={!isOpen}>
                     <div className="department-card-inner">
                       <div className="detail-row">
                         <span className="department-detail-value">{dept.adress}</span>
@@ -708,6 +714,10 @@ export function Structure() {
                           </p>
                         )}
                     </div>
+                  </div>
+
+                  <div className="mobile-element structure-branches-content" id={contentId} aria-hidden={!isOpen}>
+                  
                   </div>
                 </article>
               );

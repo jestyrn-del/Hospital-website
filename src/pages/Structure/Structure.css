@@ -349,3 +349,46 @@
     color: #4D795F;
     font-size: 1vw;
 }
+
+
+
+@media (max-width: 767px) { 
+    .structure-page {
+        margin-top: 30%;
+    }
+
+    .structure-title {
+        font-size: 8vw;
+    }
+
+    .structure-title-thin {
+        font-size: 8vw;
+    }
+
+    .structure-banner {
+        height: 15vh;
+    }
+
+    .structure-branches-grid, .departments-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .structure-branches-link-text, .department-card-title {
+        font-size: 3.2vw;
+    }
+
+    .structure-branches-link-arrow, .department-card-arrow {
+        width: 3.2vw;
+        height: 3.2vw;
+    }
+
+    
+
+
+    .department-empty {
+        margin: 0;
+        padding: 1vw 0;
+        color: #4D795F;
+        font-size: 1vw;
+    }
+}
