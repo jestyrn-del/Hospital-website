@@ -146,7 +146,7 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
                 <div className="about-news-card" key={item.id}>
                   <span className="about-news-card-date">{item.date}</span>
                   <div className="about-news-card-image">
-                    <img src={item.image} alt={item.title} loading="lazy"/>
+                    <img src={item.image} alt={item.title}/>
                   </div>
 
                   <span className="about-news-card-title">{item.title}</span>
@@ -165,19 +165,16 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
 
       <div className="about-contacts">
         <div className="container">
-          <span className="about-title-thin">контакты</span>
-          <div className="about-contacts-inner">
-            <div className="about-contacts-data"> слева столбцы
-              <a>1</a>
-              <a>2</a>
-              <a>3</a>
-              <a>4</a>
-              <a>5</a>
-              <span>6 - текст с адресом</span>
+          <div className="about-title-thin"><span>Контакты</span></div>
+          <div className="contacts-grid">
+            <div className="contacts-list">
+              <a href="#contacts">1602 ВКГ <span>↗</span></a>
+              <a href="#contacts">Страховые медицинские организации <span>↗</span></a>
+              <a href="#contacts">Военная академия <span>↗</span></a>
+              <a href="#contacts">Психологическая поддержка ВС РФ <span>↗</span></a>
+              <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
-            <div className="about-contacts-map"> справа
-              <span>карта</span>
-            </div>
+            <div className="map-placeholder"><span>КАРТА</span></div>
           </div>
         </div>
       </div>

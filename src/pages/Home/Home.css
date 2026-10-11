@@ -1,6 +1,10 @@
 /* ================= */
 /* === HERO PART === */
 /* ================= */
+.section {
+    background: transparent !important;
+}
+
 .hero {
     position: relative;
     background: linear-gradient(to top right, #FFFFFF 0%, #E8E8E8 100%);
@@ -61,7 +65,6 @@
 
 .hero-image {
     flex: 0 0 25%;
-    margin-left: 5%;
 
     border: 1px solid #92D389;
     border-radius: 3%;
@@ -726,8 +729,6 @@
         height: 100%;
 
         flex: none;
-
-        margin: 0;
 
         border-radius: 2vw;
         overflow: hidden;

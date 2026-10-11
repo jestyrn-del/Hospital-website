@@ -59,10 +59,10 @@ export function Patients() {
       <section className="container patients-content">
         <div className="patients-decoration" aria-hidden="true" />
 
-        <h1 className="patients-title-green">
+        <div className='patients-title'>
             <span>1602 ВКГ</span>
             <span className="patients-title-green">пациентам</span>
-        </h1>
+        </div>
 
         <div className="patients-links">
           {
