@@ -407,7 +407,10 @@
 
 .about-contacts {
     margin-top: 4vh;
-    padding: 6vh 0 10vh 0;
+    padding: 6vh 0 10
+    
+    
+    vh 0;
     background-color: #FFFFFF;
 }
 

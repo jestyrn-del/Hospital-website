@@ -45,22 +45,40 @@ function App() {
       onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
     >
       <Routes>
-        <Route path="/" element={
+        <Route
+          path="/"
+          element={
             <Home
-              onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
+              onAppointment={() =>
+                showNotification('Форма записи будет доступна на странице записи.')
+              }
               onNotification={showNotification}
             />
           }
         />
 
-        <Route path="/paid-services" element={<PaidServices onNotification={notification}/>}/>
-        <Route path="/about" element={<AboutHospital OpenNews={() => showNotification('Страница показа новостей пока не готова.')}/>}/>
-        <Route path="/patients" element={<Patients/>}/>
-        <Route path="/structure" element={<Structure/>}/>
+        <Route
+          path="/paid-services"
+          element={<PaidServices onNotification={notification} />}
+        />
 
-        <Route path="/history" element={<History/>}/>
-        <Route path="/license" element={<License/>}/>
-        <Route path="/vacations" element={<Vacation/>}/>
+        <Route
+          path="/about"
+          element={
+            <AboutHospital
+              OpenNews={() =>
+                showNotification('Страница показа новостей пока не готова.')
+              }
+            />
+          }
+        />
+
+        <Route path="/patients" element={<Patients />} />
+        <Route path="/structure" element={<Structure />} />
+
+        <Route path="/history" element={<History />} />
+        <Route path="/license" element={<License />} />
+        <Route path="/vacations" element={<Vacation />} />
       </Routes>
     </MainLayout>
   );
