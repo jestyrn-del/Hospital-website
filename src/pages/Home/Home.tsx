@@ -49,9 +49,9 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
 
             <div className='hero-links'>
               <Link to="/patients">Пациентам <span>↗</span></Link>
-              <a href="#about">Структура <span>↗</span></a>
-              <a href="#about">О госпитале <span>↗</span></a>
-              <a href="#contacts">Контакты <span>↗</span></a>
+              <a onClick={() => scrollToSection("about")}>Структура <span>↗</span></a>
+              <a onClick={() => scrollToSection("about")}>О госпитале <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Контакты <span>↗</span></a>
             </div>
           </div>
 
@@ -139,10 +139,10 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
           <div className="section-heading"><h2>Контакты</h2></div>
           <div className="contacts-grid">
             <div className="contacts-list">
-              <a href="#contacts">1602 ВКГ <span>↗</span></a>
-              <a href="#contacts">Страховые медицинские организации <span>↗</span></a>
-              <a href="#contacts">Военная академия <span>↗</span></a>
-              <a href="#contacts">Психологическая поддержка ВС РФ <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Военная академия <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ <span>↗</span></a>
               <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
             <div className="map-placeholder"><span>КАРТА</span></div>

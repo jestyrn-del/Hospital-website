@@ -6,7 +6,9 @@ import logoImage from '../../assets/header-logo.svg';
 import moreImage from '../../assets/about-more-info.svg';
 import newsImage from '../../assets/about-news-example.svg';
 
-const news: NewsItem[] = [
+import type { AboutHospitalProps } from '../../types';
+
+const news = [
   {
     id: 1,
     date: "02.02.2026",
@@ -57,7 +59,7 @@ const news: NewsItem[] = [
   },
 ];
 
-export function AboutHospital({ OpenNews }) {
+export function AboutHospital({ OpenNews } : AboutHospitalProps) {
 
     const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
     const newsRef = useRef<HTMLDivElement>(null);
@@ -144,7 +146,7 @@ export function AboutHospital({ OpenNews }) {
                 <div className="about-news-card" key={item.id}>
                   <span className="about-news-card-date">{item.date}</span>
                   <div className="about-news-card-image">
-                    <img src={item.image} alt={item.title} loading="lazy"/>
+                    <img src={item.image} alt={item.title}/>
                   </div>
 
                   <span className="about-news-card-title">{item.title}</span>
@@ -163,19 +165,16 @@ export function AboutHospital({ OpenNews }) {
 
       <div className="about-contacts">
         <div className="container">
-          <span className="about-title-thin">контакты</span>
-          <div className="about-contacts-inner">
-            <div className="about-contacts-data"> слева столбцы
-              <a>1</a>
-              <a>2</a>
-              <a>3</a>
-              <a>4</a>
-              <a>5</a>
-              <span>6 - текст с адресом</span>
+          <div className="about-title-thin"><span>Контакты</span></div>
+          <div className="contacts-grid">
+            <div className="contacts-list">
+              <a href="#contacts">1602 ВКГ <span>↗</span></a>
+              <a href="#contacts">Страховые медицинские организации <span>↗</span></a>
+              <a href="#contacts">Военная академия <span>↗</span></a>
+              <a href="#contacts">Психологическая поддержка ВС РФ <span>↗</span></a>
+              <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
-            <div className="about-contacts-map"> справа
-              <span>карта</span>
-            </div>
+            <div className="map-placeholder"><span>КАРТА</span></div>
           </div>
         </div>
       </div>

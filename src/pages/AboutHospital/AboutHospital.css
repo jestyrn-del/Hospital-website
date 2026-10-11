@@ -407,7 +407,7 @@
 
 .about-contacts {
     margin-top: 4vh;
-    padding: 6vh 0 10vh 0;
+    padding: 6vh 0 10vh;
     background-color: #FFFFFF;
 }
 
@@ -888,4 +888,78 @@
         font-size: 1.2vw;
         letter-spacing: .15em
     }
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.3vw;
+}
+
+.contacts-list {
+    margin-top: 5%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.6vh;
+    text-align: left;
+}
+
+.contacts-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    gap: 1vw;
+
+    margin-bottom: 1.4vh;
+    border-bottom: 1px solid #000000;
+
+    font-size: 1.2vw;
+    color: #000000;
+    text-decoration: none;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contacts-list > span {
+    display: flex;
+    margin-right: auto;
+
+    padding-top: 1.2vh;
+
+    font-size: 1.2vw;
+    color: #000000;
+}
+
+.contacts-list a span {
+    margin-left: auto;
+    flex-shrink: 0;
+
+    font-size: 1.2vw;
+    transition: transform 0.3s ease;
+}
+
+.contacts-list a:hover {
+    border-color: #1DA159;
+    color: #1DA159;
+}
+
+.contacts-list a:hover span {
+    transform: translate(3px, -3px);
+}
+
+.map-placeholder {
+    height: 100%;
+    background: #bdcac3;
+
+    border-radius: 1vw;
+
+    display: grid;
+    place-items: center;
+
+    color: #5a615d;
+    font-size: 1.2vw;
+    letter-spacing: .15em
 }

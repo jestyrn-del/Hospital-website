@@ -2,7 +2,7 @@ import { useLayoutEffect, useRef, useState  } from 'react';
 import './Structure.css';
 import aboutStatsImg from '../../assets/structure-banner.svg';
 
-interface Department {
+interface InnerArray {
   index: number;
   deportament: string;
   vacation: string;
@@ -11,14 +11,14 @@ interface Department {
   number: string;
 }
 
-interface Branch {
+interface IArray {
   fullName: string;
   adress: string;
   contacts: string[];
-  table: Department[];
+  table: InnerArray[];
 }
 
-const branches: Branch[] = [
+const branches: IArray[] = [
   {
     fullName: 'Филиал № 1 ФГКУ «1602 ВКГ» МО РФ',
     adress:
@@ -318,7 +318,7 @@ const branches: Branch[] = [
   },
 ];
 
-const departments: DepartmentInfo[] = [
+const departments: IArray[] = [
   {
     fullName: 'Администрация',
     adress:
@@ -528,10 +528,6 @@ export function Structure() {
 
   const branchesFlip = useFlipGrid<HTMLDivElement>(openIndex);
   const departmentsFlip = useFlipGrid<HTMLDivElement>(openDepartmentIndex,);
-
-  function toggleIndex(setter: React.Dispatch<React.SetStateAction<number | null>>, index: number,) {
-    setter((current) => (current === index ? null : index));
-  }
 
   return (
     <div className='structure-page'>
