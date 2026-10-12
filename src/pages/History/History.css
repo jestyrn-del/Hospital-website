@@ -1,0 +1,697 @@
+/* ================================= */
+/* === HISTORY PAGE ================ */
+/* ================================= */
+
+.history-page {
+    position: relative;
+    isolation: isolate;
+
+    background: linear-gradient(
+        251.74deg,
+        #FFFFFF 1.6%,
+        #E8E8E8 98.4%
+    );
+
+    overflow: hidden;
+}
+
+.history-page > .section {
+    padding: 8% 0 0;
+}
+
+
+/* ================================= */
+/* === TITLE ======================= */
+/* ================================= */
+
+.history-title {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    gap: 1.2vw;
+
+    margin: 4vh 0 2vh;
+
+    font-size: 3vw;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.history-title-green {
+    color: #4D795F;
+    font-weight: 400;
+}
+
+
+/* ================================= */
+/* === BREADCRUMBS ================= */
+/* ================================= */
+
+.history-description-little {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 1vw;
+    margin-bottom: 1.5%;
+
+    font-size: 1.5vh;
+    color: #000000;
+}
+
+.history-description-little span {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.5vw;
+}
+
+.history-description-little span:last-child {
+    color: #0F87C4;
+}
+
+.history-circle {
+    flex-shrink: 0;
+
+    width: 0.5vw;
+    height: 0.5vw;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        180deg,
+        #26B5FF 0%,
+        #007CBC 100%
+    );
+}
+
+
+/* ================================= */
+/* === DESCRIPTION ================= */
+/* ================================= */
+
+.history-description-more {
+    margin-bottom: 2%;
+}
+
+.history-description-more p {
+    margin: 0;
+
+    font-size: 1.2vw;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #000000;
+}
+
+
+/* ================================= */
+/* === HISTORY PERIODS ============= */
+/* ================================= */
+
+.history-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+
+    gap: 2vw;
+}
+
+.history-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+
+    gap: 1vw;
+}
+
+.history-list-grid p {
+    display: flex;
+    align-items: center;
+
+    gap: 1.2vw;
+
+    min-width: 0;
+    margin: 0;
+    padding: 1vw;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 1vw;
+
+    font-size: 1.1vw;
+    font-weight: 700;
+    line-height: 1.5;
+
+    color: #000000;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.history-list-grid p:hover {
+    background: #FFFFFF;
+
+    border-color: #4D795F;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.history-list-grid p img {
+    display: block;
+
+    width: 2.5vw;
+    height: 2.5vw;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+/* Последняя карточка занимает две колонки */
+
+.history-list-grid p:last-child {
+    grid-column: 1 / -1;
+}
+
+
+/* ================================= */
+/* === HISTORY IMAGE =============== */
+/* ================================= */
+
+.history-list-image {
+    width: 100%;
+    min-height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 1vw;
+}
+
+.history-list-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+}
+
+
+/* ================================= */
+/* === MORE SECTION ================ */
+/* ================================= */
+
+.history-more {
+    margin-top: 3%;
+    margin-bottom: 6%;
+}
+
+/* Кнопка подробнее */
+.history-more-button {
+    display: inline-flex;
+
+    gap: 1vw;
+
+    border: none;
+
+    color: #4D795F;
+
+    font-size: 2vh;
+    font-weight: 700;
+
+    text-transform: lowercase;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.history-more-button:hover {
+    background: transparent;
+    color: #4D795F;
+}
+
+.history-more-button span {
+    display: inline-block;
+
+    transition: transform 0.3s ease;
+}
+
+.history-more-button--active span {
+    transform: rotate(180deg);
+}
+
+
+/* ================================= */
+/* === COLLAPSIBLE CONTENT ========= */
+/* ================================= */
+
+.history-more-data--close,
+.history-more-data--open {
+    display: grid;
+
+    transition:
+        grid-template-rows 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.history-more-data--close {
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        grid-template-rows 0.5s ease,
+        opacity 0.5s ease,
+        visibility 0s linear 0.5s;
+}
+
+.history-more-data--open {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+        grid-template-rows 0.5s ease,
+        opacity 0.5s ease,
+        visibility 0s;
+}
+
+/* Дополнительная обёртка нужна для анимации */
+
+.history-more-data-inner {
+    min-height: 0;
+    overflow: hidden;
+}
+
+
+/* ================================= */
+/* === HISTORY TEXT ================ */
+/* ================================= */
+
+.history-more-data-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5vw;
+
+    padding-top: 3vw;
+}
+
+.history-more-data-text p {
+    margin: 0;
+
+    max-width: 100%;
+
+    font-size: 1.1vw;
+    font-weight: 400;
+    line-height: 1.75;
+
+    color: #000000;
+}
+
+
+/* ================================= */
+/* === IMAGE AND TEXT GRID ========= */
+/* ================================= */
+
+.history-more-data-grid {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: start;
+
+    padding: 0 40%;
+    width: 130vw;
+
+    gap: 3vw;
+
+    margin-top: 4vw;
+}
+
+.history-more-data-grid-image {
+    position: absolute;
+    left: -7vw;
+
+    width: 60vh;
+    bottom: -10vh;
+
+    overflow: hidden;
+
+    border-radius: 1vw;
+}
+
+.history-more-data-grid-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: inherit;
+}
+
+.history-more-data-grid-text {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5vw;
+}
+
+.history-more-data-grid-text p {
+    margin: 0;
+
+    font-size: 1.1vw;
+    font-weight: 400;
+    line-height: 1.75;
+
+    color: #000000;
+}
+
+
+/* ================================= */
+/* === IMPORTANT DATES ============= */
+/* ================================= */
+
+.history-page .about-contacts {
+    padding: 5vw 0 8vw;
+    background: #FFFFFF;
+}
+
+.history-page .about-title-thin {
+    margin-bottom: 3vw;
+
+    font-size: 2.2vw;
+    font-weight: 400;
+    line-height: 1.3;
+
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+.history-page .contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: stretch;
+
+    gap: 3vw;
+}
+
+.history-open-hospital {
+    width: 100%;
+    height: 55vh;
+
+    overflow: hidden;
+
+    border-radius: 1vw;
+}
+
+.history-open-hospital img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.history-page .contacts-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1vh;
+
+    margin-top: 0;
+}
+
+.history-page .contacts-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 0.5vw 0;
+
+    border-bottom: 1px solid #000000;
+
+    font-size: 1.3vw;
+    font-weight: 400;
+
+    color: #000000;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.history-page .contacts-list a span {
+    margin-left: auto;
+
+    font-size: 1.3vw;
+
+    transition: transform 0.3s ease;
+}
+
+.history-page .contacts-list a:hover {
+    color: #1DA159;
+    border-color: #1DA159;
+}
+
+.history-page .contacts-list a:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* ================================= */
+/* === MOBILE ====================== */
+/* ================================= */
+@media (max-width: 767px) {
+
+    .history-page > .section {
+        padding: 18vh 0 0;
+    }
+
+    /* TITLE */
+
+    .history-title {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 1vh;
+
+        margin: 0 0 4vh;
+
+        font-size: 8vw;
+        line-height: 1.2;
+    }
+
+    .history-title-green {
+        font-size: 8vw;
+    }
+
+    /* BREADCRUMBS */
+
+    .history-description-little {
+        gap: 2vw;
+        margin-bottom: 4vh;
+
+        font-size: 3vw;
+    }
+
+    .history-description-little span {
+        gap: 1.5vw;
+    }
+
+    .history-circle {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+
+    /* DESCRIPTION */
+
+    .history-description-more {
+        margin-bottom: 4vh;
+    }
+
+    .history-description-more p {
+        font-size: 3.8vw;
+        line-height: 1.6;
+    }
+
+    /* PERIODS */
+
+    .history-list {
+        display: flex;
+        flex-direction: column;
+
+        gap: 3vh;
+    }
+
+    .history-list-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 2vh;
+    }
+
+    .history-list-grid p {
+        min-height: 10vh;
+
+        gap: 4vw;
+
+        padding: 4vw;
+
+        border-radius: 3vw;
+
+        font-size: 3.8vw;
+        line-height: 1.5;
+    }
+
+    .history-list-grid p img {
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .history-list-image {
+        width: 100%;
+        height: 28vh;
+
+        border-radius: 3vw;
+    }
+
+    .history-list-image img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    /* MORE BUTTON */
+
+    .history-more {
+        margin-top: 4vh;
+        margin-bottom: 6vh;
+    }
+
+    .history-more-button {
+        width: 100%;
+        min-height: 5vh;
+
+        padding: 3vw 5vw;
+
+        border-radius: 8vw;
+
+        font-size: 3.4vw;
+    }
+
+    /* MORE TEXT */
+
+    .history-more-data-text {
+        gap: 4vh;
+        padding-top: 5vh;
+    }
+
+    .history-more-data-text p {
+        font-size: 3.4vw;
+        line-height: 1.7;
+    }
+
+    /* IMAGE AND TEXT */
+
+    .history-more-data-grid {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0;
+        gap: 4vh;
+        margin-top: 0;
+    }
+
+    .history-more-data-grid-image {
+        position: relative;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+        border-radius: 3vw;
+    }
+
+    .history-more-data-grid-text {
+        gap: 4vh;
+    }
+
+    .history-more-data-grid-text p {
+        font-size: 3.4vw;
+        line-height: 1.7;
+    }
+
+
+
+    /* IMPORTANT DATES */
+
+    .history-page .about-contacts {
+        margin-top: 6vh;
+        padding: 6vh 0 10vh;
+    }
+
+    .history-page .about-title-thin {
+        margin-bottom: 4vh;
+
+        font-size: 6vw;
+        line-height: 1.3;
+    }
+
+    .history-page .contacts-grid {
+        display: flex;
+        flex-direction: column;
+
+        gap: 4vh;
+    }
+
+    .history-open-hospital {
+        width: 100%;
+        height: 28vh;
+
+        border-radius: 3vw;
+    }
+
+    .history-open-hospital img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    .history-page .contacts-list {
+        width: 100%;
+        gap: 2vh;
+    }
+
+    .history-page .contacts-list a {
+        min-height: 5vh;
+        padding: 0;
+        font-size: 4vw;
+    }
+
+    .history-page .contacts-list a span {
+        font-size: 4vw;
+    }
+}
