@@ -285,21 +285,17 @@
 }
 
 .about-stats-button {
-    background-color: transparent;
-    
-    width: 100%;
-    margin-top: 1.2vh;
-
-    font-size: 1vw;
-
     display: flex;
-    margin-inline: auto;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 2vh;
 }
 
-.about-stats-button button {
-    display: flex;
-    margin-inline: auto;
-    align-items: center;
+.about-stats-button a {
+    border-radius: 3vh;
+    background-color: transparent;
+    transition: 0.3s ease;
 }
 
 

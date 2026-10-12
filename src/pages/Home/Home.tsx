@@ -92,9 +92,7 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
             </div>
             <div className='about-stats-decoration'/>
             <div className='about-stats-button'>
-              <button className='button'>
-                <Link to="/about">подробнее о госпитале</Link>
-              </button>
+              <Link className='button-link' to="/about">подробнее о госпитале</Link>
             </div>
           </div>
         </div>
