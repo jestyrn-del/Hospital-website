@@ -5,13 +5,6 @@ import { Contacts } from '../../components/Contacts/Contacts';
 import userImage from '../../assets/User-plus.svg';
 
 export function Vacancy() {
-  const scrollToSection = (id: string) => {
-      document.getElementById(id)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-      });
-  };
-
   return (
     <div className='about-page'>
       <section className="section">
