@@ -18,68 +18,41 @@ const defaultLinks: ContactLink[] = [
     { title: 'Психологическая поддержка ВС РФ', href: '#', },
 ];
 
-const mapUrl = 'https://yandex.ru/map-widget/v1/?ll=39.674003%2C47.259483&mode=search&sctx=ZAAAAAgBEAAaKAoSCUZ4exAC3ENAEdqSVRFunEdAEhIJZMqHoGr01D8RbCIzF7g8yD8iBgABAgMEBSgKOABAi80GSAFqAnJ1nQHNzMw9oAEAqAEAvQGkHjxoggIBLooCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=39.674003%2C47.259483&sspn=0.004699%2C0.002089&text=.&whatshere%5Bpoint%5D=39.673947%2C47.258650&whatshere%5Bzoom%5D=17&z=18.66';
+const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
+
+const mapUrl = 'https://yandex.ru/map-widget/v1/?ll=39.673288%2C47.259545&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzI5ODU5NBJF0KDQvtGB0YHQuNGPLCDQoNC-0YHRgtC-0LIt0L3QsC3QlNC-0L3Rgywg0JTQsNGH0L3QsNGPINGD0LvQuNGG0LAsIDEwIgoNbbEeQhXBCT1C&sctx=ZAAAAAgBEAAaKAoSCUZ4exAC3ENAEdqSVRFunEdAEhIJZMqHoGr01D8RbCIzF7g8yD8iBgABAgMEBSgKOABAi80GSAFqAnJ1nQHNzMw9oAEAqAEAvQGkHjxoggIBLooCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=39.673288%2C47.259545&sspn=0.000954%2C0.000424&text=.&z=20.96';
 
 export function Contacts({ title = 'Контакты', links = defaultLinks, address = '344064, Ростовская обл., Ростов-на-Дону, ул. Дачная, д. 10', }: ContactsProps) {
     return (
-        <section className="contacts section" id="contacts">
-            <div className="container">
+        <div className="container">
+            <h1>
+                <span className='title title-thin'>{title}</span>
+            </h1>
 
-                <div className="section-heading">
-                    <h2>{title}</h2>
+            <div className="contacts-grid">
+                <div className="contacts-list">
+                    {
+                        links.map((link, index) => (
+                            <a key={`${link.title}-${index}`} className="base-link contacts-link" href={link.href}>
+                                {link.title}
+                                {svg}
+                            </a>
+                        ))
+                    }
+                    <span className="contacts-address">{address}</span>
                 </div>
 
-                <div className="contacts-grid">
-
-                    <div className="contacts-list">
-                        {links.map((link, index) => (
-                            <a
-                                key={`${link.title}-${index}`}
-                                className="base-link contacts-link"
-                                href={link.href}
-                            >
-                                <span>{link.title}</span>
-
-                                <svg
-                                    width="20"
-                                    height="20"
-                                    viewBox="0 0 20 20"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        d="M4 16L16 4M6 4H16V14"
-                                        stroke="currentColor"
-                                        strokeWidth="1.5"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                </svg>
-                            </a>
-                        ))}
-
-                        <span className="contacts-address">
-                            {address}
-                        </span>
-                    </div>
-
-                    <div className="map-placeholder">
-                        {mapUrl ? (
-                            <iframe
-                                src={mapUrl}
-                                title="Расположение госпиталя на карте"
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                allowFullScreen
-                            />
+                <div className="map-placeholder">
+                    {
+                        mapUrl ? (
+                            <iframe src={mapUrl} title="Расположение госпиталя на карте" loading="eager" referrerPolicy="no-referrer-when-downgrade" allowFullScreen/>
                         ) : (
                             <span>КАРТА</span>
-                        )}
-                    </div>
-
+                        )
+                    }
                 </div>
+
             </div>
-        </section>
+        </div>
     );
 }

@@ -402,55 +402,6 @@
     object-fit: cover;
 }
 
-.history-page .contacts-list {
-    display: flex;
-    flex-direction: column;
-
-    gap: 1vh;
-
-    margin-top: 0;
-}
-
-.history-page .contacts-list a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-
-    padding: 0.5vw 0;
-
-    border-bottom: 1px solid #000000;
-
-    font-size: 1.3vw;
-    font-weight: 400;
-
-    color: #000000;
-    text-decoration: none;
-
-    cursor: pointer;
-
-    transition:
-        color 0.3s ease,
-        border-color 0.3s ease;
-}
-
-.history-page .contacts-list a span {
-    margin-left: auto;
-
-    font-size: 1.3vw;
-
-    transition: transform 0.3s ease;
-}
-
-.history-page .contacts-list a:hover {
-    color: #1DA159;
-    border-color: #1DA159;
-}
-
-.history-page .contacts-list a:hover span {
-    transform: translate(3px, -3px);
-}
 
 /* ================================= */
 /* === MOBILE ====================== */
