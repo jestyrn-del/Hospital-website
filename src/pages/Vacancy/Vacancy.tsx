@@ -1,5 +1,7 @@
 import './Vacancy.css';
 
+import { Contacts } from '../../components/Contacts/Contacts';
+
 import userImage from '../../assets/User-plus.svg';
 
 export function Vacancy() {
@@ -44,21 +46,7 @@ export function Vacancy() {
           <p><img src={userImage}/>Заведующий кабинетом<br/>врач-рентгенолог</p>
         </div>
 
-      <div className="about-contacts">
-        <div className="container">
-          <div className="about-title-thin"><span>Контакты</span></div>
-          <div className="contacts-grid">
-            <div className="contacts-list">
-              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Военная академия <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ <span>↗</span></a>
-              <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
-            </div>
-            <div className="map-placeholder"><span>КАРТА</span></div>
-          </div>
-        </div>
-      </div>
+        <Contacts />
       </section>
     </div>
   );

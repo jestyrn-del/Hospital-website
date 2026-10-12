@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { Link } from 'react-router-dom';
+import { Contacts } from '../../components/Contacts/Contacts';
 
 import './AboutHospital.css';
 
@@ -171,21 +172,7 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
         </div>
       </div>
 
-      <div className="contacts section" id="contacts">
-        <div className="container">
-          <div className="section-heading"><h2>Контакты</h2></div>
-          <div className="contacts-grid">
-            <div className="contacts-list">
-              <a className='base-link' onClick={() => scrollToSection("contacts")}>1602 ВКГ {svg}</a>
-              <a className='base-link' onClick={() => scrollToSection("contacts")}>Страховые медицинские организации {svg}</a>
-              <a className='base-link' onClick={() => scrollToSection("contacts")}>Военная академия {svg}</a>
-              <a className='base-link' onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ {svg}</a>
-              <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
-            </div>
-            <div className="map-placeholder"><span>КАРТА</span></div>
-          </div>
-        </div>
-      </div>
+      <Contacts />
     </section>
   );
 }
