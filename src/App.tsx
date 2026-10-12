@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { MainLayout } from './layouts/MainLayout/MainLayout';
+
 import type { NotificationState } from './types';
 
 import { Routes, Route } from 'react-router-dom';
@@ -15,6 +16,7 @@ import { Vacancy } from './pages/Vacancy/Vacancy';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [informationRequestOpen, setInformationRequestOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [notification, setNotification] = useState<NotificationState>({ visible: false, message: '' });
 
@@ -31,11 +33,22 @@ function App() {
     return () => { document.body.style.overflow = ''; };
   }, [menuOpen, searchOpen]);
 
+  const openInformationRequest = () => {
+      setMenuOpen(false);
+      setSearchOpen(false);
+      setInformationRequestOpen(true);
+  };
+
+  const closeInformationRequest = () => {
+      setInformationRequestOpen(false);
+  };
+
   return (
     <MainLayout
       menuOpen={menuOpen}
       searchOpen={searchOpen}
       notification={notification}
+      informationRequestOpen={informationRequestOpen}
       onMenuOpen={() => setMenuOpen(true)}
       onMenuClose={() => setMenuOpen(false)}
       onSearchOpen={() => setSearchOpen(true)}
@@ -53,6 +66,7 @@ function App() {
                 showNotification('Форма записи будет доступна на странице записи.')
               }
               onNotification={showNotification}
+              onCreateRequest={openInformationRequest}
             />
           }
         />

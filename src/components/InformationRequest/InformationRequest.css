@@ -1,0 +1,852 @@
+/* ==========================================
+   INFORMATION REQUEST
+========================================== */
+
+.information-request {
+    --ir-green: #4BAA71;
+    --ir-dark-green: #4D795F;
+    --ir-text: #000000;
+    --ir-white: #FFFFFF;
+    --ir-gray: #ECECEC;
+    --ir-error: #D93636;
+
+    --ir-radius: 10px;
+    --ir-transition: 0.25s ease;
+
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    font-family: "Evolventa", Arial, sans-serif;
+    color: var(--ir-text);
+}
+
+.information-request *,
+.information-request *::before,
+.information-request *::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   BACKDROP
+========================================== */
+
+.information-request__backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: rgba(0, 0, 0, 0.58);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* ==========================================
+   WRAPPER
+========================================== */
+
+.information-request__wrapper {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    gap: 12px;
+
+    width: min(750px, 100%);
+    max-height: calc(100dvh - 40px);
+
+    min-height: 0;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.information-request__close {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--ir-white);
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--ir-transition),
+        transform var(--ir-transition);
+}
+
+.information-request__close:hover {
+    background: #E8E8E8;
+    transform: rotate(90deg);
+}
+
+.information-request__close:active {
+    transform: rotate(90deg) scale(0.95);
+}
+
+.information-request__close span {
+    position: absolute;
+
+    width: 17px;
+    height: 1.5px;
+
+    background: var(--ir-text);
+    border-radius: 2px;
+
+    pointer-events: none;
+}
+
+.information-request__close span:first-child {
+    transform: rotate(45deg);
+}
+
+.information-request__close span:last-child {
+    transform: rotate(-45deg);
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.information-request__modal {
+    position: relative;
+
+    width: 100%;
+    min-height: 0;
+
+    padding: 20px;
+
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    background: var(--ir-white);
+    border-radius: var(--ir-radius);
+
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.15);
+
+    scrollbar-width: thin;
+    scrollbar-color: #C5C5C5 transparent;
+}
+
+/* ==========================================
+   SHARED FORM STYLES
+========================================== */
+
+.information-request__form,
+.information-request__verification,
+.information-request__request-form {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 16px;
+}
+
+/* ==========================================
+   SHARED HEADINGS
+========================================== */
+
+.information-request__heading,
+.information-request__verification-heading,
+.information-request__request-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 6px;
+}
+
+.information-request__heading h2,
+.information-request__verification-heading h2,
+.information-request__request-heading h2,
+.information-request__success-content h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+
+    color: var(--ir-text);
+}
+
+.information-request__heading p,
+.information-request__verification-heading p {
+    margin: 0;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+
+    color: var(--ir-text);
+}
+
+/* ==========================================
+   STEP 1 — PERSONAL DATA
+========================================== */
+
+.information-request__fields {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.information-request__row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+.information-request__field {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+}
+
+/* ==========================================
+   SHARED INPUT STYLES
+========================================== */
+
+.information-request__field input,
+.information-request__verification-field input,
+.information-request__request-field textarea {
+    display: block;
+
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid var(--ir-text);
+    border-radius: var(--ir-radius);
+
+    background: var(--ir-white);
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+
+    color: var(--ir-text);
+
+    outline: none;
+
+    transition:
+        border-color var(--ir-transition),
+        box-shadow var(--ir-transition);
+}
+
+.information-request__field input::placeholder,
+.information-request__verification-field input::placeholder,
+.information-request__request-field textarea::placeholder {
+    color: var(--ir-text);
+    opacity: 1;
+}
+
+.information-request__field input:focus,
+.information-request__verification-field input:focus,
+.information-request__request-field textarea:focus {
+    border-color: var(--ir-green);
+
+    box-shadow: 0 0 0 2px rgba(75, 170, 113, 0.15);
+}
+
+.information-request__field input[aria-invalid="true"],
+.information-request__verification-field input[aria-invalid="true"],
+.information-request__request-field textarea[aria-invalid="true"] {
+    border-color: var(--ir-error);
+}
+
+/* ==========================================
+   PERSONAL DATA INPUTS
+========================================== */
+
+.information-request__field input {
+    height: 45px;
+}
+
+.information-request__field input[type="date"] {
+    color: var(--ir-text);
+    cursor: pointer;
+}
+
+.information-request__field input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+/* ==========================================
+   ERRORS
+========================================== */
+
+.information-request__error {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.4;
+
+    color: var(--ir-error);
+}
+
+/* ==========================================
+   GOSUSLUGI
+========================================== */
+
+.information-request__gosuslugi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    width: 100%;
+    min-height: 49px;
+
+    padding: 10px 20px;
+
+    background: var(--ir-gray);
+    border-radius: var(--ir-radius);
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+
+    text-align: center;
+}
+
+.information-request__gosuslugi-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2px 4px;
+
+    border: none;
+    border-radius: 4px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition:
+        opacity var(--ir-transition),
+        background-color var(--ir-transition);
+}
+
+.information-request__gosuslugi-button:hover {
+    background: rgba(40, 100, 184, 0.08);
+}
+
+.information-request__gosuslugi-button:active {
+    opacity: 0.7;
+}
+
+.information-request__gosuslugi-logo {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+
+    color: #2864B8;
+}
+
+.information-request__auth-message {
+    margin: -8px 0 0;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: var(--ir-dark-green);
+}
+
+/* ==========================================
+   SHARED BUTTON
+========================================== */
+
+.information-request__next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 50px;
+
+    padding: 15px 30px;
+
+    border: none;
+    border-radius: var(--ir-radius);
+
+    background: rgba(75, 170, 113, 0.6);
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+
+    color: #F9F9F9;
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--ir-transition),
+        transform var(--ir-transition);
+}
+
+.information-request__next:hover {
+    background: var(--ir-green);
+}
+
+.information-request__next:active {
+    transform: scale(0.99);
+}
+
+.information-request__next:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==========================================
+   STEP 2 — VERIFICATION
+========================================== */
+
+.information-request__verification-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    width: 100%;
+}
+
+.information-request__verification-field input {
+    width: 197px;
+    max-width: 100%;
+    height: 44px;
+
+    padding: 10px 15px;
+
+    text-align: center;
+    line-height: 24px;
+}
+
+.information-request__verification-field .information-request__error {
+    margin-top: 4px;
+    text-align: center;
+}
+
+/* ==========================================
+   STEP 3 — REQUEST
+========================================== */
+
+.information-request__personal-data {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.information-request__personal-data span {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+
+    color: var(--ir-dark-green);
+
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================
+   TEXTAREA
+========================================== */
+
+.information-request__request-field {
+    width: 100%;
+}
+
+.information-request__request-field textarea {
+    min-height: 150px;
+    height: 150px;
+
+    resize: vertical;
+}
+
+/* ==========================================
+   SUBMIT BUTTON
+========================================== */
+
+.information-request__submit {
+    background: var(--ir-green);
+}
+
+.information-request__submit:hover {
+    background: #398E5B;
+}
+
+/* ==========================================
+   STEP 4 — SUCCESS
+========================================== */
+
+.information-request__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 15px;
+
+    width: 100%;
+
+    text-align: center;
+}
+
+/* ==========================================
+   SUCCESS IMAGE
+========================================== */
+
+.information-request__success-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 84.74px;
+    height: 59.86px;
+
+    flex-shrink: 0;
+
+    border-radius: 3px;
+
+    filter: drop-shadow(
+        0 0.6px 3px rgba(0, 0, 0, 0.1)
+    );
+}
+
+.information-request__success-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+.information-request__success-image span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: var(--ir-green);
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: var(--ir-white);
+}
+
+/* ==========================================
+   SUCCESS CONTENT
+========================================== */
+
+.information-request__success-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 16px;
+
+    width: 100%;
+}
+
+.information-request__success-content h2 {
+    text-align: center;
+}
+
+.information-request__success-content p {
+    margin: 0;
+
+    width: 100%;
+    max-width: 710px;
+
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+
+    color: var(--ir-dark-green);
+
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.information-request__success-content p span {
+    color: inherit;
+}
+
+/* ==========================================
+   DEMO NOTICE
+========================================== */
+
+.information-request__demo-notice {
+    margin: 0;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    background: #F0F7F1;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: var(--ir-dark-green);
+
+    text-align: center;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+.information-request button:focus-visible,
+.information-request input:focus-visible,
+.information-request textarea:focus-visible {
+    outline: 2px solid var(--ir-green);
+    outline-offset: 2px;
+}
+
+.information-request__gosuslugi-button:focus-visible {
+    outline-color: #2864B8;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .information-request *,
+    .information-request *::before,
+    .information-request *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* ==========================================
+   TABLET — UP TO 800px
+========================================== */
+
+@media (max-width: 800px) {
+    .information-request {
+        padding: 16px;
+    }
+
+    .information-request__wrapper {
+        width: min(650px, 100%);
+        max-height: calc(100dvh - 32px);
+    }
+
+    .information-request__row {
+        gap: 15px;
+    }
+}
+
+/* ==========================================
+   MOBILE — UP TO 600px
+========================================== */
+
+@media (max-width: 600px) {
+    .information-request {
+        padding: 12px;
+    }
+
+    .information-request__wrapper {
+        width: 100%;
+        max-height: calc(100dvh - 24px);
+
+        gap: 10px;
+    }
+
+    .information-request__close {
+        width: 36px;
+        height: 36px;
+
+        flex-basis: 36px;
+    }
+
+    .information-request__modal {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    /* Shared forms */
+
+    .information-request__form,
+    .information-request__verification,
+    .information-request__request-form {
+        gap: 18px;
+    }
+
+    /* Headings */
+
+    .information-request__heading h2,
+    .information-request__verification-heading h2,
+    .information-request__request-heading h2,
+    .information-request__success-content h2 {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .information-request__heading p,
+    .information-request__verification-heading p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Fields */
+
+    .information-request__fields {
+        gap: 12px;
+    }
+
+    .information-request__row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .information-request__field input {
+        height: 45px;
+        font-size: 14px;
+    }
+
+    /* Gosuslugi */
+
+    .information-request__gosuslugi {
+        gap: 6px;
+
+        padding: 12px;
+
+        font-size: 13px;
+    }
+
+    .information-request__gosuslugi-logo {
+        font-size: 14px;
+    }
+
+    /* Buttons */
+
+    .information-request__next {
+        min-height: 48px;
+        padding: 12px 20px;
+
+        font-size: 14px;
+    }
+
+    /* Verification */
+
+    .information-request__verification-field input {
+        width: min(197px, 100%);
+        height: 44px;
+
+        font-size: 14px;
+    }
+
+    /* Personal data */
+
+    .information-request__personal-data {
+        gap: 5px 10px;
+    }
+
+    .information-request__personal-data span {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
+    /* Request */
+
+    .information-request__request-field textarea {
+        min-height: 150px;
+
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Success */
+
+    .information-request__success {
+        gap: 18px;
+    }
+
+    .information-request__success-image {
+        width: 75px;
+        height: 55px;
+    }
+
+    .information-request__success-content {
+        gap: 12px;
+    }
+
+    .information-request__success-content p {
+        font-size: 15px;
+        line-height: 23px;
+    }
+}
+
+/* ==========================================
+   SMALL MOBILE — UP TO 360px
+========================================== */
+
+@media (max-width: 360px) {
+    .information-request {
+        padding: 8px;
+    }
+
+    .information-request__wrapper {
+        max-height: calc(100dvh - 16px);
+    }
+
+    .information-request__modal {
+        padding: 16px 12px;
+    }
+
+    .information-request__heading h2,
+    .information-request__verification-heading h2,
+    .information-request__request-heading h2,
+    .information-request__success-content h2 {
+        font-size: 18px;
+    }
+
+    .information-request__gosuslugi {
+        padding: 10px 8px;
+    }
+}

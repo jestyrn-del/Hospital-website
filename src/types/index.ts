@@ -5,6 +5,11 @@ export interface HeaderProps {
   onAccessibility: () => void;
 }
 
+export interface InformationRequestProps {
+    open: boolean;
+    onClose: () => void;
+}
+
 export interface MobileMenuProps {
   open: boolean;
   onClose: () => void;
@@ -43,4 +48,5 @@ export interface AboutHospitalProps {
 export interface HomeProps {
   onAppointment: () => void;
   onNotification: (message: string) => void;
+  onCreateRequest: () => void;
 }

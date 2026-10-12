@@ -11,7 +11,11 @@ import { Link } from 'react-router-dom';
 
 import './Home.css';
 
-export function Home({ onAppointment, onNotification }: HomeProps) {
+export function Home({
+    onAppointment,
+    onNotification,
+    onCreateRequest,
+}: HomeProps) {
   const [form, setForm] = useState<ReviewFormData>({ name: '', email: '', message: '' });
   
   const scrollToSection = (id: string) => {
@@ -117,10 +121,26 @@ export function Home({ onAppointment, onNotification }: HomeProps) {
               <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
               <Link to="/about">Подробная информация <span>↗</span></Link>
             </div>
-            <div className='patient-links-bottom'>
-              <Link to="/paid-services">Платные услуги <span>↗</span></Link>
-              <Link to="/structure">Структура <span>↗</span></Link>
-              <a onClick={onAppointment}>Создать обращение <span>↗</span></a>
+            <div className="patient-links-bottom">
+
+                <Link to="/paid-services">
+                    Платные услуги
+                    <span>↗</span>
+                </Link>
+
+                <Link to="/structure">
+                    Структура
+                    <span>↗</span>
+                </Link>
+
+                <button
+                    type="button"
+                    onClick={onCreateRequest}
+                >
+                    Создать обращение
+                    <span>↗</span>
+                </button>
+
             </div>
           </div>
           <div className='patient-decorations'>
