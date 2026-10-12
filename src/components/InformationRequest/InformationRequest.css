@@ -134,7 +134,7 @@
    MODAL
 ========================================== */
 
-.information-request__modal {
+.information-request-modal {
     position: relative;
 
     width: 100%;
@@ -159,8 +159,8 @@
 ========================================== */
 
 .information-request__form,
-.information-request__verification,
-.information-request__request-form {
+.information-request-verification,
+.information-request-request-form {
     display: flex;
     flex-direction: column;
 
@@ -174,8 +174,8 @@
 ========================================== */
 
 .information-request__heading,
-.information-request__verification-heading,
-.information-request__request-heading {
+.information-request-verification-heading,
+.information-request-request-heading {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -184,9 +184,9 @@
 }
 
 .information-request__heading h2,
-.information-request__verification-heading h2,
-.information-request__request-heading h2,
-.information-request__success-content h2 {
+.information-request-verification-heading h2,
+.information-request-request-heading h2,
+.information-request-success-content h2 {
     margin: 0;
 
     font-size: 20px;
@@ -197,7 +197,7 @@
 }
 
 .information-request__heading p,
-.information-request__verification-heading p {
+.information-request-verification-heading p {
     margin: 0;
 
     font-size: 15px;
@@ -211,21 +211,21 @@
    STEP 1 — PERSONAL DATA
 ========================================== */
 
-.information-request__fields {
+.information-request-fields {
     display: flex;
     flex-direction: column;
 
     gap: 20px;
 }
 
-.information-request__row {
+.information-request-row {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 26px;
 }
 
-.information-request__field {
+.information-request-field {
     display: flex;
     flex-direction: column;
 
@@ -236,9 +236,9 @@
    SHARED INPUT STYLES
 ========================================== */
 
-.information-request__field input,
-.information-request__verification-field input,
-.information-request__request-field textarea {
+.information-request-field input,
+.information-request-verification-field input,
+.information-request-request-field textarea {
     display: block;
 
     width: 100%;
@@ -264,24 +264,24 @@
         box-shadow var(--ir-transition);
 }
 
-.information-request__field input::placeholder,
-.information-request__verification-field input::placeholder,
-.information-request__request-field textarea::placeholder {
+.information-request-field input::placeholder,
+.information-request-verification-field input::placeholder,
+.information-request-request-field textarea::placeholder {
     color: var(--ir-text);
     opacity: 1;
 }
 
-.information-request__field input:focus,
-.information-request__verification-field input:focus,
-.information-request__request-field textarea:focus {
+.information-request-field input:focus,
+.information-request-verification-field input:focus,
+.information-request-request-field textarea:focus {
     border-color: var(--ir-green);
 
     box-shadow: 0 0 0 2px rgba(75, 170, 113, 0.15);
 }
 
-.information-request__field input[aria-invalid="true"],
-.information-request__verification-field input[aria-invalid="true"],
-.information-request__request-field textarea[aria-invalid="true"] {
+.information-request-field input[aria-invalid="true"],
+.information-request-verification-field input[aria-invalid="true"],
+.information-request-request-field textarea[aria-invalid="true"] {
     border-color: var(--ir-error);
 }
 
@@ -289,16 +289,16 @@
    PERSONAL DATA INPUTS
 ========================================== */
 
-.information-request__field input {
+.information-request-field input {
     height: 45px;
 }
 
-.information-request__field input[type="date"] {
+.information-request-field input[type="date"] {
     color: var(--ir-text);
     cursor: pointer;
 }
 
-.information-request__field input[type="date"]::-webkit-calendar-picker-indicator {
+.information-request-field input[type="date"]::-webkit-calendar-picker-indicator {
     cursor: pointer;
 }
 
@@ -306,7 +306,7 @@
    ERRORS
 ========================================== */
 
-.information-request__error {
+.information-request-error {
     display: block;
 
     margin-top: 5px;
@@ -322,7 +322,7 @@
    GOSUSLUGI
 ========================================== */
 
-.information-request__gosuslugi {
+.information-request-gosuslugi {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,7 +345,7 @@
     text-align: center;
 }
 
-.information-request__gosuslugi-button {
+.information-request-gosuslugi-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -364,15 +364,15 @@
         background-color var(--ir-transition);
 }
 
-.information-request__gosuslugi-button:hover {
+.information-request-gosuslugi-button:hover {
     background: rgba(40, 100, 184, 0.08);
 }
 
-.information-request__gosuslugi-button:active {
+.information-request-gosuslugi-button:active {
     opacity: 0.7;
 }
 
-.information-request__gosuslugi-logo {
+.information-request-gosuslugi-logo {
     font-family: inherit;
     font-size: 16px;
     font-weight: 700;
@@ -381,7 +381,7 @@
     color: #2864B8;
 }
 
-.information-request__auth-message {
+.information-request-auth-message {
     margin: -8px 0 0;
 
     font-size: 12px;
@@ -440,7 +440,7 @@
    STEP 2 — VERIFICATION
 ========================================== */
 
-.information-request__verification-field {
+.information-request-verification-field {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -450,7 +450,7 @@
     width: 100%;
 }
 
-.information-request__verification-field input {
+.information-request-verification-field input {
     width: 197px;
     max-width: 100%;
     height: 44px;
@@ -461,7 +461,7 @@
     line-height: 24px;
 }
 
-.information-request__verification-field .information-request__error {
+.information-request-verification-field .information-request-error {
     margin-top: 4px;
     text-align: center;
 }
@@ -492,11 +492,11 @@
    TEXTAREA
 ========================================== */
 
-.information-request__request-field {
+.information-request-request-field {
     width: 100%;
 }
 
-.information-request__request-field textarea {
+.information-request-request-field textarea {
     min-height: 150px;
     height: 150px;
 
@@ -519,7 +519,7 @@
    STEP 4 — SUCCESS
 ========================================== */
 
-.information-request__success {
+.information-request-success {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -535,7 +535,7 @@
    SUCCESS IMAGE
 ========================================== */
 
-.information-request__success-image {
+.information-request-success-image {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -552,7 +552,7 @@
     );
 }
 
-.information-request__success-image img {
+.information-request-success-image img {
     display: block;
 
     width: 100%;
@@ -561,7 +561,7 @@
     object-fit: contain;
 }
 
-.information-request__success-image span {
+.information-request-success-image span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -583,7 +583,7 @@
    SUCCESS CONTENT
 ========================================== */
 
-.information-request__success-content {
+.information-request-success-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -593,11 +593,11 @@
     width: 100%;
 }
 
-.information-request__success-content h2 {
+.information-request-success-content h2 {
     text-align: center;
 }
 
-.information-request__success-content p {
+.information-request-success-content p {
     margin: 0;
 
     width: 100%;
@@ -613,7 +613,7 @@
     overflow-wrap: anywhere;
 }
 
-.information-request__success-content p span {
+.information-request-success-content p span {
     color: inherit;
 }
 
@@ -621,7 +621,7 @@
    DEMO NOTICE
 ========================================== */
 
-.information-request__demo-notice {
+.information-request-demo-notice {
     margin: 0;
 
     padding: 8px 12px;
@@ -649,7 +649,7 @@
     outline-offset: 2px;
 }
 
-.information-request__gosuslugi-button:focus-visible {
+.information-request-gosuslugi-button:focus-visible {
     outline-color: #2864B8;
 }
 
@@ -676,7 +676,7 @@
         max-height: calc(100dvh - 32px);
     }
 
-    .information-request__row {
+    .information-request-row {
         gap: 15px;
     }
 }
@@ -704,7 +704,7 @@
         flex-basis: 36px;
     }
 
-    .information-request__modal {
+    .information-request-modal {
         padding: 20px 16px;
         border-radius: 12px;
     }
@@ -712,46 +712,46 @@
     /* Shared forms */
 
     .information-request__form,
-    .information-request__verification,
-    .information-request__request-form {
+    .information-request-verification,
+    .information-request-request-form {
         gap: 18px;
     }
 
     /* Headings */
 
     .information-request__heading h2,
-    .information-request__verification-heading h2,
-    .information-request__request-heading h2,
-    .information-request__success-content h2 {
+    .information-request-verification-heading h2,
+    .information-request-request-heading h2,
+    .information-request-success-content h2 {
         font-size: 20px;
         line-height: 26px;
     }
 
     .information-request__heading p,
-    .information-request__verification-heading p {
+    .information-request-verification-heading p {
         font-size: 13px;
         line-height: 20px;
     }
 
     /* Fields */
 
-    .information-request__fields {
+    .information-request-fields {
         gap: 12px;
     }
 
-    .information-request__row {
+    .information-request-row {
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    .information-request__field input {
+    .information-request-field input {
         height: 45px;
         font-size: 14px;
     }
 
     /* Gosuslugi */
 
-    .information-request__gosuslugi {
+    .information-request-gosuslugi {
         gap: 6px;
 
         padding: 12px;
@@ -759,7 +759,7 @@
         font-size: 13px;
     }
 
-    .information-request__gosuslugi-logo {
+    .information-request-gosuslugi-logo {
         font-size: 14px;
     }
 
@@ -774,7 +774,7 @@
 
     /* Verification */
 
-    .information-request__verification-field input {
+    .information-request-verification-field input {
         width: min(197px, 100%);
         height: 44px;
 
@@ -794,7 +794,7 @@
 
     /* Request */
 
-    .information-request__request-field textarea {
+    .information-request-request-field textarea {
         min-height: 150px;
 
         font-size: 13px;
@@ -803,20 +803,20 @@
 
     /* Success */
 
-    .information-request__success {
+    .information-request-success {
         gap: 18px;
     }
 
-    .information-request__success-image {
+    .information-request-success-image {
         width: 75px;
         height: 55px;
     }
 
-    .information-request__success-content {
+    .information-request-success-content {
         gap: 12px;
     }
 
-    .information-request__success-content p {
+    .information-request-success-content p {
         font-size: 15px;
         line-height: 23px;
     }
@@ -835,18 +835,18 @@
         max-height: calc(100dvh - 16px);
     }
 
-    .information-request__modal {
+    .information-request-modal {
         padding: 16px 12px;
     }
 
     .information-request__heading h2,
-    .information-request__verification-heading h2,
-    .information-request__request-heading h2,
-    .information-request__success-content h2 {
+    .information-request-verification-heading h2,
+    .information-request-request-heading h2,
+    .information-request-success-content h2 {
         font-size: 18px;
     }
 
-    .information-request__gosuslugi {
+    .information-request-gosuslugi {
         padding: 10px 8px;
     }
 }
