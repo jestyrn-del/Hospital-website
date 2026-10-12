@@ -402,43 +402,6 @@
     text-align: left;
 }
 
-.contacts-list a {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-
-    width: 100%;
-    gap: 1vw;
-
-    margin-bottom: 1.4vh;
-    border-bottom: 1px solid #000000;
-
-    font-size: 1.2vw;
-    color: #000000;
-    text-decoration: none;
-
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-.contacts-list > span {
-    display: flex;
-    margin-right: auto;
-
-    padding-top: 1.2vh;
-
-    font-size: 1.2vw;
-    color: #000000;
-}
-
-.contacts-list a span {
-    margin-left: auto;
-    flex-shrink: 0;
-
-    font-size: 1.2vw;
-    transition: transform 0.3s ease;
-}
-
 .map-placeholder {
     height: 100%;
     background: #bdcac3;

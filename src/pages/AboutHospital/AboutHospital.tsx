@@ -171,15 +171,15 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
         </div>
       </div>
 
-      <div className="about-contacts">
+      <div className="contacts section" id="contacts">
         <div className="container">
-          <div className="about-title-thin"><span>Контакты</span></div>
+          <div className="section-heading"><h2>Контакты</h2></div>
           <div className="contacts-grid">
             <div className="contacts-list">
-              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Военная академия <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ <span>↗</span></a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>1602 ВКГ {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Страховые медицинские организации {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Военная академия {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ {svg}</a>
               <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
             <div className="map-placeholder"><span>КАРТА</span></div>

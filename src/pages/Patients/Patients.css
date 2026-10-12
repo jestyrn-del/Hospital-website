@@ -51,7 +51,7 @@
     transition: 0.3s ease;
 }
 
-.patients-item--open .patients-link-arrow {
+.patients-item--open .patients-link svg {
     transform: rotate(90deg);
 }
 
@@ -78,7 +78,7 @@
         font-weight 0.35s ease;
 }
 
-.patients-link-arrow {
+.patients-link svg {
     flex-shrink: 0;
     display: inline-block;
     font-size: 1.2vw;
@@ -123,11 +123,11 @@
     padding-bottom: 2vh;
 }
 
-.patients-link:hover .patients-link-arrow {
+.patients-link:hover .patients-link svg {
     transform: translate(0.4vw, -0.4vw);
 }
 
-.patients-item--open .patients-link:hover .patients-link-arrow {
+.patients-item--open .patients-link:hover .patients-link svg {
     transform: rotate(90deg) translate(0.4vw, -0.4vw);
 }
 

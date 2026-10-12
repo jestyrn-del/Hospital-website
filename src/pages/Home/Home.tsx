@@ -120,13 +120,13 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           </div>
           <div className="patient-links">
             <div className='patient-links-top'>
-              <button className='base-link' type="button" onClick={onAppointment}>Записаться на прием к руководителю {svg}</button>
-              <Link className='base-link' to="/about">Подробная информация {svg}</Link>
+              <button className='button-link' type="button" onClick={onAppointment}>Записаться на прием к руководителю{svg}</button>
+              <Link className='button-link' to="/about">Подробная информация{svg}</Link>
             </div>
             <div className="patient-links-bottom">
-                <Link className='base-link' to="/paid-services">Платные услуги{svg}</Link>
-                <Link className='base-link' to="/structure">Структура{svg}</Link>
-                <button className='base-link' type="button" onClick={onCreateRequest}>Создать обращение{svg}</button>
+                <Link className='button-link' to="/paid-services">Платные услуги{svg}</Link>
+                <Link className='button-link' to="/structure">Структура{svg}</Link>
+                <button className='button-link' type="button" onClick={onCreateRequest}>Создать обращение{svg}</button>
             </div>
           </div>
           <div className='patient-decorations'>
@@ -145,10 +145,10 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           <div className="section-heading"><h2>Контакты</h2></div>
           <div className="contacts-grid">
             <div className="contacts-list">
-              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ {svg}</a>
-              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации {svg}</a>
-              <a onClick={() => scrollToSection("contacts")}>Военная академия {svg}</a>
-              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>1602 ВКГ {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Страховые медицинские организации {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Военная академия {svg}</a>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ {svg}</a>
               <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
             <div className="map-placeholder"><span>КАРТА</span></div>
