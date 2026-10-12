@@ -4,6 +4,21 @@
     background: linear-gradient(180deg, #fff 0%, #e8e8e8 100%);
 }
 
+
+
+
+
+.structure-branches-item a, .department-card a {
+    min-height: 10vh;
+    border: none;
+    border-radius: 3vh;
+}
+
+
+
+
+
+
 .structure-content {
     position: relative;
     z-index: 1;

@@ -526,6 +526,8 @@ export function Structure() {
     );
   };
 
+  const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
+
   const branchesFlip = useFlipGrid<HTMLDivElement>(openIndex);
   const departmentsFlip = useFlipGrid<HTMLDivElement>(openDepartmentIndex,);
 
@@ -550,15 +552,11 @@ export function Structure() {
               
               return (
                 <div className={`structure-branches-item ${isOpen ? 'structure-branches-item--open' : ''}`} key={item.fullName || index}>
-                  <button className="structure-branches-link" type="button" aria-expanded={isOpen} aria-controls={contentId} onClick={() => toggleItem(index)}>
-                    <span className="structure-branches-link-text">{item.fullName}</span>
-                    <span className="structure-branches-link-arrow" aria-hidden="true">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                  </button>
-                  
+                  <a className='button-link ' onClick={() => toggleItem(index)} aria-expanded={isOpen}>
+                    {item.fullName}
+                    {svg}
+                  </a>
+
                   <div className="computer-element structure-branches-content" id={contentId} aria-hidden={!isOpen}>
                     <div className="structure-branches-details">
                       <div className="detail-row">
@@ -687,14 +685,10 @@ export function Structure() {
 
               return (
                 <article className={`department-card ${ isOpen ? 'department-card--open' : '' }`} key={dept.fullName} >
-                  <button className="department-card-header" type="button" aria-expanded={isOpen} aria-controls={contentId} onClick={() => toggleDepartment(index)}>
-                    <span className="department-card-title">{dept.fullName}</span>
-                    <span className="department-card-arrow" aria-hidden="true">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </span>
-                  </button>
+                  <a className='button-link ' onClick={() => toggleItem(index)} aria-expanded={isOpen}>
+                    {dept.fullName}
+                    {svg}
+                  </a>
 
                   <div className="computer-element department-card-content" id={contentId} aria-hidden={!isOpen} inert={!isOpen}>
                     <div className="department-card-inner">
