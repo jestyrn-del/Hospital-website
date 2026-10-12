@@ -73,30 +73,6 @@
     gap: 1.8vh;
 }
 
-.hero-links a {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 2.8vh;
-
-    font-size: 1.3vw;
-
-    color: #000000;
-    text-decoration: none;
-
-    border-bottom: 1px solid #000000;
-    transition: 0.3s ease;
-}
-
-.hero-links a:hover {
-    color: #5A9366;
-    border-color: #5A9366;
-}
-
-.hero-links a span {
-    margin-left: auto;
-}
-
 .hero-decoration {
     display: flex;
 

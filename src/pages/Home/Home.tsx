@@ -11,13 +11,11 @@ import { Link } from 'react-router-dom';
 
 import './Home.css';
 
-export function Home({
-    onAppointment,
-    onNotification,
-    onCreateRequest,
-}: HomeProps) {
+export function Home({ onAppointment, onNotification, onCreateRequest, }: HomeProps) {
   const [form, setForm] = useState<ReviewFormData>({ name: '', email: '', message: '' });
   
+  const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
+
   const scrollToSection = (id: string) => {
       document.getElementById(id)?.scrollIntoView({
           behavior: "smooth",
@@ -56,10 +54,10 @@ export function Home({
             </div>
 
             <div className='hero-links'>
-              <Link to="/patients">Пациентам<span>↗</span></Link>
-              <a onClick={() => scrollToSection("about")}>Структура <span>↗</span></a>
-              <a onClick={() => scrollToSection("about")}>О госпитале <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Контакты <span>↗</span></a>
+              <Link className='base-link' to="/patients">Пациентам{svg}</Link>
+              <Link className='base-link' to="/structure">Структура{svg}</Link>
+              <Link className='base-link' to="/about">О госпитале{svg}</Link>
+              <a className='base-link' onClick={() => scrollToSection("contacts")}>Контакты{svg}</a>
             </div>
           </div>
 
@@ -122,29 +120,13 @@ export function Home({
           </div>
           <div className="patient-links">
             <div className='patient-links-top'>
-              <button type="button" onClick={onAppointment}>Записаться на прием к руководителю <span>↗</span></button>
-              <Link to="/about">Подробная информация <span>↗</span></Link>
+              <button className='base-link' type="button" onClick={onAppointment}>Записаться на прием к руководителю {svg}</button>
+              <Link className='base-link' to="/about">Подробная информация {svg}</Link>
             </div>
             <div className="patient-links-bottom">
-
-                <Link to="/paid-services">
-                    Платные услуги
-                    <span>↗</span>
-                </Link>
-
-                <Link to="/structure">
-                    Структура
-                    <span>↗</span>
-                </Link>
-
-                <button
-                    type="button"
-                    onClick={onCreateRequest}
-                >
-                    Создать обращение
-                    <span>↗</span>
-                </button>
-
+                <Link className='base-link' to="/paid-services">Платные услуги{svg}</Link>
+                <Link className='base-link' to="/structure">Структура{svg}</Link>
+                <button className='base-link' type="button" onClick={onCreateRequest}>Создать обращение{svg}</button>
             </div>
           </div>
           <div className='patient-decorations'>
@@ -163,10 +145,10 @@ export function Home({
           <div className="section-heading"><h2>Контакты</h2></div>
           <div className="contacts-grid">
             <div className="contacts-list">
-              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Военная академия <span>↗</span></a>
-              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ <span>↗</span></a>
+              <a onClick={() => scrollToSection("contacts")}>1602 ВКГ {svg}</a>
+              <a onClick={() => scrollToSection("contacts")}>Страховые медицинские организации {svg}</a>
+              <a onClick={() => scrollToSection("contacts")}>Военная академия {svg}</a>
+              <a onClick={() => scrollToSection("contacts")}>Психологическая поддержка ВС РФ {svg}</a>
               <span>344064, Ростовская обл., Ростов-на-Дону,<br/>ул. Дачная, д. 10</span>
             </div>
             <div className="map-placeholder"><span>КАРТА</span></div>
