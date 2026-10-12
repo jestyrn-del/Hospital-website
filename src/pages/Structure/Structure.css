@@ -10,28 +10,6 @@
     margin: 0 auto;
 }
 
-.structure-title {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.3vw;
-    margin: 0;
-    font-size: 3.3vw;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.structure-title-thin {
-    margin: 5vh 0 2vh;
-    font-size: 3.3vw;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.structure-title-green {
-    color: #4D795F;
-    font-weight: 400;
-}
-
 .structure-banner {
     margin: 3.5vh 0;
     overflow: hidden;

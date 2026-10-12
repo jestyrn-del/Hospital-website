@@ -21,33 +21,6 @@
 
 
 /* ================================= */
-/* === TITLE ======================= */
-/* ================================= */
-
-.history-title {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-
-    gap: 1.2vw;
-
-    margin: 4vh 0 2vh;
-
-    font-size: 3vw;
-    font-weight: 700;
-    line-height: 1.2;
-
-    text-transform: uppercase;
-    color: #000000;
-}
-
-.history-title-green {
-    color: #4D795F;
-    font-weight: 400;
-}
-
-
-/* ================================= */
 /* === BREADCRUMBS ================= */
 /* ================================= */
 

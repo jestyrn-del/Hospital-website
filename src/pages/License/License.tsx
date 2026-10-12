@@ -7,9 +7,9 @@ export function License() {
     <div className='about-page'>
       <section className="section">
         <div className="container">
-            <h1 className="license-title">
-                <span>1602 ВКГ</span>
-                <span className="license-title-green">лицензии</span>
+            <h1>
+              <span className='title'>1602 ВКГ</span>
+              <span className='title title-green'>лицензии</span>
             </h1>
         </div>
 

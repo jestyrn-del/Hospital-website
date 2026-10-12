@@ -10,32 +10,6 @@
     );
 }
 
-.about-title {
-    padding-top: 4vh;
-
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-
-    gap: 0 1.2vw;
-    margin: 0;
-
-    font-size: 3vw;
-    font-weight: 700;
-
-    text-transform: uppercase;
-}
-
-.about-title-thin {
-    font-weight: 400;
-    font-size: 3vw;
-    text-transform: uppercase;
-}
-
-.about-title-green {
-    color: #4D795F;
-}
-
 .about-title-bunner {
     margin: 4vh 0;
     width: 100%;

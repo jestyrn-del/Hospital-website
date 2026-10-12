@@ -2,24 +2,6 @@
     background: linear-gradient(180deg, #FFFFFF 0%, #E8E8E8 100%);
 }
 
-.vacancy-title {
-    display: flex;
-    align-items: baseline;
-    flex-wrap: wrap;
-
-    gap: 1.2vw;
-
-    margin-top: 4vh;
-
-    font-size: 3vw;
-    text-transform: uppercase;
-}
-
-.vacancy-title-green {
-    color: #4D795F;
-    font-weight: 400;
-}
-
 .vacancy-description-little {
     display: flex;
     align-items: center;

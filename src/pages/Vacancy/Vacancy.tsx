@@ -14,9 +14,9 @@ export function Vacancy() {
     <div className='about-page'>
       <section className="section">
         <div className="container">
-            <h1 className="vacancy-title">
-                <span>1602 ВКГ</span>
-                <span className="vacancy-title-green">вакансии</span>
+            <h1>
+              <span className='title'>1602 ВКГ</span>
+              <span className='title title-green'>вакансии</span>
             </h1>
         </div>
 

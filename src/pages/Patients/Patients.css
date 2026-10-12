@@ -21,38 +21,6 @@
     margin: 0 auto;
 }
 
-.patients-title {
-    padding-top: 4vh;
-
-    display: flex;
-    align-items: baseline;
-
-    gap: 0 1.2vw;
-    margin: 0;
-
-    font-size: 3vw;
-    font-weight: 700;
-
-    text-transform: uppercase;
-}
-
-.patients-title-green {
-    display: flex;
-    align-items: baseline;
-
-    gap: 0 1.2vw;
-    margin: 0;
-
-    font-size: 3vw;
-
-    text-transform: uppercase;
-}
-
-.patients-title-green {
-    color: #4D795F;
-    font-weight: 400;
-}
-
 .patients-links {
     display: flex;
     flex-direction: column;

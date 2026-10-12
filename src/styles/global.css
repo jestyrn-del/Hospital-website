@@ -156,6 +156,40 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     display: none;
 }
 
+
+.title {
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+
+    gap: 3vw;
+
+    margin: 1.2vh 2.2vh 0 0;
+
+    font-size: 5.5vh;
+    font-weight: 700;
+    line-height: 1.2;
+
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.title-thin {
+    font-weight: 400;
+}
+
+.title-green {
+    color: #4D795F;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
 /* ================== */
 /* === ADAPTATION === */
 /* ================== */

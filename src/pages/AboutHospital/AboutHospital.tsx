@@ -93,9 +93,9 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
   return (
     <section className="section">
       <div className="container">
-          <h1 className="about-title">
-              <span>1602 ВКГ</span>
-              <span className="about-title-green about-title-thin">о госпитале</span>
+          <h1>
+            <span className='title'>1602 ВКГ</span>
+            <span className='title title-green'>о госпитале</span>
           </h1>
 
           <div className="about-title-bunner">

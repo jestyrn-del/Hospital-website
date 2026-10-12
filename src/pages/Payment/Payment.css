@@ -37,24 +37,6 @@
     gap: 2vw;
 }
 
-.paid-title {
-    display: flex;
-    align-items: baseline;
-
-    gap: 0 1.2vw;
-    margin: 0;
-
-    font-size: 3vw;
-    font-weight: 700;
-
-    text-transform: uppercase;
-}
-
-.paid-title-green {
-    color: #4D795F;
-    font-weight: 400;
-}
-
 .paid-description {
     width: 100%;
 

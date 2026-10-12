@@ -33,13 +33,17 @@ export function Home({
   };
 
   return (
-    <div id="top">
-      <section className="hero">
+    <div>
+      <div className="hero">
         <div className="container hero-inner">
           <div className="hero-content">
-            <h1>1602 ВКГ</h1>
-            <p className="hero-lead">Квалифицированная помощь на высоком уровне</p>
+            <h1>
+              <span className='title'>1602 ВКГ</span>
+              <span className='title title-thin'>Квалифицированная помощь на высоком уровне</span>
+            </h1>
+
             <p className="hero-description">Федеральное государственное казенное учреждение «1602 военный клинический госпиталь» министерства обороны Российской Федерации</p>
+            
             <div className="hero-buttons">
               <button className="button" type="button" onClick={onAppointment}>Записаться на прием к руководителю</button>
               <button className="button" type="button" onClick={() => scrollToSection("patient")}>режим работы</button>
@@ -52,7 +56,7 @@ export function Home({
             </div>
 
             <div className='hero-links'>
-              <Link to="/patients">Пациентам <span>↗</span></Link>
+              <Link to="/patients">Пациентам<span>↗</span></Link>
               <a onClick={() => scrollToSection("about")}>Структура <span>↗</span></a>
               <a onClick={() => scrollToSection("about")}>О госпитале <span>↗</span></a>
               <a onClick={() => scrollToSection("contacts")}>Контакты <span>↗</span></a>
@@ -65,9 +69,9 @@ export function Home({
             <div className='hero-decoration-part hero-decoration-right'/>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="about section" id="about">
+      <div className="about section" id="about">
         <div className="container">
           <div className="section-heading">
             <h2>О 1602 ВКГ</h2>
@@ -95,9 +99,9 @@ export function Home({
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="patient section" id="patient">
+      <div className="patient section" id="patient">
         <div className="container">
           <div className="section-heading">
             <h2>Пациентам</h2>
@@ -152,9 +156,9 @@ export function Home({
             <img src={patientMilitary}/>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="contacts section" id="contacts">
+      <div className="contacts section" id="contacts">
         <div className="container">
           <div className="section-heading"><h2>Контакты</h2></div>
           <div className="contacts-grid">
@@ -168,9 +172,9 @@ export function Home({
             <div className="map-placeholder"><span>КАРТА</span></div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section className="review section" id="review">
+      <div className="review section" id="review">
         <div className="container review-grid">
           <form className="review-form" onSubmit={submitReview}>
             <h2>Оставьте свой отзыв</h2>
@@ -182,7 +186,7 @@ export function Home({
             <button className="button--green" type="submit">оставить отзыв</button>
           </form>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

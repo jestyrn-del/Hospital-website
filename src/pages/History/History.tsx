@@ -25,9 +25,9 @@ export function History() {
     <div className='history-page'>
       <section className="section">
         <div className="container">
-            <h1 className="history-title">
-                <span>1602 ВКГ</span>
-                <span className="history-title-green">история медицинской организации</span>
+            <h1>
+              <span className='title'>1602 ВКГ</span>
+              <span className='title title-green'>история медицинской организации</span>
             </h1>
         </div>
 
