@@ -39,7 +39,7 @@
     align-items: center;
     gap: 1vw;
 
-    font-size: 0.8vw;
+    font-size: 1.8vh;
 
     padding: 0.8vh 1.4vw;
     margin: 6vh 0 2vh 0;
@@ -270,6 +270,9 @@
         font-size: 3.4vw;
     }
 
+    .paid-intro-left-part button {
+        padding: 1.2vh 8vw;
+    }
 
     /* ================== */
     /* === DOCUMENTS ==== */
@@ -281,6 +284,14 @@
     }
 
     .paid-documents a {
-        font-size: 3.4vw;
+        font-size: 3.4vh;
+    }
+
+    .paid-documents-column {
+        grid-template-columns: 1fr;
+    }
+
+    .paid-documents-column a {
+        height: 20vh;
     }
 }
