@@ -733,19 +733,8 @@
         font-size: 4vw;
     }
 
-    .about-stats-button {
-        width: 100%;
-        margin-top: 0;
-        justify-content: center;
-    }
-
-    .about-stats-button button {
-        padding: 3.4vw 3.4vh;
-        margin-top: 2vh;
-
-        border-radius: 4vh;
-
-        font-size: 3.2vw;
+    .about-stats-button a {
+        padding: 1vh 2.6vh;
     }
 
     .about-stats-decoration {
