@@ -120,12 +120,12 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
           <img src={moreImage}/>
         </div>
         <div className="about-more-buttons">
-          <button>История медецинской орагнизации{svg}</button>
-          <button>Лицензии{svg}</button>
-          <button>Стандарты медецнской помощи{svg}</button>
-          <button>Показатели доступности качества медецины{svg}</button>
+          <Link className='button-link' to="/history">История медицинской организации{svg}</Link>
+          <Link className='button-link' to="/license">Лицензии{svg}</Link>
+          <button>Стандарты медицинской помощи{svg}</button>
+          <button>Показатели доступности качества медицины{svg}</button>
           <button>Медработники{svg}</button>
-          <button>Вакансии{svg}</button>
+          <Link className='button-link' to="/vacancy">Вакансии{svg}</Link>
         </div>
       </div>
 
