@@ -92,14 +92,14 @@ export function History() {
             <div className="contacts-grid">
               <div className="history-open-hospital"><img src={historyOpenHospitalImage}/></div>
               <div className="contacts-list">
-                <a onClick={() => scrollToSection("contacts")}>1964<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>1970<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>1972<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>1977<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>1989-1990<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>2000<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>2002<span>↗</span></a>
-                <a onClick={() => scrollToSection("contacts")}>2009-2010<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1964<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1970<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1972<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1977<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1989-1990<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>2000<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>2002<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>2009-2010<span>↗</span></a>
               </div>
             </div>
           </div>

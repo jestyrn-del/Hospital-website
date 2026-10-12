@@ -12,11 +12,6 @@
     gap: 2.5vh;
 }
 
-.contacts-link {
-    display: inline-flex;
-    width: 100%;
-}
-
 .contacts-address {
     display: flex;
     align-items: center;
@@ -79,10 +74,5 @@
     .contacts-list {
         padding: 3vh 0;
         gap: 10vh;
-    }
-
-    .contacts-link {
-        display: inline-flex;
-        width: 100%;
     }
 }
