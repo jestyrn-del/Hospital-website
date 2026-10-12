@@ -92,7 +92,6 @@ function App() {
 
         <Route path="/patients" element={<Patients />} />
         <Route path="/structure" element={<Structure />} />
-
         <Route path="/history" element={<History />} />
         <Route path="/license" element={<License />} />
         <Route path="/vacancy" element={<Vacancy />} />
