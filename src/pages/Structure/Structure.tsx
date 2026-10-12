@@ -508,20 +508,12 @@ function useFlipGrid<T extends HTMLElement>(dependency: number | null) {
 
 export function Structure() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [openDepartmentIndex, setOpenDepartmentIndex] = useState<number | null>(null);
+  const [openDepartmentIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
     branchesFlip.capturePositions();
 
     setOpenIndex((currentIndex) =>
-      currentIndex === index ? null : index,
-    );
-  };
-
-  const toggleDepartment = (index: number) => {
-    departmentsFlip.capturePositions();
-
-    setOpenDepartmentIndex((currentIndex) =>
       currentIndex === index ? null : index,
     );
   };
