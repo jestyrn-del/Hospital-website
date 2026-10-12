@@ -1,5 +1,8 @@
 import './Payment.css';
 
+import { Link } from 'react-router-dom';
+
+
 const services = [
   'Приемное',
   'Онкологическое',
@@ -25,6 +28,8 @@ const services = [
 ];
 
 export function PaidServices() {
+  const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
+
   return (
     <div className='paid-page' id="top">
       <section className="paid-intro-main section">
@@ -41,7 +46,7 @@ export function PaidServices() {
                     хирургического корпуса.
                 </p>
 
-                <button className='button' type='button'>
+                <button className='button-link' type='button'>
                     прейскурант
                 </button>
             </div>
@@ -132,25 +137,12 @@ export function PaidServices() {
       </section>
 
       <section className="section">
-        <div className="paid-documents container">
+        <div className="container">
             <div className="paid-documents-column">
-                <a href="#">
-                    Приказ об утверждении Положение о порядке и условиях предоставления платных медициснких услуг в ФКГУ «1602 ВКГ» Минобороны России
-                </a>
-
-                <a href="#">
-                    Положение о порядке и условиях предоставления платных медициснких услуг в ФКГУ «1602 ВКГ» Минобороны России
-                </a>
-            </div>
-
-            <div className="paid-documents-column">
-                <a href="#">
-                    Порядок направления пациентов (маршрутизация пациентов) для оформления медицинской документации и госпитализации в 1602 ВКГ для оказания платных медицинских услуг
-                </a>
-
-                <a href="#">
-                    Положение об отделении медицинского страхования
-                </a>
+                <a className='base-link' href="#">Приказ об утверждении Положение о порядке и условиях предоставления платных медициснких услуг в ФКГУ «1602 ВКГ» Минобороны России</a>
+                <a className='base-link' href="#">Положение о порядке и условиях предоставления платных медициснких услуг в ФКГУ «1602 ВКГ» Минобороны России</a>
+                <a className='base-link' href="#">Порядок направления пациентов (маршрутизация пациентов) для оформления медицинской документации и госпитализации в 1602 ВКГ для оказания платных медицинских услуг</a>
+                <a className='base-link' href="#">Положение об отделении медицинского страхования</a>
             </div>
         </div>
       </section>
