@@ -14,9 +14,11 @@ interface MainLayoutProps {
 
     menuOpen: boolean;
     searchOpen: boolean;
-    informationRequestOpen: boolean;
 
     notification: NotificationState;
+
+    informationRequestOpen: boolean;
+    informationRequestClose: () => void;
 
     onMenuOpen: () => void;
     onMenuClose: () => void;
@@ -25,7 +27,6 @@ interface MainLayoutProps {
     onSearchClose: () => void;
 
     onCreateRequest: () => void;
-    onRequestClose: () => void;
 
     onAccessibility: () => void;
     onAppointment: () => void;
@@ -36,9 +37,10 @@ export function MainLayout({
 
     menuOpen,
     searchOpen,
-    informationRequestOpen,
-
     notification,
+
+    informationRequestOpen,
+    informationRequestClose,
 
     onMenuOpen,
     onMenuClose,
@@ -47,7 +49,6 @@ export function MainLayout({
     onSearchClose,
 
     onCreateRequest,
-    onRequestClose,
 
     onAccessibility,
     onAppointment,
@@ -84,8 +85,8 @@ export function MainLayout({
             />
 
             <InformationRequest
-                open={informationRequestOpen}
-                onClose={onRequestClose}
+              open={informationRequestOpen}
+              onClose={informationRequestClose}
             />
 
             <Footer />

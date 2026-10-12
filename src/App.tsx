@@ -16,11 +16,12 @@ import { Vacancy } from './pages/Vacancy/Vacancy';
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [informationRequestOpen, setInformationRequestOpen] = useState(false);
+  
   const [searchOpen, setSearchOpen] = useState(false);
   const [notification, setNotification] = useState<NotificationState>({ visible: false, message: '' });
-
+  
   const showNotification = (message: string) => setNotification({ visible: true, message });
+  const [informationRequestOpen, setInformationRequestOpen] = useState(false);
 
   useEffect(() => {
     if (!notification.visible) return;
@@ -36,11 +37,12 @@ function App() {
   const openInformationRequest = () => {
       setMenuOpen(false);
       setSearchOpen(false);
+
       setInformationRequestOpen(true);
   };
 
   const closeInformationRequest = () => {
-      setInformationRequestOpen(false);
+    setInformationRequestOpen(false);
   };
 
   return (
@@ -49,11 +51,12 @@ function App() {
       searchOpen={searchOpen}
       notification={notification}
       informationRequestOpen={informationRequestOpen}
+      informationRequestClose={closeInformationRequest}
       onMenuOpen={() => setMenuOpen(true)}
       onMenuClose={() => setMenuOpen(false)}
       onSearchOpen={() => setSearchOpen(true)}
       onSearchClose={() => setSearchOpen(false)}
-      onCreateRequest={() => showNotification('Форма обращения будет доступна на странице обращений.')}
+      onCreateRequest={openInformationRequest}
       onAccessibility={() => showNotification('Версия для слабовидящих будет подключена отдельно.')}
       onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
     >

@@ -3,10 +3,7 @@ import type { ChangeEvent, FormEvent } from 'react';
 
 import './InformationRequest.css';
 
-interface InformationRequestProps {
-    open: boolean;
-    onClose: () => void;
-}
+import type { InformationRequestProps } from '../../types';
 
 interface RequestFormData {
     fullName: string;
@@ -84,7 +81,6 @@ export function InformationRequest({ open, onClose, }: InformationRequestProps) 
 
     const dialogRef = useRef<HTMLDivElement>(null);
     const closeButtonRef = useRef<HTMLButtonElement>(null);
-    const onCloseRef = useRef(onClose);
 
     const titleId = useId();
 
@@ -111,10 +107,6 @@ export function InformationRequest({ open, onClose, }: InformationRequestProps) 
         onClose();
     };
 
-    useEffect(() => {
-        onCloseRef.current = onClose;
-    }, [onClose]);
-
  
     useEffect(() => {
         if (!open) return;
@@ -131,7 +123,7 @@ export function InformationRequest({ open, onClose, }: InformationRequestProps) 
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Escape') {
                 event.preventDefault();
-                onCloseRef.current();
+                handleClose();
                 return;
             }
 
