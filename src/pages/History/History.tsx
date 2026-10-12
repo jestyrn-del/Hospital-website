@@ -21,6 +21,8 @@ export function History() {
 
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
 
+  const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
+
   return (
     <div className='history-page'>
       <section className="section">
@@ -92,14 +94,14 @@ export function History() {
             <div className="contacts-grid">
               <div className="history-open-hospital"><img src={historyOpenHospitalImage}/></div>
               <div className="contacts-list">
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>1964<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>1970<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>1972<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>1977<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>1989-1990<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>2000<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>2002<span>↗</span></a>
-                <a className='base-link' onClick={() => scrollToSection("contacts")}>2009-2010<span>↗</span></a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1964{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1970{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1972{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1977{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>1989-1990{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>2000{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>2002{svg}</a>
+                <a className='base-link' onClick={() => scrollToSection("contacts")}>2009-2010{svg}</a>
               </div>
             </div>
           </div>
