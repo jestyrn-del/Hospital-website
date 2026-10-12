@@ -2,14 +2,6 @@
     background-color: transparent;
 }
 
-.section {
-    background: linear-gradient(
-        180deg,
-        #FFFFFF 0%,
-        #E8E8E8 100%
-    );
-}
-
 .about-title-bunner {
     margin: 4vh 0;
     width: 100%;
