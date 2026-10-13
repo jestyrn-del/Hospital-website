@@ -55,6 +55,8 @@ export function History() {
           </div>
         </div>
 
+
+
         <div className='history-more container'>
           <button type="button" className={`history-more-button ${ isHistoryOpen ? 'history-more-button--active' : '' }`} onClick={() => setIsHistoryOpen(!isHistoryOpen)} aria-expanded={isHistoryOpen} aria-controls="history-more-content">
             {isHistoryOpen ? 'свернуть' : 'подробнее'}
