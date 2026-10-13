@@ -39,6 +39,9 @@
 .hero-buttons a {
     border-radius: 3vh;
     background-color: transparent;
+    flex-direction: column;
+    text-align: center;
+    -ms-flex-align: center;
     font-weight: 400;
 }
 
@@ -174,10 +177,6 @@
 /* ================== */
 /* === ABOUT PART === */
 /* ================== */
-.section {
-    padding: 5% 0;
-}
-
 .about {
     position: relative;
 }

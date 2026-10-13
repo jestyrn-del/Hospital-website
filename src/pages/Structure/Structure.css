@@ -56,7 +56,7 @@
     box-sizing: border-box;
 
     border: 1px solid #000;
-    border-radius: 1vw;
+    border-radius: 2vh;
     background: #FFFFFFAA;
 
     transition:
@@ -406,7 +406,7 @@
         box-sizing: border-box;
 
         border: 1px solid #000000;
-        border-radius: 1vw;
+        border-radius: 1vh;
 
         background: transparent;
 

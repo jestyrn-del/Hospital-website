@@ -528,6 +528,12 @@
 
     .history-more-data-grid-text {
         gap: 4vh;
+        order: 1;
+        width: 100%;
+    }
+
+    .history-more-data-grid-image {
+        order: 2;
     }
 
     .history-more-data-grid-text p {

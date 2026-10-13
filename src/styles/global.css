@@ -100,6 +100,10 @@ img {
     margin: 0 auto;
 }
 
+.section {
+    padding: 5% 0;
+}
+
 
 /* ================= */
 /* ===== FOCUS ===== */
@@ -193,7 +197,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     color: #000000;
 
-    font-size: 2.2vh;
+    font-size: 1.8vh;
     line-height: 1.5;
 
     cursor: pointer;
@@ -221,7 +225,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     border-radius: 1.5vh;
     background-color: #FFFFFF;
     
-    padding: 0.8vh 1.2vw;
+    padding: 0.8vh 3vh;
     font-weight: 700;
 }
 
@@ -263,7 +267,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     min-width: 0;
     padding: 2.2vh;
 
-    font-size: 2.2vh;
+    font-size: 1.8vh;
     font-weight: 700;
 
     background: #FFFFFFAA;
@@ -277,7 +281,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .card span {
-    font-size: 2vh;
+    font-size: 1.6vh;
     font-weight: 400;
     line-height: 1.5;
     color: #000000;
@@ -285,7 +289,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .card span:first-of-type {
-    font-size: 2.2vh;
+    font-size: 1.8vh;
+    padding: 0;
     font-weight: 700;
 }
 
@@ -319,6 +324,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 767px) {
     .container {
         width: calc(100% - 36px);
+    }
+
+    .section {
+        padding: 20% 0;
     }
 
     .mobile-element {
