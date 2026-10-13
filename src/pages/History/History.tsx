@@ -90,7 +90,7 @@ export function History() {
 
         <div className="about-contacts">
           <div className="container">
-            <div className="about-title-thin"><span>ЗНАМЕНАТЕЛЬНЫЕ ДАТЫ И СОБЫТИЯ 1602 ОВКГ:</span></div>
+            <h1><span className='title title-thin'>ЗНАМЕНАТЕЛЬНЫЕ ДАТЫ И СОБЫТИЯ 1602 ОВКГ:</span></h1>
             <div className="contacts-grid">
               <div className="history-open-hospital"><img src={historyOpenHospitalImage}/></div>
               <div className="contacts-list">

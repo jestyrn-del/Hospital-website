@@ -65,67 +65,67 @@ export function PaidServices() {
 
       <section className="paid-services-section section">
         <div className="container">
-            <h2 className="paid-section-title">ОТДЕЛЕНИЯ С ПЛАТНЫМИ УСЛУГАМИ</h2>
+            <h1><span className='title title-thin'>отделения с платными услугами</span></h1>
             <div className="paid-services-grid">
                 {
                     services.map(
                         (service) => (
-                            <a href="#" className="paid-service" key={service}>
-                                {service}
+                            <a href="#" className="card" key={service}>
+                                <span>{service}</span>
                             </a>
                     ))
                 }
 
-                <a href="#" className="paid-service paid-service--large">
-                    Магнитно-резонансной<br/>томографии
+                <a href="#" className="card">
+                    <span>Магнитно-резонансной<br/>томографии</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--large">
-                    <strong>Ультразвуковая диагностика</strong>
-                    <strong>Компьютерная томография</strong>
+                <a href="#" className="card">
+                    <span>Ультразвуковая диагностика</span>
+                    <span>Компьютерная томография</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--large">
-                    Челюстно-лицевой хирургии<br/>и стоматологии
+                <a href="#" className="card">
+                    <span>Челюстно-лицевой хирургии<br/>и стоматологии</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--large">
-                    Врачебной экспертизы летного<br/>состава
+                <a href="#" className="card">
+                    <span>Врачебной экспертизы летного<br/>состава</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--large">
-                    Гипер-(гипо) барической<br/>оксигенации
+                <a href="#" className="card">
+                    <span>Гипер-(гипо) барической<br/>оксигенации</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--large">
-                    <strong>Нефрологическое</strong>
+                <a href="#" className="card">
+                    <span>Нефрологическое</span>
                     <span>с кабинетом гемодиализа</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--xlarge">
-                    <strong>Центр<br/>анестезиологии-реанимации</strong>
+                <a href="#" className="card">
+                    <span>Центр<br/>анестезиологии-реанимации</span>
                     <span>с кабинетом гипербарической<br/>оксигенации</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--xlarge">
-                    <strong>Хирургическое</strong>
+                <a href="#" className="card">
+                    <span>Хирургическое</span>
                     <span>неотложная хирургия<br/>абдоминальная хирургия</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--xlarge">
-                    <strong>Хирургическое</strong>
+                <a href="#" className="card">
+                    <span>Хирургическое</span>
                     <span>сосудистая хирургия<br/>гнойная хирургия<br/>нейрохирургическое отделение</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--xlarge">
-                    <strong>Общеклиническая диагностика</strong>
-                    <strong>Биохимическая диагностика</strong>
+                <a href="#" className="card">
+                    <span>Общеклиническая диагностика</span>
+                    <span>Биохимическая диагностика</span>
                 </a>
 
-                <a href="#" className="paid-service paid-service--xlarge">
-                    <strong>Иммунологическая диагностика</strong>
-                    <strong>Бактериологическая диагностика</strong>
-                    <strong>Гистологические исследования</strong>
+                <a href="#" className="card">
+                    <span>Иммунологическая диагностика</span>
+                    <span>Бактериологическая диагностика</span>
+                    <span>Гистологические исследования</span>
                 </a>
             </div>
         </div>
