@@ -186,6 +186,32 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 
 /* === LINKS === */
+.button-link,
+.base-link {
+    display: flex;
+    align-items: center;
+    
+    border: 1px solid #000000;
+    border-radius: 1.5vh;
+    background-color: #FFFFFF;
+    color: #000000;
+    
+    font-size: 2.2vh;
+    padding: 0.8vh 1.2vw;
+    font-weight: 700;
+    line-height: 1.5;
+
+    text-decoration: none;
+    text-align: left;
+
+    cursor: pointer;
+    overflow-wrap: anywhere;
+
+    transition: 0.3s ease; 
+
+    justify-content: space-between;
+}
+
 .base-link {
     display: flex;
     align-items: center;
@@ -210,6 +236,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     transition: 0.3s ease; 
 
     justify-content: space-between;
+}
+
+.button-link {
+    
 }
 
 .base-link svg:first-of-type,
@@ -238,33 +268,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 .base-link:hover svg:first-of-type,
 .button-link:hover svg:first-of-type {
     transform: translate(0.2vw, -0.2vh);
-}
-
-
-
-.button-link {
-    display: flex;
-    align-items: center;
-    
-    border: 1px solid #000000;
-    border-radius: 1.5vh;
-    background-color: #FFFFFF;
-    color: #000000;
-    
-    font-size: 2.2vh;
-    padding: 0.8vh 1.2vw;
-    font-weight: 700;
-    line-height: 1.5;
-
-    text-decoration: none;
-    text-align: left;
-
-    cursor: pointer;
-    overflow-wrap: anywhere;
-
-    transition: 0.3s ease; 
-
-    justify-content: space-between;
 }
 
 
