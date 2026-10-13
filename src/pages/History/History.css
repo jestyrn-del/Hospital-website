@@ -169,6 +169,7 @@
     display: inline-flex;
 
     gap: 1vw;
+    margin: 2vh 0;
 
     border: none;
 
@@ -274,25 +275,20 @@
 
 .history-more-data-grid {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-columns: 1fr 1fr;
     align-items: start;
 
-    padding: 0 40%;
-    width: 130vw;
+    width: 100%;
 
     gap: 3vw;
 
     margin-top: 4vw;
+    margin-bottom: 2vh;
 }
 
 .history-more-data-grid-image {
-    position: absolute;
-    left: -7vw;
-
-    width: 60vh;
-    bottom: -10vh;
-
-    overflow: hidden;
+    width: 50vh;
+    height: 70vh;
 
     border-radius: 1vw;
 }
@@ -301,7 +297,7 @@
     display: block;
 
     width: 100%;
-    height: auto;
+    height: 100%;
 
     object-fit: cover;
 
@@ -311,6 +307,7 @@
 .history-more-data-grid-text {
     display: flex;
     flex-direction: column;
+    width: 60vw;
 
     gap: 1.5vw;
 }
