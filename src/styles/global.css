@@ -226,6 +226,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     opacity: 0.9;
 }
 
+.button-link:hover, .button-link:hover svg:first-of-type {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .base-link:hover svg:first-of-type,
 .button-link:hover svg:first-of-type {
     transform: translate(0.2vw, -0.2vh);
@@ -238,7 +242,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     align-items: center;
     
     border: 1px solid #000000;
-    border-radius: 1.2vh;
+    border-radius: 1.5vh;
     background-color: #FFFFFF;
     color: #000000;
     
@@ -266,7 +270,64 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 
-/* colapsed links */
+
+.card {
+    display: grid;
+    align-items: center;
+
+    min-width: 0;
+    padding: 2.2vh;
+
+    font-size: 2.2vh;
+    font-weight: 700;
+
+    background: #FFFFFFAA;
+
+    border: 1px solid #000000;
+    border-radius: 1.5vh;
+
+    color: #000000;
+
+    transition: 0.3s ease;
+}
+
+.card span {
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.card span:first-of-type {
+    font-size: 2.2vh;
+    font-weight: 700;
+}
+
+.card:hover {
+    background: #FFFFFF;
+    border-color: #4D795F;
+    padding-top: 2vh;
+    color: #4D795F;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover span {
+    color: #4D795F;
+}
+
+.card img {
+    display: block;
+
+    width: 2.5vw;
+    height: 2.5vw;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+/* card - clickable */
 
 
 /* ================== */
