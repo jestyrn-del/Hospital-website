@@ -79,10 +79,14 @@
     display: grid;
 }
 
+.vacancy-list p span p:first-of-type {
+    margin: -2vh 0 -2vh -1vh;
+}
+
 .vacancy-list p span p:last-of-type {
     font-weight: 400;
+    margin: 0 0 -4vh -1vh;
     color: #4D795F;
-    margin-top: -1vh;
 }
 
 @media (max-width: 767px) {
