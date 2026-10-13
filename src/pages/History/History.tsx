@@ -44,11 +44,11 @@ export function History() {
         
         <div className="history-list container">
           <div className='history-list-grid'>
-            <p><img src={fourImage}/>Основание<br/>23–28 июня 1941 г.</p>
-            <p><img src={usersImage}/>Становление<br/>1944–2000 гг.</p>
-            <p><img src={swapImage}/>Реорганизация<br/>2009 г. — настоящее время</p>
-            <p><img src={flagImage}/>Боевой путь<br/>1941–1944 гг.</p>
-            <p><img src={barsImage}/>Интенсификация и развитие<br/>2000–2009 гг.</p>
+            <p className='card'><img src={fourImage}/>Основание<br/>23–28 июня 1941 г.</p>
+            <p className='card'><img src={usersImage}/>Становление<br/>1944–2000 гг.</p>
+            <p className='card'><img src={swapImage}/>Реорганизация<br/>2009 г. — настоящее время</p>
+            <p className='card'><img src={flagImage}/>Боевой путь<br/>1941–1944 гг.</p>
+            <p className='card'><img src={barsImage}/>Интенсификация и развитие<br/>2000–2009 гг.</p>
           </div>
           <div className='history-list-image'>
             <img src={manySoldiersImage}/>

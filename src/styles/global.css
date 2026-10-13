@@ -212,11 +212,16 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     justify-content: space-between;
 }
 
-.base-link svg:first-of-type {
+.base-link svg:first-of-type,
+.button-link svg:first-of-type {
     transition: 0.3s ease;
 
     width: 2.2vh;
     height: 2.2vh;
+}
+
+.button-link svg:first-of-type {
+    border-radius: 2vh;
 }
 
 .base-link:hover, .base-link:hover svg:first-of-type,
@@ -260,13 +265,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     transition: 0.3s ease; 
 
     justify-content: space-between;
-}
-
-.button-link svg:first-of-type {
-    transition: 0.3s ease;
-
-    width: 2.2vh;
-    height: 2.2vh;
 }
 
 

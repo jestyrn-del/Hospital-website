@@ -25,18 +25,54 @@ export function Vacancy() {
         </div>
         
         <div className="vacancy-list container">
-          <p><img src={userImage}/>Врач-хирург (эксперт)</p>
-          <p><img src={userImage}/>Врач-хирург</p>
-          <p><img src={userImage}/>Медицинская сестра палатная (постовая) нейрохирургия</p>
-          <p><img src={userImage}/>Врач-анестезиолог реаниматолог<br/>2 вакансии</p>
-          <p><img src={userImage}/>Медицинская сестра анестезист</p>
-          <p><img src={userImage}/>Врач — гастроэнтеролог</p>
-          <p><img src={userImage}/>Врач функциональной диагностики</p>
-          <p><img src={userImage}/>Заведующий кабинетом<br/>врач-функциональной диагностики</p>
-          <p><img src={userImage}/>Врач-уролог</p>
-          <p><img src={userImage}/>Медицинская сестра палатная (постовая) неврология</p>
-          <p><img src={userImage}/>Медицинская сестра палатная (постовая) пульмонология</p>
-          <p><img src={userImage}/>Заведующий кабинетом<br/>врач-рентгенолог</p>
+          
+          <p className='card'>
+            <img src={userImage}/>Врач-хирург (эксперт
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Врач-хирург
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Медицинская сестра палатная (постовая) нейрохирургия
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Врач-анестезиолог реаниматолог<br/>2 вакансии
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Медицинская сестра анестезист
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Врач — гастроэнтеролог
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Врач функциональной диагностики
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Заведующий кабинетом<br/>врач-функциональной диагностики
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Врач-уролог
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Медицинская сестра палатная (постовая) неврология
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Медицинская сестра палатная (постовая) пульмонология
+          </p>
+          
+          <p className='card'>
+            <img src={userImage}/>Заведующий кабинетом<br/>врач-рентгенолог
+          </p>
         </div>
 
         <Contacts />
