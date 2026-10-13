@@ -39,7 +39,11 @@ export function Vacancy() {
           </p>
           
           <p className='card'>
-            <img src={userImage}/>Врач-анестезиолог реаниматолог<br/>2 вакансии
+            <img src={userImage}/>
+            <span>
+              <p>Врач-анестезиолог реаниматолог</p>
+              <p>2 вакансии</p>
+            </span>
           </p>
           
           <p className='card'>

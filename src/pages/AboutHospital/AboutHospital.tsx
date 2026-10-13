@@ -136,8 +136,8 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
       <div className="container about-news">
         <h1><span className='title title-thin'>новости</span></h1>
 
-        <button className="about-news-nav-button about-news-nav-button-left" type="button" onClick={() => scrollNews("left")} aria-label="Предыдущая новость">←</button>
-        <button className="about-news-nav-button about-news-nav-button-right" type="button" onClick={() => scrollNews("right")} aria-label="Следующая новость">→</button>
+        <button className="about-news-nav-button about-news-nav-button-left" type="button" onClick={() => scrollNews("left")} aria-label="Предыдущая новость">{svg}</button>
+        <button className="about-news-nav-button about-news-nav-button-right" type="button" onClick={() => scrollNews("right")} aria-label="Следующая новость">{svg}</button>
 
         <div className="about-news-cards" ref={newsRef}>
           {

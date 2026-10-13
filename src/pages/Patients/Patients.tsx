@@ -74,11 +74,7 @@ export function Patients() {
 
               return (
                 <div className={`patients-item${isOpen ? ' patients-item--open' : ''}`} key={item.title}>
-                  <button className="patients-link" type="button" aria-expanded={isOpen} aria-controls={contentId} onClick={() => toggleItem(index)}>
-                    <span className="patients-link-text">{item.title}</span>
-					          {svg}
-                  </button>
-				  {/* <a className='base-link' onClick={() => toggleItem(index)}>{item.title}{svg}</a> */}
+				          <a className='patients-item-link base-link' onClick={() => toggleItem(index)}>{item.title}{svg}</a>
 
                   <div className="patients-description" id={contentId} aria-hidden={!isOpen}>
                     <p>{item.description}</p>

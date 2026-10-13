@@ -36,6 +36,12 @@
     margin-top: 0.8vh;
 }
 
+.hero-buttons a {
+    border-radius: 3vh;
+    background-color: transparent;
+    font-weight: 400;
+}
+
 .hero-cards {
     display: flex;
     align-items: center;

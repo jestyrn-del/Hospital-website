@@ -151,9 +151,11 @@
 
 .about-news-nav-button-left {
     left: -3vw;
+    rotate: -135deg;
 }
 .about-news-nav-button-right {
     right: -3vw;
+    rotate: 45deg;
 }
 
 .about-news-nav-button:hover {
