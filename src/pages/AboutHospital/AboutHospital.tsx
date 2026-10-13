@@ -115,15 +115,15 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
         <div className="about-more-buttons">
           <Link className='button-link' to="/history">История медицинской организации{svg}</Link>
           <Link className='button-link' to="/license">Лицензии{svg}</Link>
-          <button>Стандарты медицинской помощи{svg}</button>
-          <button>Показатели доступности качества медицины{svg}</button>
-          <button>Медработники{svg}</button>
+          <a className='button-link'>Стандарты медицинской помощи{svg}</a>
+          <a className='button-link'>Показатели доступности качества медицины{svg}</a>
+          <a className='button-link'>Медработники{svg}</a>
           <Link className='button-link' to="/vacancy">Вакансии{svg}</Link>
         </div>
       </div>
 
       <div className="container about-stats-links">
-        <span className="about-title-thin">сведения об организации</span>
+        <h1><span className='title title-thin'>Сведения об организации</span></h1>
         <div className='about-stats-links-links'>
           <a>Устав организации</a>
           <a>Положение об организации</a>
@@ -134,9 +134,7 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
       </div>
 
       <div className="container about-news">
-        <div className="about-news-header">
-          <span className="about-title-thin">новости</span>
-        </div>
+        <h1><span className='title title-thin'>новости</span></h1>
 
         <button className="about-news-nav-button about-news-nav-button-left" type="button" onClick={() => scrollNews("left")} aria-label="Предыдущая новость">←</button>
         <button className="about-news-nav-button about-news-nav-button-right" type="button" onClick={() => scrollNews("right")} aria-label="Следующая новость">→</button>
