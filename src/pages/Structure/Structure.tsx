@@ -508,12 +508,20 @@ function useFlipGrid<T extends HTMLElement>(dependency: number | null) {
 
 export function Structure() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [openDepartmentIndex] = useState<number | null>(null);
+  const [openDepartmentIndex, setOpenDepartmentIndex] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
     branchesFlip.capturePositions();
 
     setOpenIndex((currentIndex) =>
+      currentIndex === index ? null : index,
+    );
+  };
+
+  const toggleDepartment = (index: number) => {
+    departmentsFlip.capturePositions();
+
+    setOpenDepartmentIndex((currentIndex) =>
       currentIndex === index ? null : index,
     );
   };
@@ -536,7 +544,7 @@ export function Structure() {
         </div>
 
         <div className='structure-branches'>
-          <h2 className='structure-title-thin'>ФИЛИАЛЫ</h2>
+          <h1><span className='title title-thin'>филиалы</span></h1>
           <div className='structure-branches-grid' ref={branchesFlip.gridRef}>
             {branches.map((item, index) => {
               const isOpen = openIndex === index;
@@ -668,7 +676,7 @@ export function Structure() {
         </div>
 
         <div className="structure-departments">
-          <h2 className="structure-title-thin">ОТДЕЛЕНИЯ</h2>
+          <h1><span className='title title-thin'>отделения</span></h1>
 
           <div className="departments-grid" ref={departmentsFlip.gridRef}>
             {departments.map((dept, index) => {
@@ -677,7 +685,7 @@ export function Structure() {
 
               return (
                 <article className={`department-card ${ isOpen ? 'department-card--open' : '' }`} key={dept.fullName} >
-                  <a className='button-link ' onClick={() => toggleItem(index)} aria-expanded={isOpen}>
+                  <a className='button-link ' onClick={() => toggleDepartment(index)} aria-expanded={isOpen}>
                     {dept.fullName}
                     {svg}
                   </a>

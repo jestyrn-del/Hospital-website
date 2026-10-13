@@ -161,12 +161,13 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     display: inline-flex;
     align-items: baseline;
     flex-wrap: wrap;
+    max-width: 90%;
 
     gap: 3vw;
 
     margin: 1.2vh 2.2vh 0 0;
 
-    font-size: 5.5vh;
+    font-size: 5vh;
     font-weight: 700;
     line-height: 1.2;
 
@@ -185,37 +186,56 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 
 /* === LINKS === */
-.base-link {
+.base-link, 
+.button-link {
     display: flex;
     align-items: center;
-    
-    border-bottom: 1px solid #000000;
-    background-color: transparent;
+
     color: #000000;
 
-    width: 100%;
-    
     font-size: 2.2vh;
-    padding: 0.5vh;
-    font-weight: 400;
     line-height: 1.5;
-
-    text-decoration: none;
-    text-align: left;
 
     cursor: pointer;
     overflow-wrap: anywhere;
-
-    transition: 0.3s ease; 
-
     justify-content: space-between;
+
+    text-decoration: none;
+    text-align: left;
+    
+    transition: 0.3s ease; 
 }
 
-.base-link svg:first-of-type {
+.base-link {
+    border-bottom: 1px solid #000000;
+    background-color: transparent;
+
+    width: 100%;
+    
+    padding: 0.5vh;
+    font-weight: 400;
+}
+
+.button-link {
+    border: 1px solid #000000;
+    border-radius: 1.5vh;
+    background-color: #FFFFFF;
+    
+    padding: 0.8vh 1.2vw;
+    font-weight: 700;
+}
+
+
+.base-link svg:first-of-type,
+.button-link svg:first-of-type {
     transition: 0.3s ease;
 
     width: 2.2vh;
     height: 2.2vh;
+}
+
+.button-link svg:first-of-type {
+    border-radius: 2vh;
 }
 
 .base-link:hover, .base-link:hover svg:first-of-type,
@@ -225,47 +245,72 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     opacity: 0.9;
 }
 
+.button-link:hover, .button-link:hover svg:first-of-type {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .base-link:hover svg:first-of-type,
 .button-link:hover svg:first-of-type {
     transform: translate(0.2vw, -0.2vh);
 }
 
 
-
-.button-link {
-    display: flex;
+/* === CARD === */
+.card {
+    display: grid;
     align-items: center;
-    
-    border: 1px solid #000000;
-    border-radius: 1.2vh;
-    background-color: #FFFFFF;
-    color: #000000;
-    
+
+    min-width: 0;
+    padding: 2.2vh;
+
     font-size: 2.2vh;
-    padding: 0.8vh 1.2vw;
     font-weight: 700;
-    line-height: 1.5;
 
-    text-decoration: none;
-    text-align: left;
+    background: #FFFFFFAA;
 
-    cursor: pointer;
-    overflow-wrap: anywhere;
+    border: 1px solid #000000;
+    border-radius: 1.5vh;
 
-    transition: 0.3s ease; 
+    color: #000000;
 
-    justify-content: space-between;
-}
-
-.button-link svg:first-of-type {
     transition: 0.3s ease;
-
-    width: 2.2vh;
-    height: 2.2vh;
 }
 
+.card span {
+    font-size: 2vh;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    transition: 0.3s ease;
+}
 
-/* colapsed links */
+.card span:first-of-type {
+    font-size: 2.2vh;
+    font-weight: 700;
+}
+
+.card:hover {
+    background: #FFFFFF;
+    border-color: #4D795F;
+    padding-top: 2vh;
+    color: #4D795F;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover span {
+    color: #4D795F;
+}
+
+.card img {
+    display: block;
+
+    width: 2.5vw;
+    height: 2.5vw;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
 
 
 /* ================== */
@@ -290,11 +335,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         gap: 4px;
     }
 
+
+
+    .title {
+        font-size: 3.6vh;
+    }
+
+
+
     .button {
         font-size: 2.8vw;
         padding: 0.8vh 1.4vw;
 
-        width: 52vw;
+        width: 80vw;
         height: 4vh;
 
         border-radius: 2vh;

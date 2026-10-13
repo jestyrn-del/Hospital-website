@@ -44,16 +44,18 @@ export function History() {
         
         <div className="history-list container">
           <div className='history-list-grid'>
-            <p><img src={fourImage}/>Основание<br/>23–28 июня 1941 г.</p>
-            <p><img src={usersImage}/>Становление<br/>1944–2000 гг.</p>
-            <p><img src={swapImage}/>Реорганизация<br/>2009 г. — настоящее время</p>
-            <p><img src={flagImage}/>Боевой путь<br/>1941–1944 гг.</p>
-            <p><img src={barsImage}/>Интенсификация и развитие<br/>2000–2009 гг.</p>
+            <p className='card'><img src={fourImage}/>Основание<br/>23–28 июня 1941 г.</p>
+            <p className='card'><img src={usersImage}/>Становление<br/>1944–2000 гг.</p>
+            <p className='card'><img src={swapImage}/>Реорганизация<br/>2009 г. — настоящее время</p>
+            <p className='card'><img src={flagImage}/>Боевой путь<br/>1941–1944 гг.</p>
+            <p className='card'><img src={barsImage}/>Интенсификация и развитие<br/>2000–2009 гг.</p>
           </div>
           <div className='history-list-image'>
             <img src={manySoldiersImage}/>
           </div>
         </div>
+
+
 
         <div className='history-more container'>
           <button type="button" className={`history-more-button ${ isHistoryOpen ? 'history-more-button--active' : '' }`} onClick={() => setIsHistoryOpen(!isHistoryOpen)} aria-expanded={isHistoryOpen} aria-controls="history-more-content">
@@ -74,14 +76,14 @@ export function History() {
                 <p>В 1968 г. введена в строй новая аптека, библиотека. В начале 1974 г. было построено и сдано в эксплуатацию современное 4_х этажное здание хирургического корпуса на 200 коек.</p>
               </div>
               <div className='history-more-data-grid'>
+                <div className='history-more-data-grid-image'>
+                  <img src={historyHumanImage}/>
+                </div>
                 <div className='history-more-data-grid-text'>
                   <p>24 марта 1984 г. после соответствующего ремонта и перепланировки сборно-каркасного здания барачного типа был сдан корпус психиатрического отделения на 40 коек. В 1993 г. — отдельный корпус для кожно-венерологического отделения</p>
                   <p>8 мая 2000 г. открыт и сдан в эксплуатацию новый современный терапевтический корпус на 150 коек с развёртыванием кардиологического центра на 85 коек</p>
                   <p>В 2008 г. закончилось строительство 7-этажного лечебно-диагностического корпуса на 245 коек с надстройкой для актового зала на 250 мест</p>
                   <p>В настоящее время возглавляет госпиталь к.м.н., полковник медицинской службы Крайнюков П.Е., заместитель начальника по медицинской части — полковник медицинской службы Попов А.В. В госпитале в разное время служили и работали (некоторые продолжают плодотворно трудиться и сегодня) заслуженные врачи РФ: Харагезов М.М., Гекимян И.К., Вечернин Н.М., Барцевич Б.Н., Богучарский, В.М., Корзан Д.П., Мелещенко Д.П., Горовиц С.Г., к.м.н. Локоть П.Я., Селиванов В.И., Аршанский Ш.С., д.м.н. Соломин А.Н., Аблязин У.С., Логвиненко А.И., Власов А.С., Чуйко В.И., д.м.н. Ан Р.Н., Моисеенко А.И., Ватаманюк В.П., Абаев Г.Т., Шейко А.В., д.м.н. Багмет А.Д., Татарин С.Н.; заслуженный работник здравоохранения РФ — канд. фарм. наук Давидов С.Б. и др.</p>
-                </div>
-                <div className='history-more-data-grid-image'>
-                  <img src={historyHumanImage}/>
                 </div>
               </div>
             </div>
@@ -90,7 +92,7 @@ export function History() {
 
         <div className="about-contacts">
           <div className="container">
-            <div className="about-title-thin"><span>ЗНАМЕНАТЕЛЬНЫЕ ДАТЫ И СОБЫТИЯ 1602 ОВКГ:</span></div>
+            <h1><span className='title title-thin'>ЗНАМЕНАТЕЛЬНЫЕ ДАТЫ И СОБЫТИЯ 1602 ОВКГ:</span></h1>
             <div className="contacts-grid">
               <div className="history-open-hospital"><img src={historyOpenHospitalImage}/></div>
               <div className="contacts-list">

@@ -45,6 +45,10 @@
     transition: 0.3s ease;
 }
 
+.patients-item a, .patients-item a:hover {
+    border-color: transparent;
+}
+
 .patients-item--open .patients-link {
     color: #4D795F;
     font-weight: 700;
@@ -91,7 +95,7 @@
     grid-template-rows: 0fr;
 
     color: #4D795F;
-    font-size: 0.8vw;
+    font-size: 2vh;
     line-height: 1.6;
 
     opacity: 0;

@@ -44,8 +44,8 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
             <p className="hero-description">Федеральное государственное казенное учреждение «1602 военный клинический госпиталь» министерства обороны Российской Федерации</p>
             
             <div className="hero-buttons">
-              <button className="button" type="button" onClick={onAppointment}>Записаться на прием к руководителю</button>
-              <button className="button" type="button" onClick={() => scrollToSection("patient")}>режим работы</button>
+              <a className="button-link" type="button" onClick={onAppointment}>Записаться на прием к руководителю</a>
+              <a className="button-link" type="button" onClick={() => scrollToSection("patient")}>режим работы</a>
             </div>
           </div>
 
@@ -72,9 +72,7 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
 
       <div className="about section" id="about">
         <div className="container">
-          <div className="section-heading">
-            <h2>О 1602 ВКГ</h2>
-          </div>
+          <h1><span className='title title-thin'>О 1602 ВКГ</span></h1>
           <div className='about-banner'>
             <img src={aboutBanner}/>
           </div>
@@ -101,20 +99,21 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
       <div className="patient section" id="patient">
         <div className="container">
           <div className="section-heading">
-            <h2>Пациентам</h2>
+            <h1><span className='title title-thin'>Пациентам</span></h1>
           </div>
           <div className="patient-info">
-            <div className="info-card">
-              <span className="info-card-title">Режим работы</span>
-              <span className="info-card-value">Каждый день, круглосуточно</span>
+            <div className="card">
+              <span>Режим работы</span>
+              <span>Каждый день, круглосуточно</span>
             </div>
-            <div className="info-card">
-              <span className="info-card-title">Горячая линия</span>
-              <span className="info-card-value">+7 863 272-83-66<br/>факс 272 83 11</span>
+            <div className="card">
+              <span>Горячая линия</span>
+              <span>+7 863 272-83-66</span>
+              <span>факс 272 83 11</span>
             </div>
-            <div className="info-card">
-              <span className="info-card-title">Психологическая поддержка ВС РФ</span>
-              <span className="info-card-value">8 800 550-67-98</span>
+            <div className="card">
+              <span>Психологическая поддержка ВС РФ</span>
+              <span>8 800 550-67-98</span>
             </div>
           </div>
           <div className="patient-links">
