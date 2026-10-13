@@ -255,7 +255,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 
-
+/* === CARD === */
 .card {
     display: grid;
     align-items: center;
@@ -311,8 +311,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
     object-fit: contain;
 }
-
-/* card - clickable */
 
 
 /* ================== */
