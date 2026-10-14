@@ -1,8 +1,10 @@
 import headerLogo from '../../assets/header-logo.svg';
 import './Footer.css';
 
+import { Link } from 'react-router-dom';
+
 export function Footer() {
-  return (
+    return (
     <footer className="footer">
         <div className="footer-decor"></div>
 
@@ -23,14 +25,14 @@ export function Footer() {
 
             <div className="footer-column">
                 <a href="#">записаться на прием</a>
-                <a href="#patient">пациентам</a>
-                <a href="#patient">режим работы</a>
+                <Link to="/patients">Пациентам</Link>
+                <Link to="/">Режим работы</Link>
             </div>
 
             <div className="footer-column">
                 <a href="#">психологическая поддержка ВС РФ</a>
                 <a href="#">военная академия</a>
-                <a href="#contacts">контакты</a>
+                <a href="#">контакты</a>
                 <a href="#">контролирующие органы</a>
             </div>
 
