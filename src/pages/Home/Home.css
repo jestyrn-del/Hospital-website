@@ -641,6 +641,10 @@
         object-fit: cover;
     }
 
+    .about-decorations {
+        display: none;
+    }
+
     .about-text {
         width: 100%;
         max-width: none;
