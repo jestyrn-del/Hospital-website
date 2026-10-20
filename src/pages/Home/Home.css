@@ -156,7 +156,6 @@
     margin: 1% 0 4%;
 
     width: 100%;
-    height: 21vh;
 
     border-radius: 10px;
 }
@@ -615,16 +614,13 @@
     }
 
     .about-banner {
-        height: 20vh;
+        height: 21vh;
 
         margin: 0 0 2vh;
         overflow: hidden;
     }
 
     .about-banner img {
-        width: 100%;
-        height: 100%;
-
         object-fit: cover;
     }
 
