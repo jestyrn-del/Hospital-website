@@ -51,7 +51,7 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
             <p className="hero-description">Федеральное государственное казенное учреждение «1602 военный клинический госпиталь» министерства обороны Российской Федерации</p>
             
             <div className="hero-buttons">
-              <a className="button-link" type="button" onClick={onAppointment}>Записаться на прием к руководителю</a>
+              <a className="button-link" type="button" onClick={onAppointment}>записаться на прием</a>
               <a className="button-link" type="button" onClick={() => scrollToSection("patient")}>режим работы</a>
             </div>
           </div>
