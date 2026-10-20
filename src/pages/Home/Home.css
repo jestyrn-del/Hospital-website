@@ -103,7 +103,7 @@
     position: absolute;
     inset: 0;
 
-    left: -25%;
+    left: 0;
 
     z-index: -1;
 }
@@ -114,7 +114,7 @@
     position: absolute;
     inset: 0;
 
-    left: -25%;
+    left: 0;
 
     z-index: -1;
 }
@@ -582,60 +582,26 @@
     .hero-decoration {
         display: flex;
 
-        position: absolute;
-        inset: 0;
-
-        width: 100%;
-        height: 100%;
-
-        left: 65%;
-
-        pointer-events: none;
-        z-index: -10;
+        left: 20%;
+        top: -5%;
     }
 
     .hero-decoration-shape-mobile {
         display: flex;
-
-        position: absolute;
-        inset: 0;
-
-        left: -25%;
-
-        z-index: -1;
     }
 
     .hero-decoration-shapes-mobile {
         display: flex;
 
-        position: absolute;
-        inset: 0;
-
         left: -25%;
-
-        z-index: -1;
     }
 
     .hero-decoration-shapes {
         display: none;
-
-        position: absolute;
-        inset: 0;
-
-        left: -25%;
-
-        z-index: -1;
     }
 
     .hero-decoration-shape {
         display: none;        
-        
-        position: absolute;
-        inset: 0;
-        
-        left: 0%;
-
-        z-index: -1;
     }
 
 

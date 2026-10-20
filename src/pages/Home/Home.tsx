@@ -73,7 +73,6 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
             <img className='hero-decoration-shapes-mobile' src={heroShapesMobile}/>
             <img className='hero-decoration-shape-mobile' src={heroShapeMobile}/>
             
-            
             <img className='hero-decoration-shapes' src={heroShapes}/>
             <img className='hero-decoration-shape' src={heroShape}/>
           </div>
