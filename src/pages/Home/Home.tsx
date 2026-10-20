@@ -4,6 +4,8 @@ import heroImage from '../../assets/home-hero-hospital.svg';
 
 import heroShape from '../../assets/home-hero-shape.svg';
 import heroShapes from '../../assets/home-hero-shapes.svg';
+import heroShapeMobile from '../../assets/home-hero-shape-mobile.svg';
+import heroShapesMobile from '../../assets/home-hero-shapes-mobile.svg';
 
 
 
@@ -68,6 +70,10 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           </div>
 
           <div className='hero-decoration'>
+            <img className='hero-decoration-shapes-mobile' src={heroShapesMobile}/>
+            <img className='hero-decoration-shape-mobile' src={heroShapeMobile}/>
+            
+            
             <img className='hero-decoration-shapes' src={heroShapes}/>
             <img className='hero-decoration-shape' src={heroShape}/>
           </div>

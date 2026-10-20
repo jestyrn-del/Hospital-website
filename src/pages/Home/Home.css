@@ -94,7 +94,29 @@
     left: 65%;
 
     pointer-events: none;
-    z-index: 0;
+    z-index: -10;
+}
+
+.hero-decoration-shape-mobile {
+    display: none;
+
+    position: absolute;
+    inset: 0;
+
+    left: -25%;
+
+    z-index: -1;
+}
+
+.hero-decoration-shapes-mobile {
+    display: none;
+
+    position: absolute;
+    inset: 0;
+
+    left: -25%;
+
+    z-index: -1;
 }
 
 .hero-decoration-shapes {
@@ -558,33 +580,62 @@
     }
 
     .hero-decoration {
-        left: 0;
-        top: 0;
+        display: flex;
+
+        position: absolute;
+        inset: 0;
 
         width: 100%;
         height: 100%;
 
+        left: 65%;
+
+        pointer-events: none;
+        z-index: -10;
+    }
+
+    .hero-decoration-shape-mobile {
+        display: flex;
+
+        position: absolute;
+        inset: 0;
+
+        left: -25%;
+
         z-index: -1;
     }
 
-    .hero-decoration-up {
+    .hero-decoration-shapes-mobile {
+        display: flex;
+
+        position: absolute;
+        inset: 0;
+
+        left: -25%;
+
+        z-index: -1;
+    }
+
+    .hero-decoration-shapes {
         display: none;
+
+        position: absolute;
+        inset: 0;
+
+        left: -25%;
+
+        z-index: -1;
     }
 
-    .hero-decoration-down {
-        right: 20%;
-        top: 0;
+    .hero-decoration-shape {
+        display: none;        
+        
+        position: absolute;
+        inset: 0;
+        
+        left: 0%;
 
-        width: 58vw;
-        height: 40%;
-    }
-
-    .hero-decoration-right {
-        right: -10%;
-        top: 0;
-
-        width: 52.5vw;
-        height: 40%;
+        z-index: -1;
     }
 
 
