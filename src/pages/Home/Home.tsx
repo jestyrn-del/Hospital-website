@@ -8,9 +8,10 @@ import heroShapeMobile from '../../assets/home-hero-shape-mobile.svg';
 import heroShapesMobile from '../../assets/home-hero-shapes-mobile.svg';
 
 
-
 import aboutBanner from '../../assets/home-about-banner.svg';
 import aboutStatsImg from '../../assets/home-about-stats-img.svg';
+import aboutDecoration from '../../assets/home-about-decoration.svg';
+
 
 import patientMilitary from '../../assets/home-patient-military.svg';
 
@@ -87,6 +88,9 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           </div>
           <div className="about-text">
             <p>Федеральное государственное казённое учреждение «1602 военный клинический госпиталь» Министерства обороны Российской Федерации (ФГКУ «1602 ВКГ» МО РФ) сформирован 23 июня 1941 года. Является многопрофильным специализированным медицинским учреждением и головным для 18 госпиталей, 9 поликлиник, 1 лазарета и других медицинских учреждений, которые охватывают территорию всего Южного военного округа, в состав которого входят Республики: Адыгея, Дагестан, Ингушетия, Северная Осетия-Алания, Чеченская, Кабардино-Балкарская, Калмыкская, Карачаево‑Черкесская; Краснодарский и Ставропольский край; Ростовская, Волгоградская и Астраханская области.              </p>
+          </div>
+          <div className='about-decorations'>
+            <img src={aboutDecoration}/>
           </div>
           <div className='about-stats'>
             <div className='about-stats-info'>

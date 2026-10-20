@@ -150,6 +150,23 @@
     font-weight: 500;
 }
 
+.about-decorations {
+    position: absolute;
+
+    width: 70vh;
+    height: 70vh;
+
+    top: 5%;
+    right: -2%;
+}
+
+.about-decorations img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
 .about-banner {
     flex: 0 0 25%;
 
