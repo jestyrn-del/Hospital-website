@@ -63,9 +63,7 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           </div>
 
           <div className='hero-decoration'>
-            <div className='hero-decoration-part hero-decoration-up'/>
-            <div className='hero-decoration-part hero-decoration-down'/>
-            <div className='hero-decoration-part hero-decoration-right'/>
+
           </div>
         </div>
       </div>
