@@ -2,6 +2,11 @@ import { useState, type FormEvent } from 'react';
 import type { HomeProps, ReviewFormData } from '../../types';
 import heroImage from '../../assets/home-hero-hospital.svg';
 
+import heroShape from '../../assets/home-hero-shape.svg';
+import heroShapes from '../../assets/home-hero-shapes.svg';
+
+
+
 import aboutBanner from '../../assets/home-about-banner.svg';
 import aboutStatsImg from '../../assets/home-about-stats-img.svg';
 
@@ -63,7 +68,8 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           </div>
 
           <div className='hero-decoration'>
-
+            <img className='hero-decoration-shapes' src={heroShapes}/>
+            <img className='hero-decoration-shape' src={heroShape}/>
           </div>
         </div>
       </div>
