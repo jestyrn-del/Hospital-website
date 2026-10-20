@@ -96,7 +96,7 @@ img {
 /* ===== LAYOUT ===== */
 /* ================== */
 .container {
-    width: 90%;
+    width: 92vw;
     margin: 0 auto;
 }
 
@@ -343,6 +343,9 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
         gap: 4px;
     }
 
+    .header-not-mobile{
+        display: none;
+    }
 
 
     .title {

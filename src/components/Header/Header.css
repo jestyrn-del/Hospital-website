@@ -1,30 +1,27 @@
 .site-header {
     position: absolute;
     z-index: 20;
-    top: 2%;
+    top: 2vh;
     left: 0;
     width: 100%;
     background: transparent;
 }
 
 .header-inner {
-    height: 100%;
     display: flex;
     align-items: center;
-    gap: 20px
 }
 
 .header-logo {
-    height: 90%;
-    margin-left: -1.4vw;
+    margin-left: -3vh;
     display: flex;
     align-items: center;
 }
 
 .header-logo img {
     display: block;
-    height: 8.8vh;
-    width: 6.4vw;
+    height: 100%;
+    width: 100%;
 
     object-fit: contain;
 }
@@ -32,19 +29,20 @@
 .header-actions {
     display: flex;
     align-items: center;
-    gap: 3vw;
+    gap: 2.2vh;
     margin-left: auto;
 }
 
 .header-button {
     background-color: #ECECEC;
 
-    padding: 0.6vh 2.1vw;
+    padding: 0.65vh 1.8vh;
     cursor: pointer;
     border-radius: 10vh;
-    border: 1px solid #ECECEC;
 
-    font-size: 1.1vw;
+    height: 4vh;
+
+    font-size: 1.5vh;
     font-weight: 400;
 
     transition: 0.3s ease;
@@ -53,45 +51,24 @@
 .header-button img {
     display: block;
     margin: 0.4vh;
-    height: 1.1vw;
-    width: 1.1vw;
+    height: 75%;
+    width: 75%;
     object-fit: contain;
 }
 
 .header-button:hover {
-    background-color: #FFFFFFAA;
+    background-color: #ECECECAA;
     border-color: #ECECECAA;
-    color: #000000AA;
 }
 
 @media(max-width: 767px) {
-    .header-not-mobile{
-        display: none;
-    }
-
-    .site-header {
-        top: 3.2vh;
-    }
-
-    .header-logo {
-        margin-left: -2.8vw;
-    }
-
     .header-logo img {
-        height: 8vh;
-        width: 16vw;
-    }
-
-    .header-actions {
-        gap: 3vw;
-    }
-
-    .header-button {
-        padding: 0.4vh 2.3vw;
+        height: 70%;
+        width: 70%;
     }
 
     .header-button img {
-        width: 6vw;
-        height: 4vw;
+        width: 2.8vh;
+        height: 2.2vh;
     }
 }
