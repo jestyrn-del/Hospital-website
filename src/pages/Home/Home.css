@@ -680,8 +680,8 @@
     .about-stats-info-image {
         flex: none;
 
-        width: 12vw;
-        height: 8vh;
+        width: 10vh;
+        height: 10vh;
     }
 
     .about-stats-info-image img {
