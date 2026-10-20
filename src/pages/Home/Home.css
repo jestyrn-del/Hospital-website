@@ -239,11 +239,11 @@
 .about-stats-decoration {
     position: absolute;
     
-    left: -20%;
-    bottom: 0%;
+    left: -15%;
+    bottom: 2%;
 
     width: 30%;
-    height: 15%;
+    height: 12%;
 
     background: linear-gradient(
         90deg,
