@@ -117,7 +117,7 @@ export function Home({ onAppointment, onNotification, onCreateRequest, }: HomePr
           <div className="patient-info">
             <div className="card">
               <span>Режим работы</span>
-              <span>Каждый день, круглосуточно</span>
+              <span>Каждый день,<br/>круглосуточно</span>
             </div>
             <div className="card">
               <span>Горячая линия</span>
