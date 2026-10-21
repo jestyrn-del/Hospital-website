@@ -3,7 +3,7 @@
 /* ================= */
 .hero {
     position: relative;
-    background: linear-gradient(to top right, #FFFFFF 0%, #E8E8E8 100%);
+    background: linear-gradient(251.74deg, #FFFFFF 1.6%, #E8E8E8 98.4%);
     overflow: hidden;
 }
 
@@ -35,7 +35,7 @@
     margin-top: 0.8vh;
 }
 
-.hero-buttons a {
+.hero-buttons a, .about-stats-button a {
     border-radius: 10vh;
     padding: 2vh 3.5vh;
     background-color: transparent;
@@ -143,12 +143,6 @@
     position: relative;
 }
 
-.section-heading h2 {
-    font-size: 3vw;
-    margin: 1% 0 2%;
-    font-weight: 500;
-}
-
 .about-decorations {
     position: absolute;
 
@@ -186,8 +180,8 @@
 }
 
 .about-text {
-    font-size: 1.1vw;
-    max-width: 50%;
+    font-size: 2.1vh;
+    max-width: 90vh;
 }
 
 .about-text p {
@@ -232,7 +226,7 @@
 }
 
 .about-stats-info-text {
-    font-size: 1.4vw;
+    font-size: 2.6vh;
 }
 
 .about-stats-decoration {
@@ -271,13 +265,6 @@
 
     width: 100%;
     margin-top: 2vh;
-}
-
-.about-stats-button a {
-    border-radius: 3vh;
-    background-color: transparent;
-    font-weight: 400;
-    transition: 0.3s ease;
 }
 
 
@@ -628,12 +615,6 @@
         overflow: hidden;
     }
 
-    .section-heading h2 {
-        font-size: 8.5vw;
-        text-transform: uppercase !important;
-        margin: 0 0 2vh;
-    }
-
     .about-banner {
         height: 21vh;
 
@@ -715,11 +696,6 @@
     .patient {
         overflow-x: clip;
         margin: 0;
-    }
-
-    .patient .section-heading h2 {
-        margin-bottom: 2.4vh;
-        text-transform: uppercase !important;
     }
 
     .patient-info {
