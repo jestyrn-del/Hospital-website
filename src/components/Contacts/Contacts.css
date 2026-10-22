@@ -1,6 +1,6 @@
 .contacts {
     padding: 56px 0;
-    background: var(--color-background-gradient);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(232, 232, 232, 0.7));
 }
 
 .contacts-grid {
@@ -19,27 +19,77 @@
 }
 
 .contacts-links {
-    list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 3.3vh;
+    width: 100%;
+    gap: 2.4vh;
     padding: 0;
     margin: 0;
-    width: 100%;
 }
 
 .contacts-item {
     width: 100%;
+    border-bottom: 1px solid #000000;
+    transition: border-color 0.35s ease;
 }
 
-.contacts-link {
+.contacts-item > button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    height: 6.5vh;
+    padding: 0.5vh 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
 }
 
-.contacts-link span {
-    flex: 1;
+.contacts-item-link {
+    color: #000000;
+    text-align: left;
     font-size: 2.2vh;
+    cursor: pointer;
+    transition: 0.35s ease;
+}
+
+.contacts-item--open .contacts-item-link {
+    color: #4D795F;
+    font-weight: 700;
+}
+
+.contacts-item--open .contacts-item-link svg {
+    transform: rotate(135deg);
+}
+
+.contacts-description {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 1vh;
+    color: #4D795F;
+    font-size: 2.2vh;
+    line-height: 1.6;
+    transition: grid-template-rows 0.35s ease, opacity 0.25s ease, visibility 0.35s ease;
+}
+
+.contacts-item--open .contacts-description {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+}
+
+.contacts-description p {
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+    transition: padding-bottom 0.35s ease;
+}
+
+.contacts-item--open .contacts-description p {
+    padding-bottom: 2vh;
 }
 
 .contacts-address {
@@ -95,8 +145,17 @@
         gap: 0.75rem;
     }
 
+    .contacts-item-link {
+        padding: 4vw 2vw 1.2vh 0;
+        font-size: 3.4vw;
+    }
+
     .contacts-address {
         font-size: 3.2vw;
+    }
+
+    .contacts-description {
+        font-size: 3.4vw;
     }
 }
 
@@ -105,7 +164,7 @@
         padding: 0.9rem;
     }
 
-    .contacts-link,
+    .contacts-item-link,
     .contacts-address {
         min-height: 3.2rem;
         padding: 0.8rem 0.9rem;
