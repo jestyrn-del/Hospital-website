@@ -441,6 +441,8 @@
 .review-form {
     display: grid;
     gap: 2.2vh;
+
+    margin: 0 42vh;
 }
 
 .review-form h2 {
@@ -514,14 +516,14 @@
     position: absolute;
 
     left: 0;
-    top: -25vh;
+    top: -40vh;
 }
 
 .review-dec-second {
     position: absolute;
 
     right: 0;
-    top: -30vh;
+    top: -40vh;
 }
 
 

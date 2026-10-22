@@ -139,15 +139,6 @@ img {
 
 
 /* ================= */
-/* ===== FOCUS ===== */
-/* ================= */
-button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
-    outline: 2px solid #9bb9aa;
-    outline-offset: 3px;
-}
-
-
-/* ================= */
 /* === SELECTION === */
 /* ================= */
 ::selection {
