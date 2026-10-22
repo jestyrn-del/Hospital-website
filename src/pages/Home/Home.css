@@ -280,7 +280,7 @@
 
 .patient {
     position: relative;
-    margin-top: 26vh;
+    margin-top: 20vh;
     overflow-x: clip;
 }
 
@@ -338,11 +338,11 @@
 }
 
 .patient-military {
-    width: 576px;
-    height: 863px;
+    width: 85vh;
+    height: 106vh;
 
-    top: -495px;
-    right: -100px;
+    top: -42.6vh;
+    right: -10vh;
 }
 
 .patient-dec-first {

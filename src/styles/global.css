@@ -295,7 +295,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-size: 2.8vh;
     font-weight: var(--font-weight-bold);
 
-    background: var(--color-soft);
+    background: var(--color-surface);
     border: var(--pattern-border);
     border-radius: var(--radius-md);
 
@@ -322,7 +322,6 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .card:hover {
-    background: var(--color-surface);
     border-color: var(--color-accent);
     padding-top: 2vh;
     color: var(--color-accent);
