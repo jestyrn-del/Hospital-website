@@ -35,7 +35,7 @@
 
 
     --radius-xs: 0.5rem;
-    --radius-sm: 1vw;
+    --radius-sm: 1vh;
     --radius-md: 1.5vh;
     --radius-pill: 10vh;
 
@@ -129,8 +129,7 @@ img {
 /* ===== LAYOUT ===== */
 /* ================== */
 .container {
-    width: 92vw;
-    margin: 0 auto;
+    margin: 0 6vh;
 }
 
 .section {
@@ -344,7 +343,7 @@ img {
 /* ================== */
 @media (max-width: 767px) {
     .container {
-        width: calc(100% - 36px);
+        margin: 0 2.2vh;
     }
 
     .section {
