@@ -163,15 +163,3 @@
         font-size: 3.4vw;
     }
 }
-
-@media (max-width: 480px) {
-    .contacts-list {
-        padding: 0.9rem;
-    }
-
-    .contacts-item-link,
-    .contacts-address {
-        min-height: 3.2rem;
-        padding: 0.8rem 0.9rem;
-    }
-}
