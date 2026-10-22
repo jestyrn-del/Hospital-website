@@ -28,8 +28,11 @@
     --color-border: #000000;
     --color-accent: #4D795F;
     --color-muted: #6b6b6b;
-    --color-soft: #FFFFFFAA;
+    --color-soft: #FFFFFF;
     --color-shadow: rgba(0, 0, 0, 0.1);
+
+    --color-background-gradient: linear-gradient(251.74deg, #FFFFFF 1.6%, #E8E8E8 98.4%);
+
 
     --radius-xs: 0.5rem;
     --radius-sm: 1vw;
@@ -295,7 +298,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     font-size: 2.8vh;
     font-weight: var(--font-weight-bold);
 
-    background: var(--color-surface);
+    background: var(--color-soft);
     border: var(--pattern-border);
     border-radius: var(--radius-md);
 
@@ -322,6 +325,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .card:hover {
+    background: var(--color-surface);
     border-color: var(--color-accent);
     padding-top: 2vh;
     color: var(--color-accent);

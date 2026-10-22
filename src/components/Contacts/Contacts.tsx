@@ -24,35 +24,38 @@ const mapUrl = 'https://yandex.ru/map-widget/v1/?ll=39.673288%2C47.259545&mode=s
 
 export function Contacts({ title = 'Контакты', links = defaultLinks, address = '344064, Ростовская обл., Ростов-на-Дону, ул. Дачная, д. 10', }: ContactsProps) {
     return (
-        <div className="container">
-            <h1>
-                <span className='title title-thin'>{title}</span>
-            </h1>
+        <section className="contacts">
+            <div className="container">
+                <h1>
+                    <span className='title title-thin'>{title}</span>
+                </h1>
 
-            <div className="contacts-grid">
-                <div className="contacts-list">
-                    {
-                        links.map((link, index) => (
-                            <a key={`${link.title}-${index}`} className="base-link contacts-link" href={link.href}>
-                                {link.title}
-                                {svg}
-                            </a>
-                        ))
-                    }
-                    <span className="contacts-address">{address}</span>
+                <div className="contacts-grid">
+                    <div className="contacts-list" aria-label="Ссылки на подразделения и контактную информацию">
+                        <ul className="contacts-links">
+                            {links.map((link, index) => (
+                                <li key={`${link.title}-${index}`} className="contacts-item">
+                                    <a className="base-link contacts-link" href={link.href}>
+                                        <span>{link.title}</span>
+                                        {svg}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                        <address className="contacts-address">{address}</address>
+                    </div>
+
+                    <div className="map-placeholder">
+                        {
+                            mapUrl ? (
+                                <iframe src={mapUrl} title="Расположение госпиталя на карте" loading="eager" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
+                            ) : (
+                                <span>КАРТА</span>
+                            )
+                        }
+                    </div>
                 </div>
-
-                <div className="map-placeholder">
-                    {
-                        mapUrl ? (
-                            <iframe src={mapUrl} title="Расположение госпиталя на карте" loading="eager" referrerPolicy="no-referrer-when-downgrade" allowFullScreen/>
-                        ) : (
-                            <span>КАРТА</span>
-                        )
-                    }
-                </div>
-
             </div>
-        </div>
+        </section>
     );
 }
