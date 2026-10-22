@@ -1,12 +1,17 @@
 .contacts {
+    --contacts-gap: 3vh;
+    --contacts-map-bg: #f5f5f5;
+    --contacts-map-border: rgba(0, 0, 0, 0.12);
+    --contacts-map-text: #444444;
+
     padding: 56px 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(232, 232, 232, 0.7));
+    background: var(--color-background-gradient);
 }
 
 .contacts-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3vh;
+    gap: var(--contacts-gap);
     align-items: stretch;
 }
 
@@ -14,7 +19,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 3vh;
+    gap: var(--contacts-gap);
     background: transparent;
 }
 
@@ -29,7 +34,7 @@
 
 .contacts-item {
     width: 100%;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--color-border);
     transition: border-color 0.35s ease;
 }
 
@@ -46,7 +51,7 @@
 }
 
 .contacts-item-link {
-    color: #000000;
+    color: var(--color-text);
     text-align: left;
     font-size: 2.2vh;
     cursor: pointer;
@@ -54,7 +59,7 @@
 }
 
 .contacts-item--open .contacts-item-link {
-    color: #4D795F;
+    color: var(--color-accent);
     font-weight: 700;
 }
 
@@ -68,7 +73,7 @@
     opacity: 0;
     visibility: hidden;
     padding-top: 1vh;
-    color: #4D795F;
+    color: var(--color-accent);
     font-size: 2.2vh;
     line-height: 1.6;
     transition: grid-template-rows 0.35s ease, opacity 0.25s ease, visibility 0.35s ease;
@@ -96,7 +101,7 @@
     display: flex;
     align-items: center;
     margin: 0;
-    color: #000000;
+    color: var(--color-text);
     margin-top: 2.4vh;
     font-style: normal;
     font-weight: 400;
@@ -111,15 +116,15 @@
     align-items: stretch;
     justify-content: center;
     overflow: hidden;
-    background: #f5f5f5;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 2vh;
+    background: var(--contacts-map-bg);
+    border: 1px solid var(--contacts-map-border);
+    border-radius: var(--radius-md);
 }
 
 .map-placeholder > span {
     font-size: 2.6vh;
     font-weight: 700;
-    color: #444444;
+    color: var(--contacts-map-text);
     letter-spacing: 0.6vw;
     align-self: center;
 }

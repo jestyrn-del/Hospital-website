@@ -426,57 +426,70 @@
 /* =================== */
 /* === REVIEW PART === */
 /* =================== */
+.review {
+    position: relative;
+    margin-top: -5vh;
+    margin-bottom: -5vh;
+    overflow: hidden;
+}
+
 .review-grid {
     display: flex;
     flex-direction: column;
-    max-width: 40%;
 }
 
 .review-form {
     display: grid;
-    gap: 1.2vw;
+    gap: 2.2vh;
 }
 
 .review-form h2 {
-    font-size: 1.6vw;
+    font-size: 2.6vh;
+    margin: 0;
 }
 
 .review-form-inputs {
     display: flex;
-    gap: 1.2vw;
+    gap: 3vh;
 }
 
 .review-form input,
 .review-form textarea {
     width: 100%;
-    font-size: 0.8vw;
+    font-size: 2vh;
 
-    border: 1px solid #000000;
-    border-radius: 1vw;
-    background: #ffffff;
+    border: 1px solid var(--color-border);
+    border-radius: 1.3vh;
+    background: transparent;
 
-    padding: 0.6vh 1.2vw;
+    padding: 1.3vh;
+    line-height: 3.5vh;
     resize: vertical;
+}
+
+.review-form input::placeholder,
+.review-form textarea::placeholder {
+    color: #000000;
 }
 
 .review-form .button {
     justify-self: center;
-    margin-top: 16px;
+    margin-top: 3vh;
     border: none;
 }
 
 .button--green {
     display: inline-flex;
-    border-radius: 3vw;
+    border-radius: 1.2vh;
     background-color: #5A9366;
     color: #FFFFFF;
 
     justify-content: center;
     align-items: center;
 
-    font-size: 0.8vw;
+    font-size: 2.2vh;
 
-    padding: 0.8vh 1.4vw;
+    padding: 2vh;
     text-transform: lowercase;
     cursor: pointer;
     text-decoration: none;
@@ -485,8 +498,30 @@
 }
 
 .button--green:hover {
-    background-color: #5A9366AA;
-    color: #FFFFFFAA;
+    background-color: #5A9366DD;
+    color: #FFFFFFDD;
+}
+
+
+
+.review-decorations {
+    position: relative;
+    display: flex;
+    width: 100vw;
+}
+
+.review-dec-first {
+    position: absolute;
+
+    left: 0;
+    top: -25vh;
+}
+
+.review-dec-second {
+    position: absolute;
+
+    right: 0;
+    top: -30vh;
 }
 
 

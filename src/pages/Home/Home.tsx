@@ -11,6 +11,9 @@ import aboutBanner from '../../assets/home-about-banner.svg';
 import aboutStatsImg from '../../assets/home-about-stats-img.svg';
 import aboutDecoration from '../../assets/home-about-decoration.svg';
 
+import reviewDecFirst from '../../assets/home-review-dec-1.svg';
+import reviewDecSecond from '../../assets/home-review-dec-2.svg';
+
 import patientMilitary from '../../assets/home-patient-military.svg';
 
 import { Link } from 'react-router-dom';
@@ -187,6 +190,10 @@ export function Home({ onAppointment, onNotification, onCreateRequest }: HomePro
             <textarea required value={form.message} onChange={(e) => updateField('message', e.target.value)} placeholder="Напишите отзыв по нашей работе. Ваш email будет скрыт для просмотра" rows={5} />
             <button className="button--green" type="submit">оставить отзыв</button>
           </form>
+        </div>
+        <div className='review-decorations'>
+          <img className='review-dec-first' src={reviewDecFirst}/>
+          <img className='review-dec-second' src={reviewDecSecond}/>
         </div>
       </div>
     </div>
