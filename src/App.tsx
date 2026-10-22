@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { MainLayout } from './layouts/MainLayout/MainLayout';
 
 import type { NotificationState } from './types';
@@ -14,14 +14,19 @@ import { Patients } from './pages/Patients/Patients';
 import { Structure } from './pages/Structure/Structure';
 import { Vacancy } from './pages/Vacancy/Vacancy';
 
+const APPOINTMENT_MESSAGE = 'Форма записи будет доступна на странице записи.';
+const ACCESSIBILITY_MESSAGE = 'Версия для слабовидящих будет подключена отдельно.';
+const NEWS_MESSAGE = 'Страница показа новостей пока не готова.';
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  
   const [searchOpen, setSearchOpen] = useState(false);
   const [notification, setNotification] = useState<NotificationState>({ visible: false, message: '' });
-  
-  const showNotification = (message: string) => setNotification({ visible: true, message });
   const [informationRequestOpen, setInformationRequestOpen] = useState(false);
+
+  const showNotification = useCallback((message: string) => {
+    setNotification({ visible: true, message });
+  }, []);
 
   useEffect(() => {
     if (!notification.visible) return;
@@ -31,19 +36,28 @@ function App() {
 
   useEffect(() => {
     document.body.style.overflow = menuOpen || searchOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [menuOpen, searchOpen]);
 
-  const openInformationRequest = () => {
-      setMenuOpen(false);
-      setSearchOpen(false);
+  const openInformationRequest = useCallback(() => {
+    setMenuOpen(false);
+    setSearchOpen(false);
+    setInformationRequestOpen(true);
+  }, []);
 
-      setInformationRequestOpen(true);
-  };
-
-  const closeInformationRequest = () => {
+  const closeInformationRequest = useCallback(() => {
     setInformationRequestOpen(false);
-  };
+  }, []);
+
+  const handleAppointment = useCallback(() => {
+    showNotification(APPOINTMENT_MESSAGE);
+  }, [showNotification]);
+
+  const handleAccessibility = useCallback(() => {
+    showNotification(ACCESSIBILITY_MESSAGE);
+  }, [showNotification]);
 
   return (
     <MainLayout
@@ -57,37 +71,26 @@ function App() {
       onSearchOpen={() => setSearchOpen(true)}
       onSearchClose={() => setSearchOpen(false)}
       onCreateRequest={openInformationRequest}
-      onAccessibility={() => showNotification('Версия для слабовидящих будет подключена отдельно.')}
-      onAppointment={() => showNotification('Форма записи будет доступна на странице записи.')}
+      onAccessibility={handleAccessibility}
+      onAppointment={handleAppointment}
     >
       <Routes>
         <Route
           path="/"
           element={
             <Home
-              onAppointment={() =>
-                showNotification('Форма записи будет доступна на странице записи.')
-              }
+              onAppointment={handleAppointment}
               onNotification={showNotification}
               onCreateRequest={openInformationRequest}
             />
           }
         />
 
-        <Route
-          path="/paid-services"
-          element={<PaidServices/>}
-        />
+        <Route path="/paid-services" element={<PaidServices />} />
 
         <Route
           path="/about"
-          element={
-            <AboutHospital
-              OpenNews={() =>
-                showNotification('Страница показа новостей пока не готова.')
-              }
-            />
-          }
+          element={<AboutHospital OpenNews={() => showNotification(NEWS_MESSAGE)} />}
         />
 
         <Route path="/patients" element={<Patients />} />

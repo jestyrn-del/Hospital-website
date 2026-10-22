@@ -18,6 +18,36 @@
 }
 
 
+:root {
+    --font-sans: "Evolventa", Arial, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    --color-text: #000000;
+    --color-surface: #ffffff;
+    --color-border: #000000;
+    --color-accent: #4D795F;
+    --color-muted: #6b6b6b;
+    --color-soft: #FFFFFFAA;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+
+    --radius-xs: 0.5rem;
+    --radius-sm: 1vw;
+    --radius-md: 1.5vh;
+    --radius-pill: 10vh;
+
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --shadow-card: 0px 4px 4.3px 0px #00000040;
+
+    --transition: 0.3s ease;
+    --pattern-border: 1px solid var(--color-border);
+    --pattern-card: {
+        border: var(--pattern-border);
+        border-radius: var(--radius-sm);
+        background: var(--color-surface);
+    };
+}
+
 /* ================ */
 /* ===== BASE ===== */
 /* ================ */
@@ -32,11 +62,11 @@ html {
 body {
     margin: 0;
 
-    font-family: "Evolventa", Arial, sans-serif;
-    font-weight: 400;
+    font-family: var(--font-sans);
+    font-weight: var(--font-weight-regular);
 
-    color: #000000;
-    background: #ffffff;
+    color: var(--color-text);
+    background: var(--color-surface);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -128,10 +158,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 /* ================== */
 .button {
     display: inline-flex;
-    border: 1px solid #000000;
+    border: 1px solid var(--color-border);
     border-radius: 3vw;
     background-color: transparent;
-    color: #000000;
+    color: var(--color-text);
 
     justify-content: center;
     align-items: center;
@@ -144,7 +174,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     cursor: pointer;
     text-decoration: none;
 
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .button:hover {
@@ -172,84 +202,80 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     margin: 1.2vh 2.2vh 0 0;
 
     font-size: 5vh;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
     line-height: 1.2;
 
     text-transform: uppercase;
-    color: #000000;
+    color: var(--color-text);
 }
 
 .title-thin {
-    font-weight: 400;
+    font-weight: var(--font-weight-regular);
 }
 
 .title-green {
-    color: #4D795F;
-    font-weight: 400;
+    color: var(--color-accent);
+    font-weight: var(--font-weight-regular);
 }
 
 
 /* === LINKS === */
-.base-link, 
+.base-link,
 .button-link {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
 
-    color: #000000;
-
+    color: var(--color-text);
     font-size: 2.2vh;
     line-height: 1.5;
 
     cursor: pointer;
     overflow-wrap: anywhere;
-    justify-content: space-between;
-
     text-decoration: none;
     text-align: left;
-    
-    transition: 0.3s ease; 
+
+    transition: var(--transition);
 }
 
 .base-link {
-    border-bottom: 1px solid #000000;
-    background-color: transparent;
-
     width: 100%;
-    
     padding: 0.5vh;
+    border-bottom: 1px solid var(--color-border);
+    background-color: transparent;
     font-weight: 400;
 }
 
 .button-link {
-    border: 1px solid #000000;
-    border-radius: 1.5vh;
-    background-color: #FFFFFF;
-    
     padding: 0.8vh 3vh;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-surface);
     font-weight: 700;
 }
 
-
 .base-link svg:first-of-type,
 .button-link svg:first-of-type {
-    transition: 0.3s ease;
-
     width: 2.8vh;
     height: 2.8vh;
+    transition: var(--transition);
 }
 
 .button-link svg:first-of-type {
     border-radius: 2vh;
 }
 
-.base-link:hover, .base-link:hover svg:first-of-type {
+.base-link:hover,
+.button-link:hover {
     opacity: 0.9;
 }
 
-.button-link:hover, .button-link:hover svg:first-of-type {
+.button-link:hover,
+.button-link:hover svg:first-of-type {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    color: #4D795F;
-    border-color: #4D795F;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 .base-link:hover svg:first-of-type,
@@ -267,16 +293,15 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
     padding: 2.2vh;
 
     font-size: 2.8vh;
-    font-weight: 700;
-    
-    background: #FFFFFFAA;
-    
-    border: 1px solid #000000;
-    border-radius: 1.5vh;
-    
-    color: #000000;
-    
-    transition: 0.3s ease;
+    font-weight: var(--font-weight-bold);
+
+    background: var(--color-soft);
+    border: var(--pattern-border);
+    border-radius: var(--radius-md);
+
+    color: var(--color-text);
+
+    transition: var(--transition);
 }
 
 .card > span:first-of-type {
@@ -293,19 +318,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 
 .card span:first-of-type {
     font-size: 2.8vh;
-    font-weight: 700;
+    font-weight: var(--font-weight-bold);
 }
 
 .card:hover {
-    background: #FFFFFF;
-    border-color: #4D795F;
+    background: var(--color-surface);
+    border-color: var(--color-accent);
     padding-top: 2vh;
-    color: #4D795F;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    color: var(--color-accent);
+    box-shadow: var(--shadow-soft);
 }
 
 .card:hover span {
-    color: #4D795F;
+    color: var(--color-accent);
 }
 
 .card img {

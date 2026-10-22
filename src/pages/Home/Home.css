@@ -35,7 +35,8 @@
     margin-top: 0.8vh;
 }
 
-.hero-buttons a, .about-stats-button a {
+.hero-buttons .button-link,
+.about-stats-button .button-link {
     border-radius: 10vh;
     padding: 2vh 3.5vh;
     background-color: transparent;
@@ -198,15 +199,17 @@
     align-items: center;
 }
 
-.about-stats-info {
+.about-stats-info,
+.info-card {
     border: 1px solid #000000;
     border-radius: 1vw;
-    
+    background: #ffffff;
+}
+
+.about-stats-info {
     display: flex;
-    
     width: 100%;
     height: 40%;
-    
     gap: 1vw;
     padding: 2.1vh 0.8vw;
 }
@@ -290,16 +293,10 @@
 }
 
 .info-card {
-    background: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 1vw;
-
     padding: 0.8vw 1vh;
-
     display: flex;
     flex-direction: column;
     position: relative;
-
     gap: 1.2vh;
 }
 
@@ -449,12 +446,14 @@
     gap: 1.2vw;
 }
 
-.review-form input, .review-form textarea {
+.review-form input,
+.review-form textarea {
     width: 100%;
     font-size: 0.8vw;
 
     border: 1px solid #000000;
     border-radius: 1vw;
+    background: #ffffff;
 
     padding: 0.6vh 1.2vw;
     resize: vertical;
