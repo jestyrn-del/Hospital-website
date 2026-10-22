@@ -142,24 +142,17 @@
         grid-template-columns: 1fr;
     }
 
-    .contacts-list {
-        padding: 1rem;
-    }
-
-    .contacts-links {
-        gap: 0.75rem;
-    }
-
-    .contacts-item-link {
-        padding: 4vw 2vw 1.2vh 0;
-        font-size: 3.4vw;
-    }
-
-    .contacts-address {
-        font-size: 3.2vw;
-    }
-
     .contacts-description {
-        font-size: 3.4vw;
+        color: var(--color-text);
+        font-size: 1.8vh;
+    }
+
+    .contacts-item--open .contacts-description p {
+        padding-bottom: 2vh;
+    }
+
+    .map-placeholder {
+        min-height: 0;
+        height: 25vh;
     }
 }
