@@ -1,9 +1,8 @@
 .patients-page {
     position: relative;
     isolation: isolate;
-    overflow-x: hidden;
 
-    padding: 8% 0;
+    padding: 8% 0 0 0;
     width: 100%;
 
     box-sizing: border-box;
@@ -17,18 +16,23 @@
     position: relative;
     z-index: 1;
 
-    width: 100%;
+    width: 90%;
 
     margin: 0 auto;
 }
 
 .patients-decoration {
     position: absolute;
-    top: 0;
-    right: 0;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-end;
+
+    top: 30%;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: -1;
 
     pointer-events: none;
 }
