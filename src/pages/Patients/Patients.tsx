@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import './Patients.css';
 
+import decorationImage from '../../assets/patient-decoration.svg';
+
 const patientLinks = [
   {
     title: 'Правила записи на первичный прием',
@@ -59,7 +61,9 @@ export function Patients() {
   return (
     <div className='patients-page'>
       <section className="container patients-content">
-        <div className="patients-decoration" aria-hidden="true" />
+        <div className="patients-decoration" aria-hidden="true">
+          <img src={decorationImage} alt="Decoration" />
+        </div>
 
         <h1>
           <span className='title'>1602 ВКГ</span>
