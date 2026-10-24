@@ -40,7 +40,9 @@ export function PaidServices() {
                     медицинского страхования. Находится на цокольном этаже
                     хирургического корпуса.
                 </p>
+            </div>
 
+            <div className='paid-intro-down-part'>
                 <button className='button-link' type='button'>
                     прейскурант
                 </button>

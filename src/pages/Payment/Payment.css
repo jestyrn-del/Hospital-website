@@ -1,11 +1,5 @@
 .paid-page {
-    padding: 5% 0 0 0;
-
-    background: linear-gradient(
-        180deg,
-        #FFFFFF 0%,
-        #E8E8E8 100%
-    );
+    background: linear-gradient(251.74deg, #FFFFFF 1.6%, #E8E8E8 98.4%);
 }
 
 .paid-intro-main {
@@ -22,25 +16,36 @@
 }
 
 .paid-intro-grid {
-    display: flex;
-    gap: 6vw;
+    position: relative;
+    
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 6fr 2fr;
+
+    grid-column-gap: 8vh;
 }
 
 .paid-intro-left-part {
     width: 46vw;
+    order: 0;
 }
 
-.paid-intro-left-part button {
-    border-radius: 3vh;
+.paid-intro-left-part h1 {
+    margin: 0;
+}
 
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
+.paid-intro-down-part {
+    order: 1;
+}
+
+.paid-intro-down-part button {
+    border-radius: 10vh;
 
     font-size: 1.8vh;
+    font-weight: 400;
 
-    padding: 0.8vh 1.4vw;
-    margin: 6vh 0 2vh 0;
+    padding: 2vh 4vh;
 }
 
 .paid-intro-right-part {
@@ -51,7 +56,7 @@
 .paid-description {
     width: 100%;
 
-    margin: 2.8vh 0;
+    margin-top: 4vh;
 
     font-size: 1.4vw;
 }
