@@ -72,63 +72,63 @@ export function PaidServices() {
                 {
                     services.map(
                         (service) => (
-                            <a href="#" className="card" key={service}>
+                            <div className="paid-service-card" key={service}>
                                 <span>{service}</span>
-                            </a>
+                            </div>
                     ))
                 }
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Магнитно-резонансной<br/>томографии</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Ультразвуковая диагностика</span>
                     <span>Компьютерная томография</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Челюстно-лицевой хирургии<br/>и стоматологии</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Врачебной экспертизы летного<br/>состава</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Гипер-(гипо) барической<br/>оксигенации</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Нефрологическое</span>
                     <span>с кабинетом гемодиализа</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Центр<br/>анестезиологии-реанимации</span>
                     <span>с кабинетом гипербарической<br/>оксигенации</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Хирургическое</span>
                     <span>неотложная хирургия<br/>абдоминальная хирургия</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Хирургическое</span>
                     <span>сосудистая хирургия<br/>гнойная хирургия<br/>нейрохирургическое отделение</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Общеклиническая диагностика</span>
                     <span>Биохимическая диагностика</span>
-                </a>
+                </div>
 
-                <a href="#" className="card">
+                <div className='paid-service-card'>
                     <span>Иммунологическая диагностика</span>
                     <span>Бактериологическая диагностика</span>
                     <span>Гистологические исследования</span>
-                </a>
+                </div>
             </div>
         </div>
       </section>
