@@ -1,8 +1,6 @@
-* {
-    background-color: transparent;
-}
-
 .paid-page {
+    padding: 5% 0 0 0;
+
     background: linear-gradient(
         180deg,
         #FFFFFF 0%,

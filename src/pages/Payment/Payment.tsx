@@ -27,7 +27,7 @@ const services = [
 export function PaidServices() {
   return (
     <div className='paid-page' id="top">
-      <section className="paid-intro-main section">
+      <section className="paid-intro-main">
         <div className="container paid-intro-grid">
             <div className='paid-intro-left-part'>
                 <h1>
@@ -63,7 +63,7 @@ export function PaidServices() {
 
       <div className="paid-decoration" aria-hidden="true" />
 
-      <section className="paid-services-section section">
+      <section className="paid-services-section">
         <div className="container">
             <h1><span className='title title-thin'>отделения с платными услугами</span></h1>
             <div className="paid-services-grid">
@@ -131,7 +131,7 @@ export function PaidServices() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="paid-documents-section">
         <div className="container">
             <div className="paid-documents-column">
                 <a className='base-link' href="#">Приказ об утверждении Положение о порядке и условиях предоставления платных медициснких услуг в ФКГУ «1602 ВКГ» Минобороны России</a>
