@@ -2,10 +2,13 @@
     position: relative;
     isolation: isolate;
 
+    background: linear-gradient(251.74deg, #FFFFFF 1.6%, #E8E8E8 98.4%);
+
     padding: 8% 0 0 0;
     width: 100%;
 
     box-sizing: border-box;
+    padding-bottom: 8vh;
 }
 
 .patients-page *, .patients-page *::before, .patients-page *::after {
@@ -17,7 +20,6 @@
     z-index: 1;
 
     width: 80%;
-    margin: 0 auto;
 }
 
 .patients-decoration {
@@ -53,7 +55,6 @@
     gap: 3vh;
 
     width: 100%;
-    margin-bottom: 8vh;
 }
 
 .patients-item {
