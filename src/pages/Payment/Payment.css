@@ -101,11 +101,8 @@
     width: 180px;
     height: 180px;
 
-    background: linear-gradient(
-        180deg,
-        #007CBC 0%,
-        #26B5FF 100%
-    );
+    background: linear-gradient(175.95deg, #007CBC -60.85%, #26B5FF 301.21%);
+
 
     clip-path: polygon(
         40% 0%,
