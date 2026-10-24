@@ -137,6 +137,7 @@
 .paid-services-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
+    
     gap: 1.7vw;
 
     width: 100%;
@@ -227,6 +228,11 @@
     display: flex;
     overflow-wrap: anywhere;
     height: 12vh;
+}
+
+.paid-documents-section {
+    padding-top: 3vh;
+    padding-bottom: 6.4vh;
 }
 
 @media (max-width: 767px) {
