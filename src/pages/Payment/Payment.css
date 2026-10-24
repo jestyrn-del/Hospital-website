@@ -80,14 +80,14 @@
 .paid-info-card h2 {
     margin: 0 0 1.2vw;
 
-    font-size: 1.3vw;
+    font-size: 2.2vh;
     font-weight: 700;
 }
 
 .paid-info-card p {
     margin: 0 0 0.8vw;
 
-    font-size: 1.3vw;
+    font-size: 2.2vh;
     font-weight: 400;
 }
 
@@ -236,10 +236,6 @@
 }
 
 @media (max-width: 767px) {
-    .paid-intro-main {
-        padding: 12vh 0 0;
-    }
-
     .paid-intro-grid {
         display: flex;
         flex-direction: column;
@@ -248,16 +244,6 @@
 
     .paid-intro-left-part {
         width: 100%;
-    }
-
-    .paid-title {
-        align-items: flex-start;
-        flex-direction: column;
-        font-size: 8vw;
-    }
-
-    .paid-description {
-        font-size: 3.4vw;
     }
 
     .paid-info-card {
@@ -282,41 +268,13 @@
     /* ================== */
     /* === DEPARTMENTS == */
     /* ================== */
-    .paid-section-title {
-        font-size: 8vw;
-    }
-
     .paid-services-grid {
         grid-template-columns: 1fr;
-    }
-
-    .paid-service {
-        padding: 3vw;
-        border-radius: 2vw;
-        font-size: 3.4vw;
-    }
-
-    .paid-service span {
-        font-size: 3.4vw;
-    }
-
-    .paid-intro-left-part button {
-        padding: 1.2vh 8vw;
     }
 
     /* ================== */
     /* === DOCUMENTS ==== */
     /* ================== */
-    .paid-documents {
-        padding-bottom: 4vh;
-        grid-template-columns: 1fr;
-        gap: 3vh;
-    }
-
-    .paid-documents a {
-        font-size: 3.4vh;
-    }
-
     .paid-documents-column {
         grid-template-columns: 1fr;
     }
