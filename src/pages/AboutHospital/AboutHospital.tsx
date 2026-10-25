@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { Link } from 'react-router-dom';
 import { Contacts } from '../../components/Contacts/Contacts';
 
@@ -66,6 +66,53 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
   const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>);
   const newsRef = useRef<HTMLDivElement>(null);
 
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(false);
+
+  const updateScrollButtons = useCallback(() => {
+    const container = newsRef.current;
+
+    if (!container) return;
+
+    const { scrollLeft, scrollWidth, clientWidth } = container;
+
+    // Допуск для дробных пикселей
+    const tolerance = 2;
+
+    setCanScrollLeft(scrollLeft > tolerance);
+
+    setCanScrollRight(
+      scrollLeft + clientWidth < scrollWidth - tolerance
+    );
+  }, []);
+
+  useEffect(() => {
+    const container = newsRef.current;
+
+    if (!container) return;
+
+    // Проверяем состояние сразу после отображения
+    updateScrollButtons();
+
+    // Отслеживаем изменение размеров
+    const resizeObserver = new ResizeObserver(() => {
+      updateScrollButtons();
+    });
+
+    resizeObserver.observe(container);
+
+    // Отслеживаем изменение размеров карточек
+    const cards = container.querySelectorAll(".about-news-card");
+
+    cards.forEach((card) => {
+      resizeObserver.observe(card);
+    });
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, [updateScrollButtons]);
+
   const scrollNews = (direction: "left" | "right") => {
     const container = newsRef.current;
 
@@ -76,16 +123,17 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
     if (!card) return;
 
     const gap = parseFloat(getComputedStyle(container).columnGap) || 0;
+
     const scrollAmount = card.offsetWidth + gap;
 
-    container.scrollBy(
-    {
-      left: direction === "left" ? -scrollAmount : scrollAmount,behavior: "smooth",
+    container.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
     });
   };
 
   return (
-    <section className="section">
+    <section className="section about-page">
       <div className="container">
           <h1>
             <span className='title'>1602 ВКГ</span>
@@ -135,32 +183,33 @@ export function AboutHospital({ OpenNews } : AboutHospitalProps) {
 
       <div className="container about-news">
         <h1><span className='title title-thin'>новости</span></h1>
-
-        <button className="about-news-nav-button about-news-nav-button-left" type="button" onClick={() => scrollNews("left")} aria-label="Предыдущая новость">{svg}</button>
-        <button className="about-news-nav-button about-news-nav-button-right" type="button" onClick={() => scrollNews("right")} aria-label="Следующая новость">{svg}</button>
-
-        <div className="about-news-cards" ref={newsRef}>
+          
+        <div className="about-news-cards" ref={newsRef} onScroll={updateScrollButtons} >
           {
-            news.map((item) => {
-              return (
-                <div className="about-news-card" key={item.id}>
-                  <span className="about-news-card-date">{item.date}</span>
-                  <div className="about-news-card-image">
-                    <img src={item.image} alt={item.title}/>
-                  </div>
-
-                  <span className="about-news-card-title">{item.title}</span>
-
-                  <div className="about-news-card-footer">
-                    <button className="about-news-card-button" type="button" onClick={OpenNews}>
-                      <span>читать</span> {svg}
-                    </button>
-                  </div>
+          news.map((item) => {
+            return (
+              <div className="about-news-card" key={item.id}>
+                <span className="about-news-card-date">{item.date}</span>
+                <div className="about-news-card-image">
+                  <img src={item.image} alt={item.title}/>
                 </div>
-              );
-            })
-          }
+
+                <span className="about-news-card-title">{item.title}</span>
+
+                <div className="about-news-card-footer">
+                  <button className="about-news-card-button" type="button" onClick={OpenNews}>
+                    <span>читать</span> {svg}
+                  </button>
+                </div>
+              </div>
+            );
+          })
+        }
         </div>
+
+        <button className={`about-news-nav-button about-news-nav-button-left ${ canScrollLeft ? 'is-visible' : '' }`} type="button" onClick={() => scrollNews('left')} aria-label="Предыдущая новость" disabled={!canScrollLeft}>{svg}</button>
+        <button className={`about-news-nav-button about-news-nav-button-right ${ canScrollRight ? 'is-visible' : '' }`} type="button" onClick={() => scrollNews('right')} aria-label="Следующая новость" disabled={!canScrollRight}>{svg}</button>
+
       </div>
 
       <Contacts />

@@ -129,7 +129,8 @@ img {
 /* ===== LAYOUT ===== */
 /* ================== */
 .container {
-    margin: 0 6vh;
+    position: relative;
+    margin: 0 3.6vh;
 }
 
 .section {

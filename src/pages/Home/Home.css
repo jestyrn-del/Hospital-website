@@ -272,10 +272,6 @@
 /* ==================== */
 /* === PATIENT PART === */
 /* ==================== */
-.container {
-    position: relative;
-}
-
 .patient {
     position: relative;
     margin-top: 20vh;
