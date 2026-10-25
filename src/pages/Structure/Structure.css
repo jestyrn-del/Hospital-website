@@ -4,20 +4,11 @@
     background: linear-gradient(180deg, #fff 0%, #e8e8e8 100%);
 }
 
-
-
-
-
 .structure-branches-item a, .department-card a {
     min-height: 10vh;
     border: none;
     border-radius: 3vh;
 }
-
-
-
-
-
 
 .structure-content {
     position: relative;
@@ -55,7 +46,7 @@
     align-self: start;
     box-sizing: border-box;
 
-    border: 1px solid #000;
+    border: none;
     border-radius: 2vh;
     background: #FFFFFFAA;
 
@@ -81,78 +72,6 @@
     box-shadow: 0 10px 30px rgb(0 0 0 / 5%);
 }
 
-.structure-branches-link,
-.department-card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1vw;
-
-    width: 100%;
-    padding: 1.6vw;
-    border: 0;
-    border-radius: inherit;
-    background: transparent;
-
-    color: #000;
-    font-size: 1.4vw;
-    font-weight: 700;
-    text-align: left;
-    cursor: pointer;
-
-    transition: color 0.3s ease;
-}
-
-.structure-branches-link:hover,
-.department-card-header:hover {
-    color: #4D795F;
-}
-
-.structure-branches-link-text,
-.department-card-title {
-    flex: 1;
-    min-width: 0;
-    margin: 0;
-    font-size: 1.3vw;
-    font-weight: 700;
-    overflow-wrap: anywhere;
-}
-
-.structure-branches-link-arrow,
-.department-card-arrow {
-    display: inline-flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-
-    width: 1.8vw;
-    height: 1.8vw;
-
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.structure-branches-link-arrow svg,
-.department-card-arrow svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.structure-branches-item--open .structure-branches-link-arrow,
-.department-card--open .department-card-arrow {
-    transform: rotate(90deg);
-}
-
-.structure-branches-link:hover .structure-branches-link-arrow,
-.department-card-header:hover .department-card-arrow {
-    transform: translate(0.15vw, -0.15vw);
-}
-
-.structure-branches-item--open .structure-branches-link:hover .structure-branches-link-arrow,
-.department-card--open .department-card-header:hover .department-card-arrow {
-    transform: rotate(90deg) translate(0.15vw, -0.15vw);
-}
-
 .structure-branches-content,
 .department-card-content {
     display: grid;
@@ -161,7 +80,7 @@
     min-width: 0;
     min-height: 0;
 
-    color: #4D795F;
+    color: #000000;
     font-size: 0.8vw;
     line-height: 1.6;
 
@@ -196,7 +115,7 @@
     min-width: 0;
     min-height: 0;
     overflow: hidden;
-    padding: 2vw;
+    padding: 0 2vw 2vw 2vw;
 }
 
 
@@ -279,9 +198,10 @@
     font-weight: 700;
 }
 
-.departments-table th:first-child,
-.departments-table td:first-child {
+.departments-table th,
+.departments-table td {
     border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .departments-table th:last-child,
@@ -308,6 +228,8 @@
 .departments-table tbody tr:last-child td:last-child {
     border-radius: 0 0 1vw;
 }
+
+
 
 
 .department-empty {
