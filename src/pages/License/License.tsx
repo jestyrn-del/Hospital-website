@@ -20,8 +20,8 @@ export function License() {
           <div className="license-description-more">
             <p>Информация об осуществляемой медицинской деятельности (копии (электронные образцы) лицензий на все виды деятельности)</p>
           </div>
-        
         </div>
+
         <div className="license-list container">
           <a className='card'><img src={documentImage}/>Лицензия ФС-61–01–002367 от 30.04.2020 г.</a>
           <a className='card'><img src={documentImage}/>Приложение № 1 к лицензии ФС-61–01–002367 от 30.04.2020 г.</a>
