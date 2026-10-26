@@ -177,7 +177,7 @@ export function Home({ onAppointment, onNotification, onCreateRequest }: HomePro
         </div>
       </div>
 
-      <Contacts />
+      <Contacts useDefault={false} />
 
       <div className="review section" id="review">
         <div className="container review-grid">

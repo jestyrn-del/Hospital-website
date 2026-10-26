@@ -11,6 +11,7 @@ interface ContactsProps {
     title?: string;
     links?: ContactLink[];
     address?: string;
+    useDefault: boolean;
 }
 
 const defaultLinks: ContactLink[] = [
@@ -24,7 +25,7 @@ const svg = (<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="
 
 const mapUrl = 'https://yandex.ru/map-widget/v1/?ll=39.673288%2C47.259545&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzI5ODU5NBJF0KDQvtGB0YHQuNGPLCDQoNC-0YHRgtC-0LIt0L3QsC3QlNC-0L3Rgywg0JTQsNGH0L3QsNGPINGD0LvQuNGG0LAsIDEwIgoNbbEeQhXBCT1C&sctx=ZAAAAAgBEAAaKAoSCUZ4exAC3ENAEdqSVRFunEdAEhIJZMqHoGr01D8RbCIzF7g8yD8iBgABAgMEBSgKOABAi80GSAFqAnJ1nQHNzMw9oAEAqAEAvQGkHjxoggIBLooCAJICAJoCDGRlc2t0b3AtbWFwcw%3D%3D&sll=39.673288%2C47.259545&sspn=0.000954%2C0.000424&text=.&z=20.96';
 
-export function Contacts({ title = 'Контакты', links = defaultLinks, address = '344064, Ростовская обл., Ростов-на-Дону, ул. Дачная, д. 10', }: ContactsProps) {
+export function Contacts({ title = 'Контакты', links = defaultLinks, address = '344064, Ростовская обл., Ростов-на-Дону, ул. Дачная, д. 10', useDefault = true}: ContactsProps) {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const toggleItem = (index: number) => {
@@ -32,7 +33,7 @@ export function Contacts({ title = 'Контакты', links = defaultLinks, add
     };
 
     return (
-        <section className="contacts">
+        <section className="contacts" style={{ background: useDefault ? '#FFFFFF' : '#F5F5F5' }}>
             <div className="container">
                 <h1>
                     <span className='title title-thin'>{title}</span>
