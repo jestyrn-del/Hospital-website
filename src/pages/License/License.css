@@ -5,6 +5,8 @@
     gap: 1vw;    
     font-size: 1.5vh;
 
+    margin-bottom: 2vh;
+
     color: #000000;
 }
 
@@ -27,7 +29,7 @@
 }
 
 .license-description-more {
-    margin-bottom: 5%;
+    margin-bottom: 2vh;
 }
 
 .license-description-more p {

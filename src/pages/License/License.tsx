@@ -7,21 +7,21 @@ export function License() {
     <div className='about-page'>
       <section className="section">
         <div className="container">
-            <h1>
-              <span className='title'>1602 ВКГ</span>
-              <span className='title title-green'>лицензии</span>
-            </h1>
-        </div>
+          <h1>
+            <span className='title'>1602 ВКГ</span>
+            <span className='title title-green'>лицензии</span>
+          </h1>
 
-        <div className="license-description-little container">
-          <span>о госпитале</span>
-          <span><div className='license-circle'/>лицензии</span>
-        </div>
+          <div className="license-description-little">
+            <span>о госпитале</span>
+            <span><div className='license-circle'/>лицензии</span>
+          </div>
+          
+          <div className="license-description-more">
+            <p>Информация об осуществляемой медицинской деятельности (копии (электронные образцы) лицензий на все виды деятельности)</p>
+          </div>
         
-        <div className="license-description-more container">
-          <p>Информация об осуществляемой медицинской деятельности (копии (электронные образцы) лицензий на все виды деятельности)</p>
         </div>
-        
         <div className="license-list container">
           <a className='card'><img src={documentImage}/>Лицензия ФС-61–01–002367 от 30.04.2020 г.</a>
           <a className='card'><img src={documentImage}/>Приложение № 1 к лицензии ФС-61–01–002367 от 30.04.2020 г.</a>
