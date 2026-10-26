@@ -27,19 +27,19 @@ export function History() {
     <div className='history-page'>
       <section className="section">
         <div className="container">
-            <h1>
-              <span className='title'>1602 ВКГ</span>
-              <span className='title title-green'>история медицинской организации</span>
-            </h1>
-        </div>
+          <h1>
+            <span className='title'>1602 ВКГ</span>
+            <span className='title title-green'>история медицинской организации</span>
+          </h1>
 
-        <div className="history-description-little container">
-          <span>о госпитале</span>
-          <span><div className='history-circle'/>история медицинской организации</span>
-        </div>
-        
-        <div className="history-description-more container">
-          <p>Условно исторический путь 1602 ОВКГ можно разделить на пять периодов:</p>
+          <div className="history-description-little">
+            <span>о госпитале</span>
+            <span><div className='history-circle'/>история медицинской организации</span>
+          </div>
+          
+          <div className="history-description-more">
+            <p>Условно исторический путь 1602 ОВКГ можно разделить на пять периодов:</p>
+          </div>
         </div>
         
         <div className="history-list container">
