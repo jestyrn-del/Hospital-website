@@ -366,6 +366,11 @@ img {
     }
 
 
+    .title {
+        font-size: 4.5vh;
+    }
+
+
     .base-link, .button-link {
         font-size: 1.9vh;
     }
@@ -373,13 +378,7 @@ img {
 
     .header-not-mobile{
         display: none;
-    }
-
-
-    .title {
-        font-size: 3.6vh;
-    }
-    
+    }    
 
     .button {
         font-size: 2.8vw;
