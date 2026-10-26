@@ -278,7 +278,7 @@ img {
 }
 
 
-/* === CARD === */
+/* === CARDS === */
 .card {
     display: grid;
     align-items: center;
@@ -338,6 +338,59 @@ img {
 
     object-fit: contain;
 }
+
+
+
+.card-without-hover {
+    display: grid;
+    align-items: center;
+
+    min-width: 0;
+    padding: 2.2vh;
+    margin: 0;
+
+    font-size: 2.8vh;
+    font-weight: var(--font-weight-bold);
+
+    background: var(--color-soft);
+    border: var(--pattern-border);
+    border-radius: var(--radius-md);
+
+    color: var(--color-text);
+
+    transition: var(--transition);
+}
+
+.card-without-hover > span:first-of-type {
+    padding-bottom: 4vh;
+}
+
+.card-without-hover span {
+    font-size: 2.8vh;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.card-without-hover span:first-of-type {
+    font-size: 2.8vh;
+    font-weight: var(--font-weight-bold);
+}
+
+.card-without-hover img {
+    display: block;
+
+    width: 2.5vw;
+    height: 2.5vw;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+
+
 
 
 /* ================== */
