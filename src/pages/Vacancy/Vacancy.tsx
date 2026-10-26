@@ -13,32 +13,32 @@ export function Vacancy() {
               <span className='title'>1602 ВКГ</span>
               <span className='title title-green'>вакансии</span>
             </h1>
-        </div>
 
-        <div className="vacancy-description-little container">
-          <span>о госпитале</span>
-          <span><div className='vacancy-circle'/>вакансии</span>
-        </div>
-        
-        <div className="vacancy-description-more container">
-          <p>Присоединяйтесь к профессиональной команде 1602 ВКГ</p>
-        </div>
-        
+          <div className="vacancy-description-little">
+            <span>о госпитале</span>
+            <span><div className='vacancy-circle'/>вакансии</span>
+          </div>
+          
+          <div className="vacancy-description-more">
+            <p>Присоединяйтесь к профессиональной команде 1602 ВКГ</p>
+          </div>
+
+        </div> 
         <div className="vacancy-list container">
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Врач-хирург (эксперт
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Врач-хирург
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Медицинская сестра палатная (постовая) нейрохирургия
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>
             <span>
               <p>Врач-анестезиолог реаниматолог</p>
@@ -46,35 +46,35 @@ export function Vacancy() {
             </span>
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Медицинская сестра анестезист
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Врач — гастроэнтеролог
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Врач функциональной диагностики
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Заведующий кабинетом<br/>врач-функциональной диагностики
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Врач-уролог
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Медицинская сестра палатная (постовая) неврология
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Медицинская сестра палатная (постовая) пульмонология
           </p>
           
-          <p className='card'>
+          <p className='card-without-hover'>
             <img src={userImage}/>Заведующий кабинетом<br/>врач-рентгенолог
           </p>
         </div>
