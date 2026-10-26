@@ -13,11 +13,13 @@ import historyHumanImage from '../../assets/history-human.svg';
 
 export function History() {
   const scrollToSection = (id: string) => {
-      document.getElementById(id)?.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-      });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
+
+  const historyArrow = (<svg width="28" height="8" viewBox="0 0 28 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.7463 3.79443V4.29445L10.7506 4.29441L10.7463 3.79443ZM10.7463 3.79443L10.7506 4.29441L26.9151 4.15428L26.9108 3.6543L26.9065 3.15432L10.742 3.29445L10.7463 3.79443ZM3.11631 3.79443V3.29443H2.88672V3.79443V4.29443H3.11631V3.79443ZM3.11631 3.79443V4.29443H10.7463V3.79443V3.29443H3.11631V3.79443ZM27.2674 4.00477C27.461 3.80782 27.4582 3.49125 27.2613 3.29769L24.0518 0.143416C23.8549 -0.0501463 23.5383 -0.0474019 23.3448 0.149546C23.1512 0.346493 23.1539 0.663064 23.3509 0.856626L26.2037 3.66043L23.3999 6.51327C23.2064 6.71022 23.2091 7.02679 23.4061 7.22035C23.603 7.41391 23.9196 7.41117 24.1131 7.21422L27.2674 4.00477ZM-3.26633e-05 3.79443L2.88672 6.68119L5.77347 3.79443L2.88672 0.907682L-3.26633e-05 3.79443Z" fill="black"/></svg>);
 
   const [isHistoryOpen, setIsHistoryOpen] = useState(false);
 
@@ -45,17 +47,19 @@ export function History() {
         <div className="history-list container">
           <div className='history-list-grid'>
             <p className='card'><img src={fourImage}/>Основание<br/>23–28 июня 1941 г.</p>
+            <div>{historyArrow}</div>
             <p className='card'><img src={usersImage}/>Становление<br/>1944–2000 гг.</p>
+            <div>{historyArrow}</div>
             <p className='card'><img src={swapImage}/>Реорганизация<br/>2009 г. — настоящее время</p>
+            <div>{historyArrow}</div>
             <p className='card'><img src={flagImage}/>Боевой путь<br/>1941–1944 гг.</p>
+            <div>{historyArrow}</div>
             <p className='card'><img src={barsImage}/>Интенсификация и развитие<br/>2000–2009 гг.</p>
           </div>
           <div className='history-list-image'>
             <img src={manySoldiersImage}/>
           </div>
         </div>
-
-
 
         <div className='history-more container'>
           <button type="button" className={`history-more-button ${ isHistoryOpen ? 'history-more-button--active' : '' }`} onClick={() => setIsHistoryOpen(!isHistoryOpen)} aria-expanded={isHistoryOpen} aria-controls="history-more-content">
