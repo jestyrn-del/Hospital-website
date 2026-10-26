@@ -1,14 +1,8 @@
-.about-page {
-    background: linear-gradient(180deg, #FFFFFF 0%, #E8E8E8 100%);
-}
-
 .license-description-little {
     display: flex;
     align-items: center;
 
-    gap: 1vw;
-    margin-bottom: 4%;
-    
+    gap: 1vw;    
     font-size: 1.5vh;
 
     color: #000000;
@@ -80,10 +74,6 @@
 }
 
 @media (max-width: 767px) {
-    .about-page {
-        background: linear-gradient(189.64deg, #FFFFFF 1.49%, #E8E8E8 15.95%);
-    }
-
     .license-title {
         margin-top: 8vh;
         font-size: 8vw;
