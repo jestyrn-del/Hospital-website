@@ -65,13 +65,13 @@
 /* === DESCRIPTION ================= */
 /* ================================= */
 .history-description-more {
-    margin-bottom: 2%;
+    margin-bottom: 2vh;
 }
 
 .history-description-more p {
     margin: 0;
 
-    font-size: 1.2vw;
+    font-size: 2.4vh;
     font-weight: 400;
     line-height: 1.6;
 
