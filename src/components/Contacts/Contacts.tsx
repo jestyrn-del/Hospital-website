@@ -11,7 +11,7 @@ interface ContactsProps {
     title?: string;
     links?: ContactLink[];
     address?: string;
-    useDefault: boolean;
+    useDefault?: boolean;
 }
 
 const defaultLinks: ContactLink[] = [
