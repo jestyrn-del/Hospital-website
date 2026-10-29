@@ -44,45 +44,42 @@ export function History() {
           </div>
         </div>
         
-<div className="history-list container">
-    <div className="history-list-grid">
+        <div className="history-list container">
+          <div className="history-list-grid">
+              <p className="history-card">
+                  <img src={fourImage} alt="" />
+                  <span>Основание<br />23–28 июня 1941 г.</span>
+              </p>
+              <div className="history-arrow">{historyArrow}</div>
 
-        <p className="history-card">
-            <img src={fourImage} alt="" />
-            <span>Основание<br />23–28 июня 1941 г.</span>
-        </p>
-        <div className="history-arrow">{historyArrow}</div>
+              <p className="history-card">
+                  <img src={flagImage} alt="" />
+                  <span>Боевой путь<br />1941–1944 гг.</span>
+              </p>
+              <div className="history-arrow">{historyArrow}</div>
 
-        <p className="history-card">
-            <img src={flagImage} alt="" />
-            <span>Боевой путь<br />1941–1944 гг.</span>
-        </p>
-        <div className="history-arrow">{historyArrow}</div>
+              <p className="history-card">
+                  <img src={usersImage} alt="" />
+                  <span>Становление<br />1944–2000 гг.</span>
+              </p>
+              <div className="history-arrow">{historyArrow}</div>
 
-        <p className="history-card">
-            <img src={usersImage} alt="" />
-            <span>Становление<br />1944–2000 гг.</span>
-        </p>
-        <div className="history-arrow">{historyArrow}</div>
+              <p className="history-card">
+                  <img src={barsImage} alt="" />
+                  <span>Интенсификация и развитие<br />2000–2009 гг.</span>
+              </p>
+              <div className="history-arrow">{historyArrow}</div>
 
-        <p className="history-card">
-            <img src={barsImage} alt="" />
-            <span>Интенсификация и развитие<br />2000–2009 гг.</span>
-        </p>
-        <div className="history-arrow">{historyArrow}</div>
+              <p className="history-card">
+                  <img src={swapImage} alt="" />
+                  <span>Реорганизация<br />2009 г. — настоящее время</span>
+              </p>
+          </div>
 
-        <p className="history-card">
-            <img src={swapImage} alt="" />
-            <span>Реорганизация<br />2009 г. — настоящее время</span>
-        </p>
-        <div className="history-arrow">{historyArrow}</div>
-
-    </div>
-
-    <div className="history-list-image">
-        <img src={manySoldiersImage} alt="История госпиталя" />
-    </div>
-</div>
+          <div className="history-list-image">
+              <img src={manySoldiersImage} alt="История госпиталя" />
+          </div>
+        </div>
 
         <div className='history-more container'>
           <button type="button" className={`history-more-button ${ isHistoryOpen ? 'history-more-button--active' : '' }`} onClick={() => setIsHistoryOpen(!isHistoryOpen)} aria-expanded={isHistoryOpen} aria-controls="history-more-content">
