@@ -433,11 +433,15 @@
 }
 
 .history-more-data-grid-image {
+    position: absolute;
     width: 60vh;
     height: 80vh;
 
     min-width: 60vh;
     min-height: 80vh;
+
+    bottom: 0;
+    left: -12vh;
 
     flex-shrink: 0;
     flex-grow: 0;
@@ -459,7 +463,9 @@
 .history-more-data-grid-text {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 110vh;
+
+    margin-left: 55vh;
 
     gap: 1.5vw;
 }
