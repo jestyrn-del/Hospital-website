@@ -1,5 +1,5 @@
-import { useEffect, useId, useRef, useState } from 'react';
-import type { ChangeEvent, FormEvent } from 'react';
+import { useEffect, useId, useRef, useMemo, useState } from 'react';
+import type { ChangeEvent, FormEvent, ReactNode } from 'react';
 
 import './InformationRequest.css';
 
@@ -57,6 +57,370 @@ function validateForm(data: RequestFormData): FormErrors {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email.trim())) errors.email = 'Введите корректный E-mail';
 
     return errors;
+}
+
+const MONTHS = [
+    'Январь', 'Февраль', 'Март', 'Апрель',
+    'Май', 'Июнь', 'Июль', 'Август',
+    'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь',
+];
+
+const ITEM_HEIGHT = 25;
+const CURRENT_YEAR = new Date().getFullYear();
+const MIN_YEAR = 1900;
+
+function formatDate(year: number, month: number, day: number) {
+    return [
+        year,
+        String(month).padStart(2, '0'),
+        String(day).padStart(2, '0'),
+    ].join('-');
+}
+
+function getDaysInMonth(year: number, month: number) {
+    return new Date(year, month, 0).getDate();
+}
+
+interface DateWheelProps {
+    options: number[];
+    value: number;
+    onChange: (value: number) => void;
+    formatOption: (option: number) => ReactNode;
+}
+
+function DateWheel({ options, value, onChange, formatOption }: DateWheelProps) {
+    const wheelRef = useRef<HTMLDivElement>(null);
+    const isScrolling = useRef(false);
+    const scrollEndTimeoutRef = useRef<number | null>(null);
+
+    const selectedIndex = options.indexOf(value);
+
+    useEffect(() => {
+        const wheel = wheelRef.current;
+
+        if (wheel && !isScrolling.current && selectedIndex >= 0) {
+            wheel.scrollTop = selectedIndex * ITEM_HEIGHT;
+        }
+    }, [selectedIndex, options.length]);
+
+    useEffect(() => () => {
+        if (scrollEndTimeoutRef.current !== null) {
+            window.clearTimeout(scrollEndTimeoutRef.current);
+        }
+    }, []);
+
+    function handleScroll() {
+        const wheel = wheelRef.current;
+        if (!wheel) return;
+
+        isScrolling.current = true;
+
+        const index = Math.max(
+            0,
+            Math.min(
+                options.length - 1,
+                Math.round(wheel.scrollTop / ITEM_HEIGHT)
+            )
+        );
+
+        const nextValue = options[index];
+
+        if (nextValue !== undefined && nextValue !== value) {
+            onChange(nextValue);
+        }
+
+        if (scrollEndTimeoutRef.current !== null) {
+            window.clearTimeout(scrollEndTimeoutRef.current);
+        }
+
+        scrollEndTimeoutRef.current = window.setTimeout(() => {
+            const settledWheel = wheelRef.current;
+            if (!settledWheel) return;
+
+            const settledIndex = Math.max(
+                0,
+                Math.min(
+                    options.length - 1,
+                    Math.round(settledWheel.scrollTop / ITEM_HEIGHT)
+                )
+            );
+            const snappedTop = settledIndex * ITEM_HEIGHT;
+
+            if (Math.abs(settledWheel.scrollTop - snappedTop) > 0.5) {
+                settledWheel.scrollTop = snappedTop;
+            }
+
+            const settledValue = options[settledIndex];
+            if (settledValue !== undefined) onChange(settledValue);
+
+            isScrolling.current = false;
+            scrollEndTimeoutRef.current = null;
+        }, 120);
+    }
+
+    return (
+        <div className="date-wheel">
+            <div
+                ref={wheelRef}
+                className="date-wheel-list"
+                onScroll={handleScroll}
+                role="listbox"
+                tabIndex={0}
+            >
+                {options.map((option, index) => {
+                    const offset = index - selectedIndex;
+
+                    return (
+                        <div
+                            key={option}
+                            className={`date-wheel-item ${offset === 0 ? 'is-selected' : ''}`}
+                            data-offset={offset}
+                            role="option"
+                            aria-selected={offset === 0}
+                            onClick={() => {
+                                const wheel = wheelRef.current;
+                                if (!wheel || offset === 0) return;
+
+                                if (scrollEndTimeoutRef.current !== null) {
+                                    window.clearTimeout(scrollEndTimeoutRef.current);
+                                    scrollEndTimeoutRef.current = null;
+                                }
+
+                                isScrolling.current = true;
+                                wheel.scrollTo({
+                                    top: index * ITEM_HEIGHT,
+                                    behavior: 'smooth',
+                                });
+                            }}
+                        >
+                            {formatOption(option)}
+                        </div>
+                    );
+                })}
+            </div>
+        </div>
+    );
+}
+
+interface DateOfBirthPickerProps {
+    value: string;
+    onChange: (value: string) => void;
+    error?: string;
+    name?: string;
+    ariaLabel?: string;
+}
+
+export default function DateOfBirthPicker({
+    value,
+    onChange,
+    error,
+    name = 'birthDate',
+    ariaLabel = 'Дата рождения',
+}: DateOfBirthPickerProps) {
+    const [isOpen, setIsOpen] = useState(false);
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    const parsed = value ? value.split('-').map(Number) : [];
+    const initialYear = parsed[0] || 2000;
+    const initialMonth = parsed[1] || 1;
+    const initialDay = parsed[2] || 1;
+
+    const [year, setYear] = useState(initialYear);
+    const [month, setMonth] = useState(initialMonth);
+    const [day, setDay] = useState(initialDay);
+
+    // Синхронизация с внешней формой.
+    useEffect(() => {
+        if (!value) return;
+
+        const [y, m, d] = value.split('-').map(Number);
+
+        if (y && m && d) {
+            setYear(y);
+            setMonth(m);
+            setDay(d);
+        }
+    }, [value]);
+
+    const maxDate = formatDate(
+        CURRENT_YEAR,
+        new Date().getMonth() + 1,
+        new Date().getDate()
+    );
+
+    const daysInMonth = getDaysInMonth(year, month);
+
+    const years = useMemo(
+        () =>
+            Array.from(
+                { length: CURRENT_YEAR - MIN_YEAR + 1 },
+                (_, index) => CURRENT_YEAR - index
+            ),
+        []
+    );
+
+    const days = useMemo(
+        () => Array.from({ length: daysInMonth }, (_, i) => i + 1),
+        [daysInMonth]
+    );
+
+    function updateDate(nextYear: number, nextMonth: number, nextDay: number) {
+        const safeDay = Math.min(
+            nextDay,
+            getDaysInMonth(nextYear, nextMonth)
+        );
+
+        const nextDate = formatDate(nextYear, nextMonth, safeDay);
+
+        // Дата рождения не может быть в будущем.
+        if (nextDate > maxDate) return;
+
+        setYear(nextYear);
+        setMonth(nextMonth);
+        setDay(safeDay);
+        onChange(nextDate);
+    }
+
+    useEffect(() => {
+        function handleOutsideClick(event: MouseEvent) {
+            if (
+                containerRef.current &&
+                !containerRef.current.contains(event.target as Node)
+            ) {
+                setIsOpen(false);
+            }
+        }
+
+        function handleEscape(event: KeyboardEvent) {
+            if (event.key === 'Escape') setIsOpen(false);
+        }
+
+        document.addEventListener('mousedown', handleOutsideClick);
+        document.addEventListener('keydown', handleEscape);
+
+        return () => {
+            document.removeEventListener('mousedown', handleOutsideClick);
+            document.removeEventListener('keydown', handleEscape);
+        };
+    }, []);
+
+    const displayValue = formatBirthDate(value);
+
+    return (
+        <div className="information-request-field">
+            <div
+                className={`custom-date-picker ${
+                    error ? 'has-error' : ''
+                }`}
+                ref={containerRef}
+            >
+                <button
+                    type="button"
+                    className="custom-date-trigger"
+                    aria-label={ariaLabel}
+                    aria-haspopup="dialog"
+                    aria-expanded={isOpen}
+                    aria-invalid={Boolean(error)}
+                    onClick={() => setIsOpen((open) => !open)}
+                >
+                    <span
+                        className={
+                            `custom-date-value ${
+                                value ? '' : 'is-placeholder'
+                            }`
+                        }
+                    >
+                        {displayValue || 'ДД.ММ.ГГГГ'}
+                    </span>
+
+                    {/* Кастомная SVG-иконка */}
+                    <svg
+                        className="custom-date-icon"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true"
+                    >
+                        <rect
+                            x="3.5"
+                            y="5.5"
+                            width="17"
+                            height="15"
+                            rx="3"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                        />
+                        <path
+                            d="M7.5 3.5V7.5M16.5 3.5V7.5M4 9.5H20"
+                            stroke="currentColor"
+                            strokeWidth="1.7"
+                            strokeLinecap="round"
+                        />
+                        <path
+                            d="M8 13H8.01M12 13H12.01M16 13H16.01M8 16.5H8.01M12 16.5H12.01"
+                            stroke="currentColor"
+                            strokeWidth="2.2"
+                            strokeLinecap="round"
+                        />
+                    </svg>
+                </button>
+
+                {isOpen && (
+                    <div
+                        className="date-picker-popover"
+                        role="dialog"
+                        aria-label="Выбор даты рождения"
+                    >
+                        <div className="date-wheels">
+                            <DateWheel
+                                options={MONTHS.map((_, i) => i + 1)}
+                                value={month}
+                                formatOption={(month) => MONTHS[month - 1]}
+                                onChange={(nextMonth) =>
+                                    updateDate(year, nextMonth, day)
+                                }
+                            />
+
+                            <DateWheel
+                                options={days}
+                                value={day}
+                                formatOption={(day) =>
+                                    String(day).padStart(2, '0')
+                                }
+                                onChange={(nextDay) =>
+                                    updateDate(year, month, nextDay)
+                                }
+                            />
+
+                            <DateWheel
+                                options={years}
+                                value={year}
+                                formatOption={String}
+                                onChange={(nextYear) =>
+                                    updateDate(nextYear, month, day)
+                                }
+                            />
+                        </div>
+                    </div>
+                )}
+
+                {/* Сохраняем имя поля для интеграции с формой */}
+                <input
+                    type="hidden"
+                    name={name}
+                    value={value}
+                />
+            </div>
+
+            {error && (
+                <span className="information-request-error" role="alert">
+                    {error}
+                </span>
+            )}
+        </div>
+    );
 }
 
 export function InformationRequest({ open, onClose, }: InformationRequestProps) {
@@ -278,7 +642,7 @@ export function InformationRequest({ open, onClose, }: InformationRequestProps) 
                                     <div className="information-request-row">
                                         <div className="information-request-field">
                                             <input type="text" name="fullName" placeholder="ФИО" autoComplete="name" aria-label="ФИО" aria-invalid={Boolean(errors.fullName)} value={formData.fullName} onChange={ (event) => updateField('fullName', event.target.value) }/>
-                                            {
+                                            { 
                                                 errors.fullName && (
                                                     <span className="information-request-error">
                                                         {errors.fullName}
@@ -287,16 +651,11 @@ export function InformationRequest({ open, onClose, }: InformationRequestProps) 
                                             }
                                         </div>
 
-                                        <div className="information-request-field">
-                                            <input type="date" name="birthDate" aria-label="Дата рождения" aria-invalid={Boolean(errors.birthDate)} value={formData.birthDate} onChange={ (event) => updateField('birthDate', event.target.value) }/>
-                                            {
-                                                errors.birthDate && (
-                                                    <span className="information-request-error">
-                                                        {errors.birthDate}
-                                                    </span>
-                                                )
-                                            }
-                                        </div>
+                                        <DateOfBirthPicker
+                                            value={formData.birthDate}
+                                            onChange={(value) => updateField('birthDate', value)}
+                                            error={errors.birthDate}
+                                        />
                                     </div>
 
                                     <div className="information-request-row">
