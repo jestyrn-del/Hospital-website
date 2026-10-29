@@ -324,13 +324,14 @@ export function InformationRequest({ open, onClose, }: InformationRequestProps) 
                                     </div>
                                 </div>
 
-                                <div className="information-request-gosuslugi">
+                                <button type="button" className="information-request-gosuslugi" onClick={handleGosuslugiAuth}>
                                     <span>подтвердите профиль через</span>
 
-                                    <button type="button" className="information-request-gosuslugi-button" onClick={handleGosuslugiAuth}>
-                                        <span className="information-request-gosuslugi-logo">Госуслуги</span>
-                                    </button>
-                                </div>
+                                    <span>
+                                        <span style={{ color: '#2864B8' }}>гос</span>
+                                        <span style={{ color: '#EF2854' }}>услуги</span>
+                                    </span>
+                                </button>
 
                                 {
                                     authMessage && (
