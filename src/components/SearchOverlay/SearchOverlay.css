@@ -21,17 +21,17 @@
     
     background: transparent;
     
-    padding: 3vh 0;
-    margin: 22vh auto 0;
+    padding: 0;
+    margin: 42vh auto 0;
 }
 
 .search-overlay-close {
     position: absolute;
     right: 0;
-    top: -0.8vh;
+    top: -8vh;
     
-    width: 3vw;
-    height: 3vh;
+    width: 5vh;
+    height: 5vh;
 
     border: 0;
     background: none;
@@ -56,24 +56,24 @@
     height: 100%;
 
     background-color: #FFFFFF;
-    border-radius: 4vw;
+    border-radius: 4vh;
 
-    padding: 0.3vw;
+    padding: 1.8vh;
 }
 
 .search-field input {
     width: 100%;
-    height: 3.2vh;
+    height: 4.8vh;
     border: 0;
-    border-radius: 4vw;
-    margin-right: 2vw;
-    font-size: 2vh;
+    border-radius: 4vh;
+    margin-right: 2vh;
+    font-size: 3.8vh;
     text-align: left;
-    padding-left: 1vw;
 }
 
-.search-field input:focus {
-    outline-color: #1DA159;
+.search-field input:focus-visible {
+    border-color: transparent;
+    outline: none;
 }
 
 .search-layout-search-button {
@@ -82,8 +82,8 @@
     align-items: center;
     border-radius: 50%;
 
-    width: 3%;
-    height: 3%;
+    width: 5vh;
+    height: 5vh;
 
     margin-right: 0.5vw;
 
@@ -92,7 +92,6 @@
 
 .search-layout-search-button:hover {
     opacity: 0.8;
-    scale: 1.2;
 }
 
 .search-field img {
@@ -102,18 +101,19 @@
 
 .search-results {
     display: grid;
-    margin: 1vh;
-    padding: 1vw;
+    margin: 2vh 3vh;
+    padding: 3vh;
+    font-size: 2vh;
     border-radius: 1.4vw;
     background-color: #FFFFFF;
-    gap: 1.3vh;
+    gap: 2.2vh;
 }
 
 .search-results button {
-    padding: 1.4vw;
+    padding: 1.2vh;
     text-align: left;
     border: 0;
-    border-radius: 0.8vw;
+    border-radius: 1.4vh;
     background: transparent;
     cursor: pointer;
     transition: 0.3s ease;
